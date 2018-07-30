@@ -1,0 +1,153 @@
+:root {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* links */
+a {
+  color: #005ea5;
+}
+
+a:visited {
+  color: #4c2c92;
+}
+
+a:hover {
+  color: #2b8cc4;
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: #005ea5;
+  outline: 0.15em solid #005ea5;
+}
+
+/* page */
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  max-width: calc(60em + 2vw);
+  margin: auto;
+  background: #fff;
+}
+
+.page__header,
+.page__content,
+.page__footer {
+  padding-left: calc(1em + 1vw);
+  padding-right: calc(1em + 1vw);
+}
+
+.page__content {
+  flex: 1 0 auto;
+}
+
+.page__header,
+.page__footer {
+  flex: 0 0 auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/* logo */
+.logo {
+  display: block;
+  width: 2em;
+  height: 2em;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: url('logo.svg');
+  background-size: cover;
+}
+
+/* hero */
+.hero {
+  margin-bottom: 2em;
+  font-size: calc(1.5em + 1vw);
+}
+
+/* paragraph */
+.paragraph {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.paragraph--lead {
+  font-size: calc(1.5em);
+}
+
+/* article */
+.article {
+  /* max-width: 40em; */
+}
+
+.article__title {
+  font-size: calc(2em + 0.5vw);
+}
+
+/* list */
+.list {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  list-style: none;
+}
+
+.list__item:not(:last-child) {
+  padding-bottom: 0.5em;
+}
+
+.list--arrows .list__item::before {
+  content: '→ ';
+}
+
+/* chat */
+.chat {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.chat__message {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 40em;
+  max-width: 90%;
+  padding: 1em;
+  background-color: #eff2f7;
+  box-shadow: 0 0.125em 0 #e0e6ed;
+  border-radius: 0.125em 1em 1em;
+}
+
+.chat__message--in {
+  margin-left: auto;
+  border-radius: 1em 1em 0.125em;
+}
+
+.chat__message .paragraph:first-child {
+  margin-top: 0;
+}
+
+.chat__message .paragraph:last-child {
+  margin-bottom: 0;
+}
