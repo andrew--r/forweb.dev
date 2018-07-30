@@ -41,6 +41,12 @@ a:active {
   outline: 0.15em solid #005ea5;
 }
 
+a:visited:focus,
+a:visited:active {
+  background-color: #4c2c92;
+  outline-color: #4c2c92;
+}
+
 /* page */
 .page {
   display: flex;
