@@ -5,6 +5,8 @@
   font-size: 16px;
   line-height: 1.35;
   height: 100%;
+
+  --readable-line-width: 40em;
 }
 
 *,
@@ -48,15 +50,19 @@ a:visited:active {
 }
 
 /* headings */
-.h1 {
+.heading {
+  max-width: var(--readable-line-width);
+}
+
+.heading--1 {
   font-size: calc(2em + 0.5vw);
 }
 
-.h2 {
+.heading--2 {
   font-size: calc(1.5em + 0.5vw);
 }
 
-.h3 {
+.heading--3 {
   font-size: calc(1.25em + 0.5vw);
 }
 
@@ -111,6 +117,7 @@ a:visited:active {
 .paragraph {
   margin-top: 1em;
   margin-bottom: 1em;
+  max-width: var(--readable-line-width);
 }
 
 .paragraph--lead {
@@ -127,6 +134,10 @@ a:visited:active {
 
 .list--arrows {
   padding-left: 0;
+}
+
+.list__item {
+  max-width: var(--readable-line-width);
 }
 
 .list__item:not(:last-child) {
