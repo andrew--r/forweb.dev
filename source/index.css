@@ -47,6 +47,19 @@ a:visited:active {
   outline-color: #4c2c92;
 }
 
+/* headings */
+.h1 {
+  font-size: calc(2em + 0.5vw);
+}
+
+.h2 {
+  font-size: calc(1.5em + 0.5vw);
+}
+
+.h3 {
+  font-size: calc(1.25em + 0.5vw);
+}
+
 /* page */
 .page {
   display: flex;
@@ -104,20 +117,16 @@ a:visited:active {
   font-size: calc(1.5em);
 }
 
-/* article */
-.article {
-  /* max-width: 40em; */
-}
-
-.article__title {
-  font-size: calc(2em + 0.5vw);
-}
-
 /* list */
 .list {
   margin-top: 1em;
   margin-bottom: 1em;
+  padding-left: 1em;
   list-style: none;
+}
+
+.list--arrows {
+  padding-left: 0;
 }
 
 .list__item:not(:last-child) {
