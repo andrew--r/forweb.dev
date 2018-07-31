@@ -1,0 +1,19 @@
+[build]
+	publish = "source/"
+
+[[redirects]]
+  from = "/css/about-postcss"
+  to="/blog/about-postcss"
+
+[[redirects]]
+  from = "/html/principles-for-writing-idiomatic-html"
+  to="/blog/principles-for-writing-idiomatic-html"
+
+[[redirects]]
+  from = "/other/8-things-for-beginners"
+  to="/blog/8-things-for-beginners"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
