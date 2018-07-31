@@ -66,6 +66,12 @@ a:visited:active {
   font-size: calc(1.25em + 0.5vw);
 }
 
+/* pre */
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
 /* page */
 .page {
   display: flex;
