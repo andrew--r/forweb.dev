@@ -1,5 +1,6 @@
 [build]
-	publish = "source/"
+	publish = "build/"
+  command = "npm run build"
 
 [[redirects]]
   from = "/css/about-postcss"
