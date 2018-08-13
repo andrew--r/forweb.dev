@@ -5,7 +5,7 @@ import { Footer } from '../../../components/footer';
 
 export default function() {
   return (
-    <Document title="О PostCSS от его создателя: интервью с Андреем Ситником">
+    <Document title="8 вещей, которые я хотел бы знать в начале карьеры">
       <div className="page__header">
         <Header />
       </div>
