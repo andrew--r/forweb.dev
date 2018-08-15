@@ -83,8 +83,8 @@ export default function() {
               элемента.
             </li>
             <li className="list__item">
-              Указывайте атрибуты без их значения, если это возможно (например
-              <code>checked</code> вместо
+              Указывайте атрибуты без их значения, если это возможно (например{' '}
+              <code>checked</code> вместо{' '}
               <code>checked="checked"</code>
               ).
             </li>
@@ -92,14 +92,14 @@ export default function() {
               Всегда используйте двойные кавычки для значений атрибутов.
             </li>
             <li className="list__item">
-              Не указывайте атрибут
-              <code>type</code> в элементах
-              <code>link</code>,<code>style</code> и<code>script</code>.
+              Не указывайте атрибут{' '}
+              <code>type</code> в элементах{' '}
+              <code>link</code>, <code>style</code> и <code>script</code>.
             </li>
             <li className="list__item">Всегда закрывайте теги.</li>
             <li className="list__item">
               Не используйте слеш в единичных тегах (<code>{`<img>`}</code>
-              &nbsp;— правильно,
+              &nbsp;— правильно,{' '}
               <code>{`<img/>`}</code>
               &nbsp;— неправильно).
             </li>
