@@ -12,7 +12,7 @@ export function Document(props) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans"
         />
-        <link rel="stylesheet" href={`/assets/index.css?v=${Date.now()}`} />
+        <link rel="stylesheet" href={`/index.css?v=${Date.now()}`} />
       </head>
 
       <body className="page">{props.children}</body>
