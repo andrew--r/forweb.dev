@@ -2,6 +2,7 @@
 :root {
   --font-family-base: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
   --font-family-headings: var(--font-family-base);
+  --font-family-code: Fira Code, Courier New, Courier, monospace;
 
   --font-size-base: 1rem;
   --font-size-l: 1.25rem;
@@ -134,7 +135,7 @@ pre {
 
 /* code */
 code {
-  font-family: monospace;
+  font-family: var(--font-family-code);
 }
 
 /* page */
@@ -319,9 +320,15 @@ code {
 }
 
 /* text */
-.text {
-}
-
 .text--muted {
   opacity: 0.5;
+}
+
+/* fonts */
+@font-face {
+  font-family: 'Fira Code';
+  src: local('Fira Code'), url('/assets/fonts/fira-code/regular.woff2'),
+    url('/assets/fonts/fira-code/regular.woff');
+  font-weight: 400;
+  font-display: swap;
 }
