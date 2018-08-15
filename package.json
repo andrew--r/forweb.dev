@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf ./lib && rm -rf ./build",
-    "build": "babel source --out-dir lib && node lib && cp -R ./source/assets ./build/assets",
+    "build": "babel-node ./build-scripts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged"
   },
@@ -20,12 +19,17 @@
   "devDependencies": {
     "@babel/cli": "7.0.0-rc.1",
     "@babel/core": "7.0.0-rc.1",
+    "@babel/node": "7.0.0-rc.1",
     "@babel/preset-env": "7.0.0-rc.1",
     "@babel/preset-react": "7.0.0-rc.1",
+    "autoprefixer": "9.1.1",
     "classnames": "2.2.6",
+    "csso": "3.5.1",
     "husky": "0.14.3",
     "lint-staged": "7.2.0",
     "mkdirp": "0.5.1",
+    "postcss": "7.0.2",
+    "postcss-calc": "6.0.1",
     "prettier": "1.14.0",
     "react": "16.4.2",
     "react-dom": "16.4.2"
