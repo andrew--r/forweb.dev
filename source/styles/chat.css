@@ -1,21 +1,29 @@
 .chat {
+  display: flex;
+  flex-direction: column;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 .chat__message {
+  display: table;
   margin-top: 1em;
   margin-bottom: 1em;
-  width: 40em;
-  max-width: 90%;
+  max-width: 40em;
   padding: 1em;
   background-color: #eff2f7;
   box-shadow: 0 0.125em 0 #e0e6ed;
   border-radius: 0.125em 1em 1em;
 }
 
+.chat__message--out {
+  align-self: flex-start;
+  margin-right: 10%;
+}
+
 .chat__message--in {
-  margin-left: auto;
+  align-self: flex-end;
+  margin-left: 10%;
   border-radius: 1em 1em 0.125em;
 }
 
