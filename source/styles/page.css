@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  max-width: calc(60em + 2vw);
+  margin: auto;
+  background: #fff;
+}
+
+.page__header,
+.page__content,
+.page__footer {
+  padding-left: calc(1em + 1vw);
+  padding-right: calc(1em + 1vw);
+}
+
+.page__content {
+  flex: 1 0 auto;
+}
+
+.page__header,
+.page__footer {
+  flex: 0 0 auto;
+}

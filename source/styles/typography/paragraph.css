@@ -1,0 +1,14 @@
+.paragraph {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  max-width: var(--readable-line-width);
+}
+
+.paragraph:first-child,
+.heading + .paragraph {
+  margin-top: 0;
+}
+
+.paragraph--lead {
+  font-size: var(--font-size-l);
+}

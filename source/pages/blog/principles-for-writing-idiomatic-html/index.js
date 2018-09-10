@@ -2,6 +2,7 @@ import React from 'react';
 import { Document } from '../../../components/document';
 import { Header } from '../../../components/header';
 import { Footer } from '../../../components/footer';
+import { Link } from '../../../components/link';
 
 export default function() {
   return (
@@ -84,23 +85,20 @@ export default function() {
             </li>
             <li className="list__item">
               Указывайте атрибуты без их значения, если это возможно (например{' '}
-              <code>checked</code> вместо{' '}
-              <code>checked="checked"</code>
+              <code>checked</code> вместо <code>checked="checked"</code>
               ).
             </li>
             <li className="list__item">
               Всегда используйте двойные кавычки для значений атрибутов.
             </li>
             <li className="list__item">
-              Не указывайте атрибут{' '}
-              <code>type</code> в элементах{' '}
+              Не указывайте атрибут <code>type</code> в элементах{' '}
               <code>link</code>, <code>style</code> и <code>script</code>.
             </li>
             <li className="list__item">Всегда закрывайте теги.</li>
             <li className="list__item">
               Не используйте слеш в единичных тегах (<code>{`<img>`}</code>
-              &nbsp;— правильно,{' '}
-              <code>{`<img/>`}</code>
+              &nbsp;— правильно, <code>{`<img/>`}</code>
               &nbsp;— неправильно).
             </li>
           </ul>
@@ -276,13 +274,13 @@ export default function() {
           <p className="paragraph">
             <i>
               Это перевод{' '}
-              <a href="https://github.com/necolas/idiomatic-html">
+              <Link href="https://github.com/necolas/idiomatic-html">
                 Principles of writing consistent, idiomatic HTML
-              </a>{' '}
+              </Link>{' '}
               Николаса Галлахера. Оригинал лицензирован по{' '}
-              <a href="http://creativecommons.org/licenses/by/3.0/">
+              <Link href="http://creativecommons.org/licenses/by/3.0/">
                 Creative Commons Attribution 3.0 Unported License
-              </a>
+              </Link>
               . Лицензия распространяется на все документы и переводы.
             </i>
           </p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Document } from '../../../components/document';
 import { Header } from '../../../components/header';
 import { Footer } from '../../../components/footer';
+import { Link } from '../../../components/link';
 
 export default function() {
   return (
@@ -20,7 +21,7 @@ export default function() {
             В последнее время сообществом фронтенд-разработчиков довольно
             активно обсуждается PostCSS. О том, что это и где оно применяется мы
             расспросили создателя PostCSS{' '}
-            <a href="http://sitnik.ru/">Андрея Ситника</a>.
+            <Link href="http://sitnik.ru/">Андрея Ситника</Link>.
           </p>
 
           <div className="chat">
@@ -126,7 +127,7 @@ export default function() {
             <div className="chat__message chat__message--in">
               <p className="paragraph">
                 Технически{' '}
-                <a href="https://github.com/postcss/postcss">PostCSS</a>
+                <Link href="https://github.com/postcss/postcss">PostCSS</Link>
                 &nbsp;— это инструмент, который позволяет его JS-плагинам
                 перестраивать CSS-файл. Но в реальности этот инструмент
                 позволяет нам совсем по другому подойти к написанию CSS. На
@@ -138,17 +139,17 @@ export default function() {
               </p>
               <p className="paragraph">
                 Например,{' '}
-                <a href="https://github.com/postcss/autoprefixer">
+                <Link href="https://github.com/postcss/autoprefixer">
                   Автопрефиксер
-                </a>
+                </Link>
                 &nbsp;— он сам расставляет префиксы только там, где вам нужно.
                 Не нужно писать примеси и тому подобное &nbsp;— он работает с
-                обычным CSS. Или <a href="http://cssnext.io/">cssnext</a>,
+                обычным CSS. Или <Link href="http://cssnext.io/">cssnext</Link>,
                 который откомпилирует CSS4 в обычный CSS (как Babel для ES6).
                 Или{' '}
-                <a href="https://github.com/luisrudge/postcss-flexbugs-fixes">
+                <Link href="https://github.com/luisrudge/postcss-flexbugs-fixes">
                   postcss-flexbugs-fixes
-                </a>
+                </Link>
                 &nbsp;— он содержит в себе базу данных ошибок реализации
                 флексбокса в браузерах. И он автоматически исправляет или
                 предупреждает вас, когда код будет не работать из-за этих
@@ -165,9 +166,9 @@ export default function() {
             <div className="chat__message chat__message--in">
               <p className="paragraph">
                 Да. Например, плагин{' '}
-                <a href="https://github.com/postcss/postcss-nested">
+                <Link href="https://github.com/postcss/postcss-nested">
                   postcss-nested
-                </a>{' '}
+                </Link>{' '}
                 в 60 строк просто проходиться по CSS и заменяет
                 <code>{`a { b { } }`}</code> на
                 <code>{`a b {}`}</code>. Но PostCSS не только про трансформацию
@@ -175,9 +176,9 @@ export default function() {
               </p>
               <p className="paragraph">
                 Например, Твиттер использует PostCSS, чтобы{' '}
-                <a href="https://github.com/postcss/postcss-bem-linter">
+                <Link href="https://github.com/postcss/postcss-bem-linter">
                   проверять БЭМ-нотацию
-                </a>
+                </Link>
                 . Или плагин [doiuse](https://github.com/anandthakker/doiuse),
                 который проверяет по Can I Use все ли используемые свойства
                 поддерживаются в нужных вам браузерах. Ну и недавно
@@ -201,8 +202,10 @@ export default function() {
                 Автопрефиксер и рекомендует его как единственный инструмент для
                 работы с браузерными префиксами. Точный список плагинов у
                 Alibaba не знаю, но они разрабатывают{' '}
-                <a href="https://github.com/cssdream/cssgrace">cssgrace</a> и
-                несколько плагинов для cssnext. Так что точно используют эти
+                <Link href="https://github.com/cssdream/cssgrace">
+                  cssgrace
+                </Link>{' '}
+                и несколько плагинов для cssnext. Так что точно используют эти
                 два. В Китае просто большая проблема с IE&nbsp;— там до сих пор
                 популярные версии 8, 7 и даже иногда 6. Поэтому cssgrace&nbsp;—
                 это такой cssnext наоборот. Он находит вещи, которые не
@@ -211,17 +214,17 @@ export default function() {
               <p className="paragraph">
                 Твиттер пошли дальше&nbsp;— они совсем отказались от
                 препроцессоров. Когда я последний раз говорил с{' '}
-                <a href="https://github.com/necolas">Николасом</a>, он сказал,
-                что они сейчас на Rework и переходят на PostCSS.
+                <Link href="https://github.com/necolas">Николасом</Link>, он
+                сказал, что они сейчас на Rework и переходят на PostCSS.
               </p>
             </div>
 
             <div className="chat__message chat__message--out">
               <p className="paragraph">
                 А ещё я слышал, что bootstrap 5, вероятно,{' '}
-                <a href="https://twitter.com/mdo/status/591364406816079873">
+                <Link href="https://twitter.com/mdo/status/591364406816079873">
                   будет переписан на PostCSS
-                </a>
+                </Link>
                 . Это похоже прямо-таки на революцию в мире CSS.
               </p>
               <p className="paragraph">
@@ -240,7 +243,9 @@ export default function() {
                 можем делать такие сложные вещи, как Автопрефиксер или cssnext,
                 то сделать вложенность или переменные очень легко. Как раз на
                 этой неделе вышел{' '}
-                <a href="https://github.com/jonathantneal/precss">PreCSS</a>
+                <Link href="https://github.com/jonathantneal/precss">
+                  PreCSS
+                </Link>
                 &nbsp;— набор плагинов для PostCSS, чтобы сделать что-то типа
                 препроцессора.
               </p>
@@ -324,7 +329,7 @@ export default function() {
             </p>
 
             <p className="paragraph chat__message chat__message--out">
-              В нашем <a href="http://vk.com/forwebdev">сообществе</a> в
+              В нашем <Link href="http://vk.com/forwebdev">сообществе</Link> в
               комментариях к одному из постов сказали, что было бы разумно
               ввести какое-нибудь специальное расширение для файлов стилей,
               написанных для PostCSS&nbsp;— ну чтобы хотя бы никакой путаницы не
@@ -380,8 +385,10 @@ export default function() {
                 разрабатывает cssnext и stylelint и активно участвует в
                 сообществе. Ben Briggs из Англии ведёт разработку важных
                 инфраструктурных плагинов типа postcss-use и помогает новичкам в{' '}
-                <a href="https://gitter.im/postcss/postcss">gitter-чате</a>.
-                Jonathan Neal из США разрабатывает PreCSS. 一丝 из Китая
+                <Link href="https://gitter.im/postcss/postcss">
+                  gitter-чате
+                </Link>
+                . Jonathan Neal из США разрабатывает PreCSS. 一丝 из Китая
                 внедряет PostCSS в Таобао и другие проеты Алибабы и ответственен
                 за пиар в Китае. David Clark из США занимается линтерами
                 (Stylelint и postcss-bem-linter) и пишет отличные статьи,

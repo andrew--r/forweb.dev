@@ -1,0 +1,24 @@
+.heading {
+  max-width: var(--readable-line-width);
+  margin-bottom: 0.4em;
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-headings);
+}
+
+.heading--1 {
+  margin-bottom: 0.6em;
+  font-size: var(--font-size-xxl);
+}
+
+.heading--2 {
+  font-size: var(--font-size-xl);
+}
+
+.heading--3 {
+  font-size: var(--font-size-l);
+}
+
+.paragraph + .heading {
+  margin-top: 2em;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Document } from '../components/document';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
+import { Link } from '../components/link';
 
 export default function() {
   return (
@@ -13,48 +14,34 @@ export default function() {
       <main className="page__content">
         <h2 className="heading heading--1">
           Годнота для&nbsp;фронтендеров и дизайнеров в&nbsp;
-          <a className="link" href="https://t.me/forwebdev">
-            Телеграме
-          </a>
-          ,{' '}
-          <a className="link" href="https://vk.com/forwebdev">
-            ВКонтакте
-          </a>{' '}
-          и&nbsp;
-          <a className="link" href="https://twitter.com/forwebdev">
-            Твитере
-          </a>
+          <Link href="https://t.me/forwebdev">Телеграме</Link>,{' '}
+          <Link href="https://vk.com/forwebdev">ВКонтакте</Link> и&nbsp;
+          <Link href="https://twitter.com/forwebdev">Твитере</Link>
         </h2>
 
         <p className="paragraph">Наши статьи и&nbsp;переводы:</p>
 
         <ul className="list">
           <li className="list__item">
-            <a
-              className="link"
-              href="https://github.com/forwebdev/ui-developer-tips"
-            >
+            <Link href="https://github.com/forwebdev/ui-developer-tips">
               Советы для разработчика интерфейсов
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a className="link" href="/blog/about-postcss">
+            <Link href="/blog/about-postcss">
               О&nbsp;PostCSS от его создателя: интервью с&nbsp;Андреем Ситником
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a className="link" href="/blog/8-things-for-beginners">
+            <Link href="/blog/8-things-for-beginners">
               8 вещей, которые я хотел&nbsp;бы знать в&nbsp;начале карьеры
-            </a>{' '}
+            </Link>{' '}
             <sup>перевод</sup>
           </li>
           <li className="list__item">
-            <a
-              className="link"
-              href="/blog/principles-for-writing-idiomatic-html"
-            >
+            <Link href="/blog/principles-for-writing-idiomatic-html">
               Принципы написания однородного, идиоматического HTML
-            </a>{' '}
+            </Link>{' '}
             <sup>перевод</sup>
           </li>
         </ul>

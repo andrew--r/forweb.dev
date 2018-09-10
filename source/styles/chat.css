@@ -1,0 +1,28 @@
+.chat {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.chat__message {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 40em;
+  max-width: 90%;
+  padding: 1em;
+  background-color: #eff2f7;
+  box-shadow: 0 0.125em 0 #e0e6ed;
+  border-radius: 0.125em 1em 1em;
+}
+
+.chat__message--in {
+  margin-left: auto;
+  border-radius: 1em 1em 0.125em;
+}
+
+.chat__message .paragraph:first-child {
+  margin-top: 0;
+}
+
+.chat__message .paragraph:last-child {
+  margin-bottom: 0;
+}

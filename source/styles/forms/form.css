@@ -1,0 +1,12 @@
+.form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.form__row {
+  max-width: var(--readable-line-width);
+}
+
+.form__row + .form__row {
+  margin-top: 1em;
+}
