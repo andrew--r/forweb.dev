@@ -2,6 +2,7 @@ import React from 'react';
 import { Document } from '../../../components/document';
 import { Header } from '../../../components/header';
 import { Footer } from '../../../components/footer';
+import { Link } from '../../../components/link';
 
 export default function() {
   return (
@@ -42,12 +43,9 @@ export default function() {
             будет, если вы напишете нечитаемый код&nbsp;— через какое-то время
             вы просто не будете знать, что делает тот или иной кусок кода. Вы
             точно хотите всех этих проблем? Посмотрите{' '}
-            <a
-              className="link"
-              href="http://www.sitepoint.com/6-tips-for-writing-better-code"
-            >
+            <Link href="http://www.sitepoint.com/6-tips-for-writing-better-code">
               советы по написанию чистого кода
-            </a>
+            </Link>
             .
           </p>
 
@@ -85,12 +83,9 @@ export default function() {
           <p className="paragraph">
             Ошибка, которую совершают начинающие разработчики, заключается в
             изучении jQuery. Вопросы{' '}
-            <a
-              className="link"
-              href="https://www.quora.com/I-only-know-jQuery-and-am-not-very-well-versed-with-vanilla-Javascript-Will-this-limit-me-if-I-am-ultimately-trying-to-get-a-job-as-a-junior-front-end-developer-If-so-what-are-some-free-resources-to-expand-my-Javascript-knowledge-Should-I-even-be-thinking-about-things-like-ember-or-angular-yet"
-            >
+            <Link href="https://www.quora.com/I-only-know-jQuery-and-am-not-very-well-versed-with-vanilla-Javascript-Will-this-limit-me-if-I-am-ultimately-trying-to-get-a-job-as-a-junior-front-end-developer-If-so-what-are-some-free-resources-to-expand-my-Javascript-knowledge-Should-I-even-be-thinking-about-things-like-ember-or-angular-yet">
               вроде этого
-            </a>{' '}
+            </Link>{' '}
             на Quora дают понять, что jQuery весьма популярен среди людей,
             которые не имеют понятия о базовых принципах и возможностях
             JavaScript!
@@ -103,9 +98,9 @@ export default function() {
             меньшего количества кода. Однако последние версии JavaScript (или
             ECMAScript в оригинале) имеют более дружелюбный синтаксис, благодаря
             чему{' '}
-            <a className="link" href="http://youmightnotneedjquery.com/">
+            <Link href="http://youmightnotneedjquery.com/">
               в jQuery больше нет нужды
-            </a>
+            </Link>
             .
           </p>
 
@@ -198,12 +193,9 @@ export default function() {
             подходе к разработке. Если вы найдёте кого-то, кто искренне
             заинтересован в рассмотрении вашего кода, то относитесь к его ревью
             серьёзно. Можете взглянуть на{' '}
-            <a
-              className="link"
-              href="http://www.sitepoint.com/integrated-collaborative-code-reviewing-beanstalk/"
-            >
+            <Link href="http://www.sitepoint.com/integrated-collaborative-code-reviewing-beanstalk/">
               продвинутый способ проведения кодревью
-            </a>
+            </Link>
             .
           </p>
 
@@ -216,12 +208,9 @@ export default function() {
           <p className="paragraph">
             <i>
               Это перевод статьи{' '}
-              <a
-                className="link"
-                href="http://www.sitepoint.com/8-things-wish-id-known-started-developer/"
-              >
+              <Link href="http://www.sitepoint.com/8-things-wish-id-known-started-developer/">
                 8 Things I Wish I’d Known When I Started as a Web Developer
-              </a>{' '}
+              </Link>{' '}
               Шомика Дайтари.
             </i>
           </p>

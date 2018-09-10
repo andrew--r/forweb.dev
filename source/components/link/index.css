@@ -1,0 +1,26 @@
+.link {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: var(--color-purple);
+}
+
+.link:hover {
+  color: var(--color-blue-light);
+}
+
+.link:focus,
+.link:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-blue);
+  outline: 0.15em solid var(--color-blue);
+}
+
+.link:visited:focus,
+.link:visited:active {
+  background-color: var(--color-purple);
+  outline-color: var(--color-purple);
+}
