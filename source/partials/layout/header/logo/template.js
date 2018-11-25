@@ -4,7 +4,7 @@ module.exports = (context) => `
     <img
       class="logo__image"
       src="${context.getAssetUrl('logo.svg')}"
-      alt="For Web logo"
+      alt=""
     />
     For Web
   </a>
