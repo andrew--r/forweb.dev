@@ -1,0 +1,21 @@
+.logo {
+  --safe-area: 0.5em;
+
+  position: relative;
+  left: calc(var(--safe-area) * -1);
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+}
+
+.logo__link {
+  display: block;
+  padding: var(--safe-area);
+}
+
+.logo__image {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
