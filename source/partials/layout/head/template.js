@@ -26,7 +26,7 @@ module.exports = (
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="${getAssetUrl('main.css')}">
     <link rel="icon" type="image/png" href="${getAssetUrl('favicon.png')}">
 
