@@ -1,13 +1,12 @@
 .heading {
   max-width: var(--readable-line-width);
-  margin-bottom: 0.4em;
+  margin-bottom: var(--font-size-base);
   font-family: var(--font-family-headings);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-headings);
 }
 
 .heading--1 {
-  margin-bottom: 0.6em;
   font-size: var(--font-size-xxl);
 }
 
@@ -20,5 +19,5 @@
 }
 
 .paragraph + .heading {
-  margin-top: 2em;
+  margin-top: calc(var(--base-line) * 2);
 }
