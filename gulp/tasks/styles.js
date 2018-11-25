@@ -1,23 +1,33 @@
-import gulp from 'gulp';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import postcssCalc from 'postcss-calc';
-import postcssEasyImport from 'postcss-easy-import';
-import postcssColorFunction from 'postcss-color-function';
-import csso from 'gulp-csso';
-import { sourcePath, buildPath } from '../../build.config';
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const postcssEasyImport = require('postcss-easy-import');
+const postcssColorFunction = require('postcss-color-function');
+const csso = require('gulp-csso');
+const rev = require('gulp-rev');
+const rename = require('gulp-rename');
+const config = require('../../build.config');
 
-gulp.task('styles', (done) => {
+gulp.task('styles', () => {
   return gulp
-    .src(`${sourcePath}/styles/index.css`)
+    .src(`${config.paths.source}/{pages,assets}/**/*.css`)
     .pipe(
-      postcss([
-        postcssEasyImport(),
-        postcssColorFunction(),
-        postcssCalc({ preserve: false }),
-        autoprefixer(),
-      ]),
+      postcss([postcssEasyImport(), postcssColorFunction(), autoprefixer()]),
     )
     .pipe(csso())
-    .pipe(gulp.dest(buildPath));
+    .pipe(rev())
+    .pipe(
+      rename((path) => {
+        path.dirname = path.dirname.replace(/^pages\/?/, '');
+      }),
+    )
+    .pipe(gulp.dest(config.paths.build))
+    .pipe(
+      rev.manifest({
+        base: config.paths.build,
+        path: `${config.paths.build}/rev-manifest.json`,
+        merge: true,
+      }),
+    )
+    .pipe(gulp.dest(config.paths.build));
 });
