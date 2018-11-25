@@ -1,7 +1,7 @@
-import gulp from 'gulp';
-import del from 'del';
-import { buildPath } from '../../build.config';
+const gulp = require('gulp');
+const del = require('del');
+const config = require('../../build.config');
 
 gulp.task('clean', () => {
-  return del([buildPath]);
+  return del([config.paths.build]);
 });
