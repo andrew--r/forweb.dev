@@ -1,7 +1,11 @@
 .input {
+  box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 0.375em 0.75em;
+  min-width: 0;
+  height: var(--control-height-base);
+  padding-left: 0.75em;
+  padding-right: 0.75em;
   font: inherit;
   border: 1px solid #ced4da;
 }

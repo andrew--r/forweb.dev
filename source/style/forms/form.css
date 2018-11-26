@@ -1,12 +1,34 @@
 .form {
-  margin-top: calc(var(--base-line) * 2);
-  margin-bottom: calc(var(--base-line) * 2);
+  margin-top: var(--base-line);
+  margin-bottom: var(--base-line);
+}
+
+.form:last-child {
+  margin-bottom: 0;
 }
 
 .form__row {
   max-width: var(--readable-line-width);
 }
 
+.form__row--inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__row--inline > * + * {
+  margin-left: calc(var(--base-line) / 2);
+}
+
+.form__row--inline > .button {
+  flex: 0 0 auto;
+}
+
+.form__row--inline > .input {
+  flex: 1 1 auto;
+}
+
 .form__row + .form__row {
-  margin-top: var(--base-line);
+  margin-top: calc(var(--base-line) * 0.75);
 }

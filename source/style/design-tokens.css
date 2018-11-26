@@ -10,13 +10,12 @@
 
   --font-weight-normal: 400;
   --font-weight-bold: 600;
-
   --line-height-base: 1.5;
   --line-height-headings: 1.3;
-
   --base-line: calc(var(--font-size-base) * var(--line-height-base));
-
   --readable-line-width: 40em;
+
+  --control-height-base: 2.375em;
 
   --color-blue: #005ea5;
   --color-blue-light: #2b8cc4;
