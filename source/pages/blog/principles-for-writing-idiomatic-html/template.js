@@ -2,10 +2,6 @@ const layout = require('../../../partials/layout/template');
 const article = require('../../../partials/article/template');
 
 const renderArticleContent = () => `
-<h2 class="heading heading--1">
-  Принципы написания однородного HTML
-</h2>
-
 <p class="paragraph paragraph--lead">
   Этот документ представляет собой общие рекомендации по&nbsp;стилю написания HTML-разметки. Данное руководство призывает к&nbsp;использованию общепринятых и&nbsp;устоявшихся подходов к&nbsp;написанию кода.
 </p>

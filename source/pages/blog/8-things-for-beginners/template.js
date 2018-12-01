@@ -1,11 +1,7 @@
 const layout = require('../../../partials/layout/template');
 const article = require('../../../partials/article/template');
 
-const renderArticleContent = (context) => `
-<h2 class="heading heading--1">
-  8&nbsp;вещей, которые я&nbsp;хотел&nbsp;бы знать в&nbsp;начале карьеры
-</h2>
-
+const renderArticleContent = () => `
 <p class="paragraph paragraph--lead">
   Я&nbsp;работаю в&nbsp;сфере веб-разработки больше пяти лет, и&nbsp;это похоже на&nbsp;приключение&nbsp;&mdash; знакомство с&nbsp;новыми технологиями и&nbsp;эксперименты с&nbsp;разными подходами. Временами я&nbsp;был успешен, временами я&nbsp;разочаровывался в&nbsp;себе. В&nbsp;этой статье я&nbsp;хочу рассказать вам о&nbsp;некоторых идеях, которые я&nbsp;постепенно осознал, работая веб-разработчиком. Надеюсь, что вас научат чему-то мои ошибки.
 </p>
