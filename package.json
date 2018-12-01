@@ -20,6 +20,7 @@
   "homepage": "https://github.com/andrew--r/static-website-template#readme",
   "devDependencies": {
     "autoprefixer": "9.3.1",
+    "date-fns": "1.29.0",
     "del": "3.0.0",
     "eslint": "5.8.0",
     "eslint-config-prettier": "3.1.0",

@@ -2,8 +2,6 @@ const layout = require('../../../partials/layout/template');
 const article = require('../../../partials/article/template');
 
 const renderArticleContent = () => `
-<h2 class="heading heading--1">О&nbsp;PostCSS от его создателя: интервью с&nbsp;Андреем Ситником</h2>
-
 <p class="paragraph paragraph--lead">
   В&nbsp;последнее время сообществом фронтенд-разработчиков довольно активно обсуждается PostCSS. О&nbsp;том, что это и&nbsp;где оно применяется мы&nbsp;расспросили создателя PostCSS <a href="http://sitnik.ru/">Андрея Ситника</a>.
 </p>
