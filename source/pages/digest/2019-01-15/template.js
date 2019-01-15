@@ -10,6 +10,9 @@ const renderArticleContent = () => `
 <h3 class="heading heading--2"><a href="https://www.smashingmagazine.com/2019/01/how-to-learn-css/">How To Learn CSS</a></h3>
 <p class="paragraph">Обзор фундаментальных концепций CSS и ресурсов для их изучения от Рейчел Эндрю.</p>
 
+<h3 class="heading heading--2"><a href="https://glebbahmutov.com/blog/dont-help-me-say-no/">Don't help me say No</a></h3>
+<p class="paragraph">Распространённые ошибки соискателей с точки зрения работодателя: Глеб Бахмутов рассказал, что вынуждает его отказывать кандидатам.</p>
+
 <h3 class="heading heading--2"><a href="https://24ways.org/2018/jank-free-image-loads/">Jank-Free Image Loads</a></h3>
 <p class="paragraph">Эрик Портис о двух новых возможностях веб-платформы, которые позволят избежать перерисовки страницы при загрузке картинок: CSS-свойство <code>aspect-ratio</code> и HTML-атрибут <code>intrinsicsize</code>.</p>
 
