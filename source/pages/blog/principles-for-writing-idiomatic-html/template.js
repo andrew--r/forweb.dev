@@ -63,7 +63,7 @@ const renderArticleContent = () => `
   </li>
   <li class="list__item">Всегда закрывайте теги.</li>
   <li class="list__item">
-    Не&nbsp;используйте слеш в&nbsp;единичных тегах (<code><img></code> &mdash; правильно, <code><img/></code> &mdash; неправильно).
+    Не&nbsp;используйте слеш в&nbsp;единичных тегах (<code>&lt;img&gt;</code> &mdash; правильно, <code>&lt;img/&gt;</code> &mdash; неправильно).
   </li>
 </ul>
 
