@@ -4,9 +4,6 @@ const article = require('../../../partials/article/template');
 const renderArticleContent = () => `
 <p class="paragraph paragraph--lead">Важные новости и материалы второй половины марта 2019</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://boolean.method.ac/">The Boolean Game</a></h3>
-<p class="paragraph">Игра для практического изучения булевых операций над многоугольниками, используемых в графических редакторах.</p>
-
 <h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://3perf.com/blog/link-rels/">Preload, prefetch and other &lt;link&gt; tags</a></h3>
 <p class="paragraph">Какие есть теги-подсказки для улучшения производительности и когда их применять? Подробный обзор Ивана Акулова.</p>
 
