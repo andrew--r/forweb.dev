@@ -16,7 +16,7 @@ const renderArticleContent = () => `
 <h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://medium.com/@stasonmars/css-%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B-4-%D0%B3%D0%BE-%D1%83%D1%80%D0%BE%D0%B2%D0%BD%D1%8F-af1a5170620c">CSS-селекторы четвёртого уровня</a></h3>
 <p class="paragraph">Стас Багрецов перевёл обширный обзор новых CSS-селекторов, некоторые из которых можно применять уже сегодня.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://habr.com/ru/company/yandex/blog/442762/">Стажёр Вася и его истории об идемпотентности AP</a></h3>
+<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://habr.com/ru/company/yandex/blog/442762/">Стажёр Вася и его истории об идемпотентности API</a></h3>
 <p class="paragraph">Какие проблемы могут возникнуть, если не учитывать идемпотентность распределенных систем в своем проекте, и как эти проблемы решать? Подробное объяснение с примерами от Дениса Исаева из Яндекс.Такси.</p>
 
 <h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="http://jeremymikkola.com/posts/2019_03_19_rules_for_autocomplete.html">Rules for Autocomplete</a></h3>
