@@ -5,9 +5,14 @@ const renderPage = () => `
   Годнота для&nbsp;фронтендеров и&nbsp;дизайнеров в&nbsp;<a href="https://t.me/forwebdev">Телеграме</a>, <a href="https://vk.com/forwebdev">ВКонтакте</a> и&nbsp;<a href="https://twitter.com/forwebdev">Твитере</a>
 </h2>
 
-<p class="paragraph">Наши статьи и&nbsp;переводы:</p>
+<p class="paragraph">Наши материалы:</p>
 
 <ul class="list">
+  <li class="list__item">
+    <a href="/digest">
+      Новости фронтенда без&nbsp;шума
+    </a>
+  </li>
   <li class="list__item">
     <a href="https://github.com/forwebdev/ui-developer-tips">
       Советы для&nbsp;разработчика интерфейсов
