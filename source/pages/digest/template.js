@@ -1,6 +1,7 @@
 const layout = require('../../partials/layout/template');
+const pagePublicationDate = require('../../partials/page-publication-date/template');
 
-const renderPage = () => `
+const renderPage = (context) => `
 <h2 class="heading heading--1">Дайджест Форвеба</h2>
 
 <p class="paragraph paragraph--lead">
@@ -46,6 +47,22 @@ const renderPage = () => `
     </button>
   </div>
 </form>
+
+<h3 class="heading heading--2">Архив выпусков</h3>
+
+${Array.from(context.currentPage.children)
+  .map(
+    ([, page]) => `
+    <section style="margin: 2em 0">
+      ${pagePublicationDate(page)}
+      <h4 class="heading heading--3">
+        <a href="${page.url}">${page.metadata.title}</a>
+      </h4>
+      <p class="paragraph">${page.metadata.description}</p>
+    </section>
+    `,
+  )
+  .join('<hr />')}
 `;
 
 module.exports = (context) => layout(context, renderPage(context));
