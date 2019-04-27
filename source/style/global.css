@@ -39,3 +39,9 @@ a {
 a:focus {
   outline: 3px solid var(--color-blue);
 }
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--color-borders);
+}
