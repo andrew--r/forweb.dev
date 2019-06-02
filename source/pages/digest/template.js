@@ -18,27 +18,20 @@ const renderPage = (context) => `
 
 <form
   class="form"
-  action="https://forwebdev.us19.list-manage.com/subscribe/post?u=1e420147ab39ab295d24b7876&amp;id=3308e73dc7"
-  method="post"
+  method="POST"
+  action="https://cp.unisender.com/ru/subscribe?hash=6qrafxfokaqm31371iubwsi9bqh45xy3ci8e4ucgzuucrtq18o1oy"
+  name="subscribtion_form"
   target="_blank"
 >
   <div class="form__row">
     <label class="label" for="email">
       Эл. почта *
     </label>
-
-    <input class="input" type="email" name="EMAIL" id="email" required />
-    <div
-      style="position: absolute; left: -5000vw;"
-      aria-hidden="true"
-    >
-      <input
-        type="text"
-        name="b_1e420147ab39ab295d24b7876_3308e73dc7"
-        tabIndex="-1"
-        value=""
-      />
-    </div>
+    <input class="input" type="email" name="email" required />
+    <input type="hidden" name="charset" value="UTF-8">
+    <input type="hidden" name="default_list_id" value="17817541">
+    <input type="hidden" name="overwrite" value="2">
+    <input type="hidden" name="is_v5" value="1">
   </div>
 
   <div class="form__row">
