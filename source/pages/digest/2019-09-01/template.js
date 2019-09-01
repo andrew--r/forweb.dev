@@ -38,7 +38,7 @@ const renderArticleContent = () => `
 <p class="paragraph">Предложение по&nbsp;добавлению в&nbsp;веб-платформу нативного API для реализации виртуального скролла.</p>
 
 <h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://v8.dev/features/optional-chaining">Optional chaining</a></h3>
-<p class="paragraph">ведение в&nbsp;optional chaining operator, позволяющий безопасно обращаться к&nbsp;глубоким полям во&nbsp;вложенных структурах.</p>
+<p class="paragraph">Введение в&nbsp;optional chaining operator, позволяющий безопасно обращаться к&nbsp;глубоким полям во&nbsp;вложенных структурах.</p>
 
 <h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web">Get started with GPU Compute on&nbsp;the Web</a></h3>
 <p class="paragraph">Введение в&nbsp;GPU-вычисления в&nbsp;вебе.</p>
