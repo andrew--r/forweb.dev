@@ -1,6 +1,6 @@
 .form {
   margin-top: var(--base-line);
-  margin-bottom: var(--base-line);
+  margin-bottom: calc(var(--base-line) * 2);
 }
 
 .form:last-child {
