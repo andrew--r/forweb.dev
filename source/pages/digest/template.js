@@ -44,6 +44,7 @@ const renderPage = (context) => `
 <h3 class="heading heading--2">Архив выпусков</h3>
 
 ${Array.from(context.currentPage.children)
+  .reverse()
   .map(
     ([, page]) => `
     <section style="margin: 2em 0">
