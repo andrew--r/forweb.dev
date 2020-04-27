@@ -1,9 +1,0 @@
-.digest-widget {
-  margin-top: calc(var(--base-line) * 2);
-  margin-bottom: calc(var(--base-line) * 2);
-  padding: var(--base-line);
-  padding-top: calc(var(--base-line) * 0.85);
-  padding-bottom: calc(var(--base-line) * 1.5);
-  max-width: var(--readable-line-width);
-  border: 1px solid var(--color-borders);
-}
