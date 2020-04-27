@@ -1,0 +1,46 @@
+{% from "components/header/index.njk" import header %}
+{% from "components/footer/index.njk" import footer %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+</head>
+<body class="page">
+  <div class="page__header">
+    {{ header() }}
+  </div>
+
+  <main class="page__content">
+    {{ content | safe }}
+  </main>
+
+  <div class="page__footer">
+    {{ footer(site=site) }}
+  </div>
+
+  <style>
+      @font-face {
+        font-family: 'Fira Code';
+        src: url('/assets/fonts/fira-code/regular.woff2'), url('/assets/fonts/fira-code/regular.woff');
+        font-weight: 400;
+        font-display: swap;
+      }
+    </style>
+</body>
+</html>
