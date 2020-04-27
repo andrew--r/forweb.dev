@@ -1,0 +1,18 @@
+---
+layout: main
+---
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <time datetime="{% dateToIsoString page.date %}" itemprop="datePublished">
+      {% formatDate page.date %}
+    </time>
+
+    <h2 class="heading heading--1" itemprop="name headline">
+      {{ title }}
+    </h2>
+  </header>
+
+  <div itemprop="articleBody">
+    {{ content | safe }}
+  </div>
+</article>
