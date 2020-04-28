@@ -41,7 +41,8 @@ a:focus {
 }
 
 hr {
+  background: var(--color-borders);
   border: none;
   height: 1px;
-  background: var(--color-borders);
+  margin: 1rem 0;
 }

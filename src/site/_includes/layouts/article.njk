@@ -1,6 +1,25 @@
 ---
 layout: main
 ---
+{% set isBlog = page.url.startsWith('/blog') %}
+{% set isDigest = page.url.startsWith('/digest') %}
+
+{% if isBlog or isDigest %}
+  <nav class="breadcrumbs">
+    {% if isDigest %}
+      <a href="/digest">
+        <span aria-hidden="true">←</span> Новости фронтенда без шума
+      </a>
+    {% endif %}
+
+    {% if isBlog %}
+      <a href="/">
+        <span aria-hidden="true">←</span> На главную
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}
+
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <time datetime="{% dateToIsoString page.date %}" itemprop="datePublished">

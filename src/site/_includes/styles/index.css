@@ -9,5 +9,6 @@
 @import './chat.css';
 @import './links.css';
 @import './button.css';
+@import './breadcrumbs.css';
 @import '../components/**/*.css';
 @import '../layouts/**/*.css';
