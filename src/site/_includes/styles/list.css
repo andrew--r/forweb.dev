@@ -13,6 +13,6 @@
   padding-bottom: 0.5em;
 }
 
-.paragraph + .list {
+p + .list {
   margin-top: -0.75em;
 }

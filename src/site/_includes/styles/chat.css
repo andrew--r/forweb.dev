@@ -26,11 +26,3 @@
   margin-left: 10%;
   border-radius: 1em 1em 0.125em;
 }
-
-.chat__message .paragraph:first-child {
-  margin-top: 0;
-}
-
-.chat__message .paragraph:last-child {
-  margin-bottom: 0;
-}
