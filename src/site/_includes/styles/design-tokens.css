@@ -21,6 +21,8 @@
   --color-blue-light: #2b8cc4;
   --color-purple: #4c2c92;
   --color-borders: rgba(0, 0, 0, 0.1);
+
+  --page-content-spacing: calc(1em + 1vw);
 }
 
 @media (min-width: 64em) {

@@ -11,8 +11,8 @@
 .page__header,
 .page__content,
 .page__footer {
-  padding-left: calc(1em + 1vw);
-  padding-right: calc(1em + 1vw);
+  padding-left: var(--page-content-spacing);
+  padding-right: var(--page-content-spacing);
 }
 
 .page__content {
