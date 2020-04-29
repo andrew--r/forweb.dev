@@ -1,3 +1,5 @@
+const markdownIt = require('markdown-it');
+const hljs = require('highlight.js');
 const htmlMinifier = require('html-minifier');
 
 const LAYOUTS = ['main', 'article'];
@@ -6,6 +8,17 @@ module.exports = (config) => {
   LAYOUTS.forEach((layout) => {
     config.addLayoutAlias(layout, `layouts/${layout}.njk`);
   });
+
+  /**
+   * Markdown
+   */
+  config.setLibrary(
+    'md',
+    markdownIt({
+      highlight: (source, language) =>
+        language ? hljs.highlight(language, source).value : '',
+    }),
+  );
 
   /**
    * Passthrough copy
