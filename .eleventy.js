@@ -15,6 +15,7 @@ module.exports = (config) => {
   config.setLibrary(
     'md',
     markdownIt({
+      html: true,
       highlight: (source, language) =>
         language ? hljs.highlight(language, source).value : '',
     }),
