@@ -29,6 +29,7 @@
     "html-minifier": "4.0.0",
     "markdown-it": "10.0.0",
     "postcss-color-function": "4.0.1",
-    "postcss-easy-import": "3.0.0"
+    "postcss-easy-import": "3.0.0",
+    "postcss-selector-matches": "4.0.0"
   }
 }
