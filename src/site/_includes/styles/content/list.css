@@ -1,18 +1,18 @@
-.list {
+.content :matches(ul, ol) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   padding-left: 1em;
   list-style: none;
 }
 
-.list__item {
+.content li {
   max-width: var(--readable-line-width);
 }
 
-.list__item:not(:last-child) {
+.content li:not(:last-child) {
   padding-bottom: 0.5em;
 }
 
-p + .list {
+.content p + :matches(ul, ol) {
   margin-top: -0.75em;
 }

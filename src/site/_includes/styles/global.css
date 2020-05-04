@@ -29,20 +29,3 @@ html,
 body {
   height: 100%;
 }
-
-a {
-  font: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-
-a:focus {
-  outline: 3px solid var(--color-blue);
-}
-
-hr {
-  background: var(--color-borders);
-  border: none;
-  height: 1px;
-  margin: 1rem 0;
-}

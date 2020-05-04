@@ -19,6 +19,7 @@ module.exports = class {
       require('autoprefixer'),
       require('postcss-easy-import'),
       require('postcss-color-function'),
+      require('postcss-selector-matches'),
     ])
       .process(rawCss, { from: rawFilepath })
       .then((result) => result.css);
