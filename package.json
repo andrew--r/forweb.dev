@@ -7,6 +7,7 @@
     "clean": "rm -rf build",
     "prestart": "yarn clean",
     "start": "NODE_ICU_DATA=./node_modules/full-icu eleventy --serve",
+    "postinstall": "yarn-deduplicate",
     "prebuild": "yarn clean",
     "build": "NODE_ICU_DATA=./node_modules/full-icu eleventy"
   },
@@ -30,6 +31,7 @@
     "markdown-it": "10.0.0",
     "postcss-color-function": "4.0.1",
     "postcss-easy-import": "3.0.0",
-    "postcss-selector-matches": "4.0.0"
+    "postcss-selector-matches": "4.0.0",
+    "yarn-deduplicate": "2.0.0"
   }
 }
