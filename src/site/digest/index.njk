@@ -3,35 +3,34 @@ layout: main
 title: "Дайджест Форвеба: новости фронтенда без шума"
 description: "Во фронтенде много хайпа и информационного шума. Соцсети и медиа перегружают нас информацией и вызывают синдром упущенной выгоды. Дайджест Форвеба помогает бороться с этим: выходит раз в две недели и содержит только стоящие внимания события и материалы."
 ---
-<h2 class="heading heading--1">Дайджест Форвеба</h2>
+<div class="content">
+  <h1>Дайджест Форвеба</h1>
 
-<p class="paragraph--lead">
-  Новости фронтенда без шума
-</p>
+  <p class="paragraph--lead">Новости фронтенда без шума</p>
 
-<p>
-  Во фронтенде много хайпа и информационного шума. Соцсети и медиа перегружают нас информацией и вызывают <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC_%D1%83%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D1%8B">синдром упущенной выгоды</a>.
-</p>
+  <p>
+    Во фронтенде много хайпа и информационного шума. Соцсети и медиа перегружают нас информацией и вызывают <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC_%D1%83%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D1%8B">синдром упущенной выгоды</a>.
+  </p>
 
-<p>
-  Дайджест Форвеба помогает бороться с этим: выходит раз в две недели и содержит только стоящие внимания события и материалы.
-</p>
+  <p>
+    Дайджест Форвеба помогает бороться с этим: выходит раз в две недели и содержит только стоящие внимания события и материалы.
+  </p>
 
-<hr>
+  <hr>
 
-<p>Обновление от 27.04.2020: выпуск дайджеста приостановлен.</p>
+  <p>Обновление от 27.04.2020: выпуск дайджеста приостановлен.</p>
 
-<h3 class="heading heading--2">Архив выпусков</h3>
+  <h2>Архив выпусков</h2>
 
-{% for item in collections.digest | sort(true, false, 'fileSlug') %}
-  <section style="margin: 2em 0">
-    <time datetime="{% dateToIsoString item.date %}">
-      {% formatDate item.date %}
-    </time>
-    <h4 class="heading heading--3">
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </h4>
-    <p>{{ item.data.description }}</p>
-  </section>
-{% endfor %}
-
+  {% for item in collections.digest | sort(true, false, 'fileSlug') %}
+    <section style="margin: 2em 0">
+      <time datetime="{% dateToIsoString item.date %}">
+        {% formatDate item.date %}
+      </time>
+      <h3>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </h3>
+      <p>{{ item.data.description }}</p>
+    </section>
+  {% endfor %}
+</div>

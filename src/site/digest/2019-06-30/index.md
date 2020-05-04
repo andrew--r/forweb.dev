@@ -7,26 +7,34 @@ description: Состояние CSS в 2019, дизайн-система ivi, з
 ---
 <p class="paragraph--lead">Важные новости и материалы второй половины июня 2019</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://2019.stateofcss.com/">The State of&nbsp;CSS 2019</a></h3>
+## [The State of&nbsp;CSS 2019](https://2019.stateofcss.com/)
+
 <p>Результаты опроса The State of&nbsp;CSS 2019: демография, используемые фичи/технологии/методологии, мнения и&nbsp;многое другое.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://habr.com/ru/company/ivi/blog/456854/">От&nbsp;UI-kit до&nbsp;дизайн-системы</a></h3>
+## [От&nbsp;UI-kit до&nbsp;дизайн-системы](https://habr.com/ru/company/ivi/blog/456854/)
+
 <p>Дизайнеры онлайн-кинотеатра ivi поделились опытом реализации дизайн-системы для всех платформ.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://microsoft.github.io/just/">Just</a></h3>
+## [Just](https://microsoft.github.io/just/)
+
 <p>Библиотека от&nbsp;Microsoft для организации задач сборки в&nbsp;JS-проектах (по&nbsp;сути аналог Gulp) с&nbsp;возможностью скаффолдинга.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://web.dev/google-search-sw/">Bringing service workers to&nbsp;Google Search</a></h3>
+## [Bringing service workers to&nbsp;Google Search](https://web.dev/google-search-sw/)
+
 <p>Подробный рассказ инженеров Google о&nbsp;мотивации, процессе и&nbsp;сложностях внедрения сервис-воркера на&nbsp;страницу поисковой выдачи.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://every-layout.dev/">Every Layout</a></h3>
+## [Every Layout](https://every-layout.dev/)
+
 <p>Практический учебник по&nbsp;вёрстке композируемых и&nbsp;надёжных UI-компонентов: от&nbsp;примитивов до&nbsp;сложных раскладок с&nbsp;примерами и&nbsp;объяснениями задач и&nbsp;решений.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://github.com/lydiahallie/javascript-questions">List of&nbsp;(Advanced) JavaScript Questions</a></h3>
+## [List of&nbsp;(Advanced) JavaScript Questions](https://github.com/lydiahallie/javascript-questions)
+
 <p>Список вопросов на&nbsp;знание JavaScript для собеседований, ответы и&nbsp;объяснения прилагаются.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://v8.dev/features/promise-combinators">Promise combinators</a></h3>
+## [Promise combinators](https://v8.dev/features/promise-combinators)
+
 <p>Promise.all, Promise.race, Promise.any и&nbsp;Promise.allSettled: обзор существующих комбинаторов промисов в&nbsp;блоге V8.</p>
 
-<h3 class="heading heading--2"><a target="_blank" rel="noopener noreferrer" href="https://v8.dev/blog/cost-of-javascript-2019">The cost of&nbsp;JavaScript in&nbsp;2019</a></h3>
+## [The cost of&nbsp;JavaScript in&nbsp;2019](https://v8.dev/blog/cost-of-javascript-2019)
+
 <p>Эдди Османи о&nbsp;том, как JS&nbsp;влияет на&nbsp;перформанс и&nbsp;где основные узкие места.</p>
