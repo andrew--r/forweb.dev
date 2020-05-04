@@ -4,6 +4,7 @@
   position: relative;
   left: calc(var(--safe-area) * -1);
   display: inline-block;
+  font-size: 1.25rem;
   font-weight: var(--font-weight-bold);
 }
 
