@@ -1,3 +1,4 @@
+@use 'tokens/text';
 @use 'tokens/page';
 
 pre {
@@ -5,7 +6,6 @@ pre {
   overflow-x: scroll;
   margin: 1.25em 0;
   margin-left: page.$content-spacing * -1;
-  padding: (page.$content-spacing * 0.8) page.$content-spacing
-    (page.$content-spacing * 1.2);
+  padding: text.$size-m page.$content-spacing text.$size-l;
   width: calc(100% + #{page.$content-spacing} * 2);
 }

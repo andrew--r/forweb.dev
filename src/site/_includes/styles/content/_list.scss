@@ -1,20 +1,37 @@
+@use 'tokens/color';
 @use 'tokens/text';
 
+$spacing-vertical: 1.25em;
+
 .content :matches(ul, ol) {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-  padding-left: 1em;
+  margin-top: $spacing-vertical;
+  margin-bottom: $spacing-vertical;
+  padding-left: calc(#{text.$base-line} * 1.5);
   list-style: none;
+}
+
+.content p + :matches(ul, ol) {
+  margin-top: -0.75em;
 }
 
 .content li {
   max-width: text.$readable-line-width;
+
+  &::before {
+    position: absolute;
+    transform: translateX(-100%);
+  }
 }
 
 .content li:not(:last-child) {
   padding-bottom: 0.5em;
 }
 
-.content p + :matches(ul, ol) {
-  margin-top: -0.75em;
+.content ol {
+  counter-reset: ol;
+
+  li::before {
+    counter-increment: ol;
+    content: counter(ol) '. ';
+  }
 }
