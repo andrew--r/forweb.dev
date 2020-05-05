@@ -1,10 +1,9 @@
 @use 'tokens/color';
 @use 'tokens/page';
 
-img {
+.content img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 1.25em 0;
   width: auto;
 }
