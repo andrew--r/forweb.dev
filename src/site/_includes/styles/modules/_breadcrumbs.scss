@@ -1,0 +1,6 @@
+@use 'tokens/text';
+
+.breadcrumbs {
+  font-size: text.$size-s;
+  padding-bottom: text.$base-line;
+}

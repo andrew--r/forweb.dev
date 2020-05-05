@@ -1,7 +1,9 @@
+@use 'tokens/text';
+
 p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  max-width: var(--readable-line-width);
+  max-width: text.$readable-line-width;
 }
 
 p:first-child,
@@ -14,5 +16,5 @@ p:last-child {
 }
 
 .paragraph--lead {
-  font-size: var(--font-size-l);
+  font-size: text.$size-l;
 }

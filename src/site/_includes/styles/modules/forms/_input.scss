@@ -1,0 +1,20 @@
+@use 'tokens/color';
+@use 'tokens/control';
+
+.input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: control.$height-base;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  font: inherit;
+  border: thin solid #ced4da;
+}
+
+.input:focus {
+  outline: 0;
+  border-color: color.$blue-light;
+  box-shadow: 0 0 0 0.2em color.$blue-light;
+}

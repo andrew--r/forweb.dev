@@ -1,6 +1,8 @@
+@use 'tokens/text';
+
 .form {
-  margin-top: var(--base-line);
-  margin-bottom: calc(var(--base-line) * 2);
+  margin-top: text.$base-line;
+  margin-bottom: calc(#{text.$base-line} * 2);
 }
 
 .form:last-child {
@@ -8,7 +10,7 @@
 }
 
 .form__row {
-  max-width: var(--readable-line-width);
+  max-width: text.$readable-line-width;
 }
 
 .form__row--inline {
@@ -18,7 +20,7 @@
 }
 
 .form__row--inline > * + * {
-  margin-left: calc(var(--base-line) / 2);
+  margin-left: calc(#{text.$base-line} / 2);
 }
 
 .form__row--inline > .button {
@@ -30,5 +32,5 @@
 }
 
 .form__row + .form__row {
-  margin-top: calc(var(--base-line) * 0.75);
+  margin-top: calc(#{text.$base-line} * 0.75);
 }

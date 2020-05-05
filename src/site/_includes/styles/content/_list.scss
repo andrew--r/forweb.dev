@@ -1,3 +1,5 @@
+@use 'tokens/text';
+
 .content :matches(ul, ol) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
@@ -6,7 +8,7 @@
 }
 
 .content li {
-  max-width: var(--readable-line-width);
+  max-width: text.$readable-line-width;
 }
 
 .content li:not(:last-child) {
