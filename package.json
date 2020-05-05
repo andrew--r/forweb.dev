@@ -29,10 +29,8 @@
     "hljs-alabaster": "1.0.0",
     "html-minifier": "4.0.0",
     "markdown-it": "10.0.0",
-    "postcss-color-function": "4.0.1",
-    "postcss-easy-import": "3.0.0",
-    "postcss-nested": "4.2.1",
     "postcss-selector-matches": "4.0.0",
+    "sass": "1.26.5",
     "yarn-deduplicate": "2.0.0"
   }
 }

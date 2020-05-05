@@ -1,9 +1,11 @@
+@use 'tokens/text';
+
 :root {
   box-sizing: border-box;
   height: 100%;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-family: text.$family-base;
+  font-size: text.$size-m;
+  line-height: text.$line-height-base;
 
   /* Make type rendering look crisper */
   -webkit-font-smoothing: antialiased;

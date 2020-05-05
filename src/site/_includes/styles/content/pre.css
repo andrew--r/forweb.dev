@@ -1,9 +1,0 @@
-pre {
-  background-color: #f7f7f7;
-  overflow-x: scroll;
-  margin: 1.25em 0;
-  margin-left: calc(var(--page-content-spacing) * -1);
-  padding: calc(var(--page-content-spacing) * 0.8) var(--page-content-spacing)
-    calc(var(--page-content-spacing) * 1.2);
-  width: calc(100% + var(--page-content-spacing) * 2);
-}

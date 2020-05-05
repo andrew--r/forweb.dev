@@ -1,0 +1,46 @@
+@use 'sass:color' as sassColor;
+@use 'tokens/color';
+
+@function get-border-color($color) {
+  @return sassColor.scale($color, $alpha: -80%);
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  outline: 0.1875rem solid color.$outline;
+}
+
+a:not(.unstyled-link) {
+  border-bottom: thin solid get-border-color(color.$link);
+  color: color.$link;
+
+  &:hover,
+  .indicate-visited-links &:visited:hover {
+    border-bottom-color: sassColor.scale(color.$link-hover, $alpha: -80%);
+    color: color.$link-hover;
+  }
+
+  &:matches(:focus, :active) {
+    background-color: color.$link-hover;
+    border-bottom-color: transparent;
+    color: #fff;
+    outline: 0.15em solid color.$link-hover;
+  }
+
+  .indicate-visited-links &:visited {
+    border-bottom-color: get-border-color((color.$link-visited));
+    color: color.$link-visited;
+
+    &:matches(:focus, :active) {
+      background-color: color.$link-visited;
+      border-bottom-color: transparent;
+      color: #fff;
+      outline-color: color.$link-visited;
+    }
+  }
+}

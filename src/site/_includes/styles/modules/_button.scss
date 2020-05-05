@@ -1,17 +1,20 @@
+@use 'tokens/color';
+@use 'tokens/control';
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: var(--control-height-base);
+  height: control.$height-base;
   padding-left: 0.75em;
   padding-right: 0.75em;
   font: inherit;
   border: 0;
   color: #fff;
-  background: var(--color-blue);
+  background: color.$blue;
 }
 
 .button:focus {
   outline: none;
-  box-shadow: 0 0 0 0.2em var(--color-blue-light);
+  box-shadow: 0 0 0 0.2em color.$blue-light;
 }

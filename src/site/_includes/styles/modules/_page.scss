@@ -1,3 +1,5 @@
+@use 'tokens/page';
+
 .page {
   display: flex;
   flex-direction: column;
@@ -11,8 +13,8 @@
 .page__header,
 .page__content,
 .page__footer {
-  padding-left: var(--page-content-spacing);
-  padding-right: var(--page-content-spacing);
+  padding-left: page.$content-spacing;
+  padding-right: page.$content-spacing;
 }
 
 .page__content {

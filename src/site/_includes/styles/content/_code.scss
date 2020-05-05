@@ -1,0 +1,6 @@
+@use 'tokens/text';
+
+code {
+  font-family: text.$family-code;
+  font-size: 0.875em;
+}
