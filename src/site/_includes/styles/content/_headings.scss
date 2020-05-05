@@ -2,7 +2,7 @@
 
 :matches(h1, h2, h3, h4, h5, h6) {
   max-width: text.$readable-line-width;
-  margin-bottom: calc(#{text.$size-m} / 2);
+  margin-bottom: calc(#{text.$base-line} / 2);
   font-family: text.$family-headings;
   font-weight: text.$weight-bold;
   line-height: text.$line-height-headings;
@@ -32,7 +32,7 @@ h4,
 h5,
 h6 {
   font-size: text.$size-m;
-  margin-bottom: calc(#{text.$size-m} / 4);
+  margin-bottom: calc(#{text.$base-line} / 4);
 }
 
 h3,
