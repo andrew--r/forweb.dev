@@ -2,13 +2,13 @@
 
 :matches(h1, h2, h3, h4, h5, h6) {
   max-width: text.$readable-line-width;
-  margin-bottom: text.$size-m;
+  margin-bottom: calc(#{text.$size-m} / 2);
   font-family: text.$family-headings;
   font-weight: text.$weight-bold;
   line-height: text.$line-height-headings;
 
   .content &:not(:first-child) {
-    margin-top: calc(#{text.$base-line} * var(--content-heading-spacing-top));
+    margin-top: calc(#{text.$base-line} * 2);
   }
 
   time + & {
@@ -17,29 +17,29 @@
 }
 
 h1 {
-  --content-heading-spacing-top: 2;
-
   font-size: text.$size-xxl;
 }
 
 h2 {
-  --content-heading-spacing-top: 2;
-
   font-size: text.$size-xl;
-}
-
-:matches(h3, h4, h5, h6) {
-  --content-heading-spacing-top: 2;
 }
 
 h3 {
   font-size: text.$size-l;
+}
 
+h4,
+h5,
+h6 {
+  font-size: text.$size-m;
+  margin-bottom: calc(#{text.$size-m} / 4);
+}
+
+h3,
+h4,
+h5,
+h6 {
   .content &:not(:first-child) {
     margin-top: text.$base-line;
   }
-}
-
-:matches(h4, h5, h6) {
-  font-size: text.$size-m;
 }
