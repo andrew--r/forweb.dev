@@ -7,5 +7,5 @@ pre {
   margin-left: page.$content-spacing * -1;
   padding: (page.$content-spacing * 0.8) page.$content-spacing
     (page.$content-spacing * 1.2);
-  width: calc(100% + page.$content-spacing * 2);
+  width: calc(100% + #{page.$content-spacing} * 2);
 }
