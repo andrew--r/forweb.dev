@@ -11,47 +11,19 @@ description: Годнота для фронтендеров и дизайнер�
   <p>Наши материалы:</p>
 
   <ul>
-    <li>
-      <a href="/blog/about-postcss">
-        О PostCSS от его создателя: интервью с Андреем Ситником
-      </a>
-    </li>
+    {% for article in collections.articles | sort(true, false, 'date') %}
+      <li>
+        <a href="{{ article.url }}">{{ article.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <li>
-      <a href="/blog/2020-04-29-data-state">
-        Состояние загружаемых данных
-      </a>
-    </li>
+  <p>В архиве:</p>
 
-    <li>
-      <a href="/blog/2020-05-04-code-duplication">Когда можно дублировать код?</a>
-    </li>
-
-    <li>
-      <a href="/blog/2020-05-05-object-url">URL.createObjectURL вместо FileReader.readAsDataURL</a>
-    </li>
-
-    <li>
-      <a href="/blog/2020-05-05-drag-and-drop-ux">UX drag-and-drop загрузки файлов</a>
-    </li>
-
-    <li>
-      <a href="/blog/8-things-for-beginners">8 вещей, которые я хотел бы знать в начале карьеры</a>
-    </li>
-
-    <li>
-      <a href="/blog/principles-for-writing-idiomatic-html">Принципы написания однородного, идиоматического HTML</a>
-    </li>
-
+  <ul>
     <li>
       <a href="/digest">
         Новости фронтенда без шума
-    </li>
-
-    <li>
-      <a href="https://github.com/forwebdev/ui-developer-tips" target="_blank" rel="noopener noreferrer">
-        Советы для разработчика интерфейсов
-      </a>
     </li>
   </ul>
 </div>
