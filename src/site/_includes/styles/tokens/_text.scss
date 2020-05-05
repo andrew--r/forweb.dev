@@ -2,7 +2,7 @@ $family-base: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
 $family-headings: $family-base;
 $family-code: Fira Code, Courier New, Courier, monospace;
 
-$size-s: var(--font-size-s);
+$size-s: 0.875rem;
 $size-m: var(--font-size-m);
 $size-l: var(--font-size-l);
 $size-xl: var(--font-size-xl);
@@ -17,7 +17,6 @@ $readable-line-width: 40em;
 
 :root {
   --base-line: calc(var(--font-size-m) * #{$line-height-base});
-  --font-size-s: 0.875rem;
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
   --font-size-xl: 1.5rem;
@@ -26,7 +25,6 @@ $readable-line-width: 40em;
 
 @media (min-width: 64em) {
   :root {
-    --font-size-s: 1rem;
     --font-size-m: 1.125rem;
     --font-size-l: 1.5rem;
     --font-size-xl: 1.75rem;
