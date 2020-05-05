@@ -8,7 +8,7 @@
   line-height: text.$line-height-headings;
 
   .content &:not(:first-child) {
-    margin-top: calc(text.$base-line * var(--content-heading-spacing-top));
+    margin-top: calc(#{text.$base-line} * var(--content-heading-spacing-top));
   }
 
   time + & {
