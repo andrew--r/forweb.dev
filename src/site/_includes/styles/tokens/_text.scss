@@ -21,10 +21,8 @@ $readable-line-width: 40em;
   --font-size-l: 1.25rem;
   --font-size-xl: 1.5rem;
   --font-size-xxl: 2rem;
-}
 
-@media (min-width: 64em) {
-  :root {
+  @media (min-width: 64em) {
     --font-size-m: 1.125rem;
     --font-size-l: 1.375rem;
     --font-size-xl: 1.75rem;
