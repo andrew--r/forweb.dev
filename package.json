@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/forwebdev/site/issues"
   },
-  "homepage": "https://forwebdev.ru",
+  "homepage": "https://forweb.dev",
   "devDependencies": {
     "@11ty/eleventy": "0.10.0",
     "autoprefixer": "9.3.1",
