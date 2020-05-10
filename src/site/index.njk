@@ -5,20 +5,24 @@ description: Годнота для фронтендеров и дизайнер�
 ---
 <div class="content">
   <h1>
-    Годнота для фронтендеров и дизайнеров в <a href="https://t.me/forwebdev">Телеграме</a>, <a href="https://vk.com/forwebdev">ВКонтакте</a> и <a href="https://twitter.com/forwebdev">Твитере</a>
+    Годнота для фронтендеров
   </h1>
 
-  <p>Наши материалы:</p>
+  <p class="paragraph--lead">С 2014 года ежедневно публикуем свежие статьи, доклады, инструменты и многое другое в <a href="https://t.me/forwebdev">Телеграме</a>, <a href="https://vk.com/forwebdev">ВКонтакте</a> и <a href="https://twitter.com/forwebdev">Твитере</a></p>
+
+  <h2><a href="/blog">Наши статьи</a></h2>
 
   <ul>
-    {% for article in collections.articles | sort(true, false, 'date') %}
-      <li>
+    {% set latestArticles = collections.articles | sort(true, false, 'date') | slice(3) %}
+    {% for article in latestArticles[0]  %}
+      <li class="indicate-visited-links">
         <a href="{{ article.url }}">{{ article.data.title }}</a>
       </li>
     {% endfor %}
+    <li>Все статьи → <a href="/blog">/blog</a></li>
   </ul>
 
-  <p>В архиве:</p>
+  <h2>Архив</h2>
 
   <ul>
     <li>
