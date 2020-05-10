@@ -1,6 +1,7 @@
 const markdownIt = require('markdown-it');
 const hljs = require('highlight.js');
 const htmlMinifier = require('html-minifier');
+const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
 
 const LAYOUTS = ['main', 'article'];
 
@@ -48,6 +49,8 @@ module.exports = (config) => {
   /**
    * Filters
    */
+  config.addNunjucksFilter('groupByYear', groupByYear);
+
   config.addShortcode('dateToIsoString', (date) => date.toISOString());
 
   config.addShortcode('formatDate', (date) => {
