@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forwebdev/site.git"
+    "url": "git+https://github.com/andrew--r/forweb.dev.git"
   },
   "author": "Andrey Romanov <me@andreyromanov.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/forwebdev/site/issues"
+    "url": "https://github.com/andrew--r/forweb.dev/issues"
   },
   "homepage": "https://forweb.dev",
   "devDependencies": {
