@@ -1,4 +1,8 @@
 .footer {
   padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+
+  @supports (padding: max(0px)) {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
 }
