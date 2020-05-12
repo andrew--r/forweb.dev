@@ -21,6 +21,12 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {% if alternates %}
+    {% for alternate in alternates %}
+      <link rel="alternate" href="{{ alternate.href }}" type="{{ alternate.type }}" />
+    {% endfor %}
+  {% endif %}
 </head>
 <body class="page">
   <div class="page__header">
