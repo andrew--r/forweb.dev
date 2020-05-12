@@ -1,0 +1,28 @@
+@use 'tokens/color';
+
+.rss-link {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  color: color.$rss;
+  vertical-align: top;
+
+  &:hover {
+    color: color.$link-hover;
+  }
+
+  &:focus-visible {
+    background-color: color.$link-hover;
+    color: #fff;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    fill: currentColor;
+  }
+}

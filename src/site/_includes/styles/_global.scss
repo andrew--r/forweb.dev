@@ -1,7 +1,9 @@
+@use 'tokens/color';
 @use 'tokens/text';
 
 :root {
   box-sizing: border-box;
+  color: color.$text;
   height: 100%;
   font-family: text.$family-base;
   font-size: text.$size-m;

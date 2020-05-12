@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it');
 const hljs = require('highlight.js');
+const rss = require('@11ty/eleventy-plugin-rss');
 const htmlMinifier = require('html-minifier');
 const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
 
@@ -62,6 +63,11 @@ module.exports = (config) => {
 
     return formatter.format(date);
   });
+
+  /**
+   * Plugins
+   */
+  config.addPlugin(rss);
 
   return {
     dir: {
