@@ -13,7 +13,7 @@ $safe-area: 0.5rem;
 
 .logo__link {
   display: block;
-  padding: 0 $safe-area;
+  padding: $safe-area;
 }
 
 .logo__image {
