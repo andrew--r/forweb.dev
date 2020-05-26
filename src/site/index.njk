@@ -12,26 +12,46 @@ description: Годнота для фронтендеров и дизайнер�
 
   <p class="paragraph--lead">С 2014 года ежедневно публикуем свежие статьи, доклады, инструменты и многое другое в <a href="tg://resolve?domain=forwebdev">Телеграме</a>, <a href="https://vk.com/forwebdev">ВКонтакте</a> и <a href="https://twitter.com/forwebdev">Твитере</a></p>
 
-  <h2>
-    <a href="/blog">Наши статьи</a> {{ rssLink(site.feeds.articles) }}
-  </h2>
+  <section>
+    <h2>
+      <a href="/blog">Наши статьи</a> {{ rssLink(site.feeds.articles) }}
+    </h2>
 
-  <ul>
-    {% set latestArticles = collections.articles | sort(true, false, 'date') | slice(3) %}
-    {% for article in latestArticles[0]  %}
-      <li class="indicate-visited-links">
-        <a href="{{ article.url }}">{{ article.data.title }}</a>
+    <ul>
+      {% set latestArticles = collections.articles | sort(true, false, 'date') | slice(3) %}
+      {% for item in latestArticles[0]  %}
+        <li class="indicate-visited-links">
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {% endfor %}
+      <li>Все статьи → <a href="/blog">/blog</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>
+      <a href="/news">Новости фронтенда</a> {{ rssLink(site.feeds.news) }}
+    </h2>
+
+    <ul>
+      {% set latestNews = collections.news | sort(true, false, 'date') | slice(3) %}
+      {% for item in latestNews[0]  %}
+        <li class="indicate-visited-links">
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {% endfor %}
+      <li>Все новости → <a href="/news">/news</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Архив</h2>
+
+    <ul>
+      <li>
+        <a href="/digest">
+          Новости фронтенда без шума
       </li>
-    {% endfor %}
-    <li>Все статьи → <a href="/blog">/blog</a></li>
-  </ul>
-
-  <h2>Архив</h2>
-
-  <ul>
-    <li>
-      <a href="/digest">
-        Новости фронтенда без шума
-    </li>
-  </ul>
+    </ul>
+  </section>
 </div>

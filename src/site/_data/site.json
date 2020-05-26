@@ -9,6 +9,7 @@
     "url": "http://andrew-r.ru"
   },
   "feeds": {
-    "articles": "/blog/feed.xml"
+    "articles": "/blog/feed.xml",
+    "news": "/news/feed.xml"
   }
 }
