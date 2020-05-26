@@ -18,7 +18,7 @@ description: Когда дело касается обновлений, мир J
 
 ---
 
-Оригинал: [NPM now marks packages as abandoned after 24h since the last commit](https://www.theolognion.com/npm-now-marks-packages-as-abandoned-after-24h-since-the-last-commit/). Перевод [Артёма Трубачёва](https://twitter.com/Truuuuuuubachev).
+Оригинал: [NPM now marks packages as abandoned after 24h since the last commit](https://www.theolognion.com/npm-now-marks-packages-as-abandoned-after-24h-since-the-last-commit/). Перевод [Артёма Трубачева](https://twitter.com/Truuuuuuubachev).
 
 <details>
 <summary>Комментарий редакции</summary>
