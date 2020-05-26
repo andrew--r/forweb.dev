@@ -2,9 +2,10 @@
 layout: main
 ---
 {% set isBlog = page.url.startsWith('/blog') %}
+{% set isNews = page.url.startsWith('/news') %}
 {% set isDigest = page.url.startsWith('/digest') %}
 
-{% if isBlog or isDigest %}
+{% if isBlog or isDigest or isNews %}
   <nav class="breadcrumbs">
     {% if isDigest %}
       <a href="/digest">
@@ -15,6 +16,12 @@ layout: main
     {% if isBlog %}
       <a href="/blog">
         <span aria-hidden="true">←</span> Статьи
+      </a>
+    {% endif %}
+
+    {% if isNews %}
+      <a href="/news">
+        <span aria-hidden="true">←</span> Новости
       </a>
     {% endif %}
   </nav>
