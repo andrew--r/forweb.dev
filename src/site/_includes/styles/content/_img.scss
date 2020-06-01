@@ -2,6 +2,7 @@
 @use 'tokens/page';
 
 .content img {
+  border: thin solid color.$borders;
   display: block;
   max-width: 100%;
   height: auto;

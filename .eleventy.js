@@ -3,6 +3,7 @@ const hljs = require('highlight.js');
 const rss = require('@11ty/eleventy-plugin-rss');
 const htmlMinifier = require('html-minifier');
 const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
+const { sliceArray } = require('./src/nunjucks/filters/sliceArray');
 
 const LAYOUTS = ['main', 'article'];
 
@@ -51,6 +52,7 @@ module.exports = (config) => {
    * Filters
    */
   config.addNunjucksFilter('groupByYear', groupByYear);
+  config.addNunjucksFilter('sliceArray', sliceArray);
 
   config.addShortcode('dateToIsoString', (date) => date.toISOString());
 
