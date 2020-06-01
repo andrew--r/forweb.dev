@@ -18,8 +18,8 @@ description: Годнота для фронтендеров и дизайнер�
     </h2>
 
     <ul>
-      {% set latestArticles = collections.articles | sort(true, false, 'date') | slice(3) %}
-      {% for item in latestArticles[0]  %}
+      {% set latestArticles = collections.articles | sort(true, false, 'date') | sliceArray(0, 3) %}
+      {% for item in latestArticles %}
         <li class="indicate-visited-links">
           <a href="{{ item.url }}">{{ item.data.title }}</a>
         </li>
@@ -34,8 +34,8 @@ description: Годнота для фронтендеров и дизайнер�
     </h2>
 
     <ul>
-      {% set latestNews = collections.news | sort(true, false, 'date') | slice(3) %}
-      {% for item in latestNews[0]  %}
+      {% set latestNews = collections.news | sort(true, false, 'date') | sliceArray(0, 2) %}
+      {% for item in latestNews  %}
         <li class="indicate-visited-links">
           <a href="{{ item.url }}">{{ item.data.title }}</a>
         </li>
