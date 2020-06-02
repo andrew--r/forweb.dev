@@ -73,11 +73,11 @@ module.exports = (config) => {
 
   config.setBrowserSyncConfig({
     callbacks: {
-      ready: (err, bs) => {
-        bs.addMiddleware('*', (req, res) => {
-          const content_404 = fs.readFileSync(`${OUTPUT_FOLDER_NAME}/404.html`);
+      ready: (err, browserSync) => {
+        browserSync.addMiddleware('*', (req, res) => {
+          const notFoundPageContent = fs.readFileSync(`${OUTPUT_FOLDER_NAME}/404.html`);
 
-          res.write(content_404);
+          res.write(notFoundPageContent);
           res.writeHead(404);
           res.end();
         });
