@@ -2,9 +2,11 @@ const markdownIt = require('markdown-it');
 const hljs = require('highlight.js');
 const rss = require('@11ty/eleventy-plugin-rss');
 const htmlMinifier = require('html-minifier');
+const fs = require('fs');
 const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
 const { sliceArray } = require('./src/nunjucks/filters/sliceArray');
 
+const OUTPUT_FOLDER_NAME = 'build';
 const LAYOUTS = ['main', 'article'];
 
 module.exports = (config) => {
@@ -71,10 +73,24 @@ module.exports = (config) => {
    */
   config.addPlugin(rss);
 
+  config.setBrowserSyncConfig({
+    callbacks: {
+      ready: (err, browserSync) => {
+        browserSync.addMiddleware('*', (req, res) => {
+          const notFoundPageContent = fs.readFileSync(`${OUTPUT_FOLDER_NAME}/404.html`);
+
+          res.write(notFoundPageContent);
+          res.writeHead(404);
+          res.end();
+        });
+      }
+    }
+  });
+
   return {
     dir: {
       input: 'src/site',
-      output: 'build',
+      output: OUTPUT_FOLDER_NAME,
     },
     templateFormats: ['njk', 'md', 'png', 'jpg', 'svg', '11ty.js'],
     passthroughFileCopy: true,
