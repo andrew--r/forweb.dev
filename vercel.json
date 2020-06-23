@@ -1,6 +1,11 @@
 {
   "routes": [
     {
+      "src": "/(news|digest|blog)",
+      "status": 301,
+      "headers": { "Location": "/ru/$1" }
+    },
+    {
       "src": "/(news|digest|blog)/(.*)",
       "status": 301,
       "headers": { "Location": "/ru/$1/$2" }
