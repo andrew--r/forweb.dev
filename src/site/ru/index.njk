@@ -14,7 +14,7 @@ description: Годнота для фронтендеров и дизайнер�
 
   <section>
     <h2>
-      <a href="/blog">Наши статьи</a> {{ rssLink(site.feeds.articles) }}
+      <a href="/ru/blog">Наши статьи</a> {{ rssLink(site.feeds.ru.articles) }}
     </h2>
 
     <ul>
@@ -24,13 +24,13 @@ description: Годнота для фронтендеров и дизайнер�
           <a href="{{ item.url }}">{{ item.data.title }}</a>
         </li>
       {% endfor %}
-      <li>Все статьи → <a href="/blog">/blog</a></li>
+      <li>Все статьи → <a href="/ru/blog">/blog</a></li>
     </ul>
   </section>
 
   <section>
     <h2>
-      <a href="/news">Новости фронтенда</a> {{ rssLink(site.feeds.news) }}
+      <a href="/ru/news">Новости фронтенда</a> {{ rssLink(site.feeds.ru.news) }}
     </h2>
 
     <ul>
@@ -40,7 +40,7 @@ description: Годнота для фронтендеров и дизайнер�
           <a href="{{ item.url }}">{{ item.data.title }}</a>
         </li>
       {% endfor %}
-      <li>Все новости → <a href="/news">/news</a></li>
+      <li>Все новости → <a href="/ru/news">/news</a></li>
     </ul>
   </section>
 
@@ -49,8 +49,9 @@ description: Годнота для фронтендеров и дизайнер�
 
     <ul>
       <li>
-        <a href="/digest">
+        <a href="/ru/digest">
           Новости фронтенда без шума
+        </a>
       </li>
     </ul>
   </section>

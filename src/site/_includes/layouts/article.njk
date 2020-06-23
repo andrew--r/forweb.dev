@@ -1,26 +1,26 @@
 ---
 layout: main
 ---
-{% set isBlog = page.url.startsWith('/blog') %}
-{% set isNews = page.url.startsWith('/news') %}
-{% set isDigest = page.url.startsWith('/digest') %}
+{% set isBlog = page.url.startsWith('/ru/blog') %}
+{% set isNews = page.url.startsWith('/ru/news') %}
+{% set isDigest = page.url.startsWith('/ru/digest') %}
 
 {% if isBlog or isDigest or isNews %}
   <nav class="breadcrumbs">
     {% if isDigest %}
-      <a href="/digest">
+      <a href="/ru/digest">
         <span aria-hidden="true">←</span> Новости фронтенда без шума
       </a>
     {% endif %}
 
     {% if isBlog %}
-      <a href="/blog">
+      <a href="/ru/blog">
         <span aria-hidden="true">←</span> Статьи
       </a>
     {% endif %}
 
     {% if isNews %}
-      <a href="/news">
+      <a href="/ru/news">
         <span aria-hidden="true">←</span> Новости
       </a>
     {% endif %}

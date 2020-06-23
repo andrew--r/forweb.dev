@@ -1,6 +1,25 @@
 {
   "routes": [
+    {
+      "src": "/(news|digest|blog)",
+      "status": 301,
+      "headers": { "Location": "/ru/$1" }
+    },
+    {
+      "src": "/(news|digest|blog)/(.*)",
+      "status": 301,
+      "headers": { "Location": "/ru/$1/$2" }
+    },
+    {
+      "src": "/",
+      "status": 302,
+      "headers": { "Location": "/ru" }
+    },
     { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
   ]
 }
