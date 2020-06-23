@@ -1,7 +1,7 @@
 {% from "components/logo/index.njk" import logo %}
 
-{% macro header() %}
+{% macro header(page) %}
   <header class="header">
-    {{ logo() }}
+    {{ logo(page.url | truncate(3, true, "")) }}
   </header>
 {% endmacro %}

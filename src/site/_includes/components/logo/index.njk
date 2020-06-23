@@ -1,10 +1,10 @@
-{% macro logo() %}
+{% macro logo(href) %}
   <div class="logo">
-    <a class="unstyled-link logo__link" href="/">
+    <a class="unstyled-link logo__link" href="{{ href }}">
       <img
         class="logo__image"
         src="/assets/images/logo.svg"
-        alt="Логотип For Web"
+        alt="For Web"
       />
       For Web
     </a>

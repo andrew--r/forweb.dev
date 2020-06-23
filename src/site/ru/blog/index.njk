@@ -1,21 +1,21 @@
 ---
 layout: main
-title: Новости фронтенда — For Web
-description: Последние новости из мира фронтенда
+title: Статьи — For Web
+description: Наши статьи и переводы
 alternates:
-  - href: /news/feed.xml
+  - href: /blog/feed.xml
     type: application/atom+xml
 ---
 {% from "components/rss-link/index.njk" import rssLink %}
 
 <div class="content">
-  <h1>Новости фронтенда {{ rssLink(site.feeds.news) }}</h1>
+  <h1>Статьи {{ rssLink(site.feeds.ru.articles) }}</h1>
 
-  {% for year, news in collections.news | groupByYear %}
+  {% for year, articles in collections.articles | groupByYear %}
     <section class="indicate-visited-links">
       <h2>{{ year }}</h2>
 
-      {% for item in news %}
+      {% for item in articles %}
         <section>
           <time datetime="{% dateToIsoString item.date %}" itemprop="datePublished">
             {% formatDate item.date %}
