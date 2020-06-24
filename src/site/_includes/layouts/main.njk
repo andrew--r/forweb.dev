@@ -1,8 +1,10 @@
 {% from "components/header/index.njk" import header %}
 {% from "components/footer/index.njk" import footer %}
 
+{% set currentLocale = site.currentLocale(page) %}
+
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="{{ currentLocale }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +39,7 @@
   </head>
   <body class="page">
     <div class="page__header">
-      {{ header(page) }}
+      {{ header(site, page) }}
     </div>
 
     <main class="page__content">
@@ -47,6 +49,5 @@
     <div class="page__footer">
       {{ footer(site=site) }}
     </div>
-
   </body>
 </html>

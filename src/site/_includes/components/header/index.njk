@@ -1,7 +1,11 @@
 {% from "components/logo/index.njk" import logo %}
+{% from "components/locale-switcher/index.njk" import localeSwitcher %}
 
-{% macro header(page) %}
+{% macro header(site, page) %}
+  {% set currentLocale = site.currentLocale(page) %}
+
   <header class="header">
-    {{ logo(page.url | truncate(3, true, "")) }}
+    {{ logo(href="/" + currentLocale) }}
+    {{ localeSwitcher(site.locales, currentLocale) }}
   </header>
 {% endmacro %}

@@ -1,0 +1,17 @@
+@use 'tokens/text';
+
+.locale-switcher {
+  margin: 1rem 0;
+  font-size: text.$size-s;
+  list-style: none;
+}
+
+.locale-switcher__item {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}

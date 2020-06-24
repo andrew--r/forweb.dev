@@ -5,6 +5,7 @@ const htmlMinifier = require('html-minifier');
 const fs = require('fs');
 const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
 const { sliceArray } = require('./src/nunjucks/filters/sliceArray');
+const localeRedirect = require('./api/localeRedirect');
 
 const OUTPUT_FOLDER_NAME = 'build';
 const LAYOUTS = ['main', 'article'];
@@ -75,16 +76,20 @@ module.exports = (config) => {
 
   config.setBrowserSyncConfig({
     callbacks: {
-      ready: (err, browserSync) => {
-        browserSync.addMiddleware('*', (req, res) => {
-          const notFoundPageContent = fs.readFileSync(`${OUTPUT_FOLDER_NAME}/404.html`);
+      ready: (_, browserSync) => {
+        browserSync.addMiddleware('/', localeRedirect);
 
-          res.write(notFoundPageContent);
-          res.writeHead(404);
-          res.end();
+        browserSync.addMiddleware('*', (_, response) => {
+          const notFoundPageContent = fs.readFileSync(
+            `${OUTPUT_FOLDER_NAME}/404.html`,
+          );
+
+          response.write(notFoundPageContent);
+          response.writeHead(404);
+          response.end();
         });
-      }
-    }
+      },
+    },
   });
 
   return {
