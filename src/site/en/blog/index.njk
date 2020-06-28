@@ -1,17 +1,17 @@
 ---
 layout: main
-title: Статьи — For Web
-description: Наши статьи и переводы
+title: Articles — For Web
+description: Articles for front-end developers and web designers
 alternates:
-  - href: /ru/blog/feed.xml
+  - href: /en/blog/feed.xml
     type: application/atom+xml
 ---
 {% from "components/rss-link/index.njk" import rssLink %}
 
 <div class="content">
-  <h1>Статьи {{ rssLink(site.localeData.ru.feeds.articles) }}</h1>
+  <h1>Статьи {{ rssLink(site.localeData.en.feeds.articles) }}</h1>
 
-  {% for year, articles in collections.articlesRu | groupByYear %}
+  {% for year, articles in collections.articlesEn | groupByYear %}
     <section class="indicate-visited-links">
       <h2>{{ year }}</h2>
 

@@ -7,10 +7,25 @@ module.exports = {
   locales,
   defaultLocale: 'en',
 
-  feeds: {
+  localeData: {
+    en: {
+      author: {
+        name: 'Andrey Romanov',
+        email: 'me@andreyromanov.com',
+      },
+      feeds: {
+        articles: '/en/blog/feed.xml',
+      },
+    },
     ru: {
-      articles: '/ru/blog/feed.xml',
-      news: '/ru/news/feed.xml',
+      author: {
+        name: 'Андрей Романов',
+        email: 'me@andreyromanov.com',
+      },
+      feeds: {
+        articles: '/ru/blog/feed.xml',
+        news: '/ru/news/feed.xml',
+      },
     },
   },
 

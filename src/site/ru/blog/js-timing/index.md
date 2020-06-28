@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [articles]
+tags: [articles, ru]
 date: 2020-05-10
 title: Считаем время в JavaScript
 description: Почему расчёт длительности с помощью Date.now может привести к неожиданным результатам и как этого избежать

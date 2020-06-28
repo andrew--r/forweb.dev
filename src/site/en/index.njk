@@ -13,4 +13,20 @@ description: "Awesomeness for front-end developers and web designers: fresh arti
   <p class="paragraph--lead">
     Everyday portion of fresh articles, videos, tools and much more on <a href="https://twitter.com/forweb_en">Twitter</a>
   </p>
+
+  <section>
+    <h2>
+      <a href="/en/blog">Articles</a> {{ rssLink(site.localeData.en.feeds.articles) }}
+    </h2>
+
+    <ul>
+      {% set latestArticles = collections.articlesEn | sort(true, false, 'date') | sliceArray(0, 3) %}
+      {% for item in latestArticles %}
+        <li class="indicate-visited-links">
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {% endfor %}
+      <li>All articles → <a href="/en/blog">/blog</a></li>
+    </ul>
+  </section>
 </div>

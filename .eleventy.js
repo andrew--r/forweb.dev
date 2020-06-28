@@ -92,6 +92,17 @@ module.exports = (config) => {
     },
   });
 
+  /**
+   * Collections
+   */
+  config.addCollection('articlesEn', (collectionApi) => {
+    return collectionApi.getFilteredByTags('articles', 'en');
+  });
+
+  config.addCollection('articlesRu', (collectionApi) => {
+    return collectionApi.getFilteredByTags('articles', 'ru');
+  });
+
   return {
     dir: {
       input: 'src/site',

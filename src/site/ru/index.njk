@@ -14,11 +14,11 @@ description: "Годнота для фронтендеров и дизайне�
 
   <section>
     <h2>
-      <a href="/ru/blog">Наши статьи</a> {{ rssLink(site.feeds.ru.articles) }}
+      <a href="/ru/blog">Статьи</a> {{ rssLink(site.localeData.ru.feeds.articles) }}
     </h2>
 
     <ul>
-      {% set latestArticles = collections.articles | sort(true, false, 'date') | sliceArray(0, 3) %}
+      {% set latestArticles = collections.articlesRu | sort(true, false, 'date') | sliceArray(0, 3) %}
       {% for item in latestArticles %}
         <li class="indicate-visited-links">
           <a href="{{ item.url }}">{{ item.data.title }}</a>
@@ -30,7 +30,7 @@ description: "Годнота для фронтендеров и дизайне�
 
   <section>
     <h2>
-      <a href="/ru/news">Новости фронтенда</a> {{ rssLink(site.feeds.ru.news) }}
+      <a href="/ru/news">Новости фронтенда</a> {{ rssLink(site.localeData.ru.feeds.news) }}
     </h2>
 
     <ul>
