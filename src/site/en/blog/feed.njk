@@ -1,10 +1,10 @@
 ---
-title: Статьи For Web
-permalink: "{{ site.localeData.ru.feeds.articles }}"
+title: Articles — For Web
+permalink: "{{ site.localeData.en.feeds.articles }}"
 eleventyExcludeFromCollections: true
 ---
 {% set feedUrl = page.url | absoluteUrl(site.url) %}
-{% set posts = collections.articlesRu %}
+{% set posts = collections.articlesEn %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -14,8 +14,8 @@ eleventyExcludeFromCollections: true
   <updated>{{ posts | rssLastUpdatedDate }}</updated>
   <id>{{ feedUrl }}</id>
   <author>
-    <name>{{ site.localeData.ru.author.name }}</name>
-    <email>{{ site.localeData.ru.author.email }}</email>
+    <name>{{ site.localeData.en.author.name }}</name>
+    <email>{{ site.localeData.en.author.email }}</email>
   </author>
   {%- for post in posts %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
