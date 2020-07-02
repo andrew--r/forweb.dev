@@ -1,0 +1,15 @@
+{% macro localeSwitcher(locales, currentLocale) %}
+  <ul class="locale-switcher">
+    {% for locale in locales %}
+      <li class="locale-switcher__item">
+        {% if locale == currentLocale %}
+          {{ locale }}
+        {% else %}
+          <a href="/{{ locale}}">
+            {{ locale }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

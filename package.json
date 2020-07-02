@@ -33,5 +33,8 @@
     "postcss-selector-matches": "4.0.0",
     "sass": "1.26.5",
     "yarn-deduplicate": "2.0.0"
+  },
+  "dependencies": {
+    "accept-language-parser": "1.5.0"
   }
 }

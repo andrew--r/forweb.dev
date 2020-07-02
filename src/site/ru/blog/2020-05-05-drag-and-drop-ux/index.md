@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [articles]
+tags: [articles, ru]
 date: 2020-05-05
 title: UX drag-and-drop загрузки файлов
 description: Как реализовать drag-and-drop загрузку файлов, чтобы пользователи не страдали
