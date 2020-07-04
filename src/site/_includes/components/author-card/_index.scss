@@ -4,28 +4,40 @@
 $avatar-size: 4rem;
 
 .author-card {
-  @media (max-width: media.$article-narrow-aside) {
-    display: flex;
+  display: flex;
+
+  @media (min-width: media.$article-narrow-aside) {
+    display: block;
   }
 }
 
 .author-card__content {
-  @media (max-width: media.$article-narrow-aside) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .author-card__image + & {
     min-height: $avatar-size;
+  }
+
+  @media (min-width: media.$article-narrow-aside) {
+    display: block;
+
+    .author-card__image + & {
+      min-height: auto;
+    }
   }
 }
 
 img.author-card__image {
   border-radius: 100%;
   display: block;
+  margin-right: 1rem;
   height: $avatar-size;
   width: $avatar-size;
 
   @media (min-width: media.$article-narrow-aside) {
+    margin-right: 0;
     margin-bottom: 0.5rem;
   }
 }

@@ -1,5 +1,5 @@
 {% macro authorCard(author) %}
-  <aside class="author-card">
+  <div class="author-card">
     {% if author.data.avatar %}
       <img class="author-card__image" src="{{ author.filePathStem | jsSlice(0, -3) }}/{{ author.data.avatar }}" alt="">
     {% endif %}
@@ -17,5 +17,5 @@
 
       {{ author.templateContent | safe }}
     </div>
-  </aside>
+  </div>
 {% endmacro %}

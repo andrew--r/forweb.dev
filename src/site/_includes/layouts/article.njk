@@ -2,6 +2,7 @@
 layout: main
 ---
 {% from "components/author-card/index.njk" import authorCard %}
+{% from "components/article-contributors/index.njk" import articleContributors %}
 
 {% set currentLocale = site.currentLocale(page) %}
 {% set isBlog = page.url.startsWith('/ru/blog') %}
@@ -43,9 +44,10 @@ layout: main
 
   <div class="article__body content indicate-visited-links" itemprop="articleBody">
     {% for foundAuthor in collections.people | filterPeople(currentLocale, author) %}
-      <div class="article__aside">
+      <aside class="article__aside">
         {{ authorCard(author=foundAuthor) }}
-      </div>
+        {{ articleContributors(currentLocale, collections.people | filterPeople(currentLocale, translators), collections.people | filterPeople(currentLocale, editors)) }}
+      </aside>
     {% endfor %}
     {{ content | safe }}
   </div>

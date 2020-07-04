@@ -1,6 +1,6 @@
 ---
 permalink: false
-tags: [people, ru]
+tags: [people]
 id: andrey-romanov
 name: Андрей Романов
 url: https://andrew-r.ru

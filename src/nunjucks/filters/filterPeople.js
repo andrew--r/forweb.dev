@@ -1,5 +1,9 @@
-function filterPeople(people, locale, id) {
-  return people.filter((item) => item.filePathStem.endsWith(`${id}/${locale}`));
+function filterPeople(people, locale, ids) {
+  const normalizedIds = [].concat(ids);
+
+  return people.filter((item) =>
+    normalizedIds.some((id) => item.filePathStem.endsWith(`${id}/${locale}`)),
+  );
 }
 
 module.exports = { filterPeople };
