@@ -8,4 +8,9 @@ pre {
   margin-left: page.$content-spacing * -1;
   padding: text.$size-m page.$content-spacing text.$size-l;
   width: calc(100% + #{page.$content-spacing * 2});
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
 }
