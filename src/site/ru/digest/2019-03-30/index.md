@@ -2,6 +2,7 @@
 layout: article
 date: 2019-03-30
 tags: [digest]
+author: andrey-romanov
 title: Дайджест Форвеба №6
 description: CSS-селекторы четвёртого уровня, WebAssembly за пределами веба, теги-подсказки для улучшения производительности, автоматические переносы текста, идемпотентность API, UX автокомплита, SSR в HeadHunter
 ---

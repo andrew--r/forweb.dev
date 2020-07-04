@@ -1,0 +1,21 @@
+{% macro authorCard(author) %}
+  <aside class="author-card">
+    {% if author.data.avatar %}
+      <img class="author-card__image" src="{{ author.filePathStem | jsSlice(0, -3) }}/{{ author.data.avatar }}" alt="">
+    {% endif %}
+
+    <div class="author-card__content">
+      <p class="author-card__title">
+        {% if author.data.url %}
+          <a href="{{ author.data.url }}">
+            {{ author.data.name }}
+          </a>
+        {% else %}
+          {{ author.data.name }}
+        {% endif %}
+      </p>
+
+      {{ author.templateContent | safe }}
+    </div>
+  </aside>
+{% endmacro %}

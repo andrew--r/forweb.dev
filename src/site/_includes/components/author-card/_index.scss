@@ -1,0 +1,44 @@
+@use "tokens/text";
+@use "tokens/media";
+
+$avatar-size: 4rem;
+
+.author-card {
+  @media (max-width: media.$article-narrow-aside) {
+    display: flex;
+  }
+}
+
+.author-card__content {
+  @media (max-width: media.$article-narrow-aside) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    min-height: $avatar-size;
+  }
+}
+
+img.author-card__image {
+  border-radius: 100%;
+  display: block;
+  height: $avatar-size;
+  width: $avatar-size;
+
+  @media (min-width: media.$article-narrow-aside) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.author-card__title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.author-card p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+}

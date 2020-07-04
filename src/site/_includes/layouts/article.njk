@@ -1,6 +1,9 @@
 ---
 layout: main
 ---
+{% from "components/author-card/index.njk" import authorCard %}
+
+{% set currentLocale = site.currentLocale(page) %}
 {% set isBlog = page.url.startsWith('/ru/blog') %}
 {% set isNews = page.url.startsWith('/ru/news') %}
 {% set isDigest = page.url.startsWith('/ru/digest') %}
@@ -27,8 +30,8 @@ layout: main
   </nav>
 {% endif %}
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
+<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="article__header">
     <time datetime="{% dateToIsoString page.date %}" itemprop="datePublished">
       {% formatDate page.date %}
     </time>
@@ -38,7 +41,12 @@ layout: main
     </h1>
   </header>
 
-  <div class="content indicate-visited-links" itemprop="articleBody">
+  <div class="article__body content indicate-visited-links" itemprop="articleBody">
+    {% for foundAuthor in collections.people | filterPeople(currentLocale, author) %}
+      <div class="article__aside">
+        {{ authorCard(author=foundAuthor) }}
+      </div>
+    {% endfor %}
     {{ content | safe }}
   </div>
 </article>
