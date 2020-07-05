@@ -80,7 +80,7 @@ const comments = {
 };
 ```
 
-The code has grown a bit, but the values of all flags are now changed automatically, and the probability of error due to incorrect update of one of the flags is reduced to zero. The comments uploading function becomes much simpler:
+The code has grown a bit, but as a result all flags change automatically, and the probability of error due to incorrect flag update is reduced to zero. The comments uploading function becomes much simpler:
 
 ```javascript
 function loadComments() {
