@@ -4,7 +4,8 @@ const rss = require('@11ty/eleventy-plugin-rss');
 const htmlMinifier = require('html-minifier');
 const fs = require('fs');
 const { groupByYear } = require('./src/nunjucks/filters/groupByYear');
-const { sliceArray } = require('./src/nunjucks/filters/sliceArray');
+const { jsSlice } = require('./src/nunjucks/filters/jsSlice');
+const { filterPeople } = require('./src/nunjucks/filters/filterPeople');
 const localeRedirect = require('./api/localeRedirect');
 
 const OUTPUT_FOLDER_NAME = 'build';
@@ -55,7 +56,8 @@ module.exports = (config) => {
    * Filters
    */
   config.addNunjucksFilter('groupByYear', groupByYear);
-  config.addNunjucksFilter('sliceArray', sliceArray);
+  config.addNunjucksFilter('jsSlice', jsSlice);
+  config.addNunjucksFilter('filterPeople', filterPeople);
 
   config.addShortcode('dateToIsoString', (date) => date.toISOString());
 
@@ -95,20 +97,21 @@ module.exports = (config) => {
   /**
    * Collections
    */
-  config.addCollection('articlesEn', (collectionApi) => {
-    return collectionApi.getFilteredByTags('articles', 'en');
-  });
+  function addLocalizedCollection({ name, tag, locale }) {
+    config.addCollection(name, (collectionApi) => {
+      return collectionApi.getFilteredByTags(tag, locale);
+    });
+  }
 
-  config.addCollection('articlesRu', (collectionApi) => {
-    return collectionApi.getFilteredByTags('articles', 'ru');
-  });
+  addLocalizedCollection({ name: 'articlesEn', tag: 'articles', locale: 'en' });
+  addLocalizedCollection({ name: 'articlesRu', tag: 'articles', locale: 'ru' });
 
   return {
     dir: {
       input: 'src/site',
       output: OUTPUT_FOLDER_NAME,
     },
-    templateFormats: ['njk', 'md', 'png', 'jpg', 'svg', '11ty.js'],
+    templateFormats: ['njk', 'md', 'png', 'jpg', 'jpeg', 'svg', '11ty.js'],
     passthroughFileCopy: true,
   };
 };
