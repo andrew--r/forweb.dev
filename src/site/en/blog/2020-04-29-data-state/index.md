@@ -49,7 +49,7 @@ function loadComments() {
 }
 ```
 
-It turns out to be confusing and repetitive. You have to be careful which flags you want to reset, otherwise your application will have meaningless flag combinations like `isLoading: true` and `isLoaded: true`.
+It turns out to be confusing and repetitive. You have to be careful resetting flags, otherwise you’ll get meaningless flag combinations like `isLoading: true` and `isLoaded: true`.
 
 A more practical approach to solve this problem is to describe the state of one `dataState` field and automatically calculate flags based on the value of this field:
 
