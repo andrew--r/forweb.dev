@@ -51,7 +51,7 @@ function loadComments() {
 
 It turns out to be confusing and repetitive. You have to be careful resetting flags, otherwise you’ll get meaningless flag combinations like `isLoading: true` and `isLoaded: true`.
 
-A more practical approach to solve this problem is to describe the state of one `dataState` field and automatically calculate flags based on the value of this field:
+A more practical approach is to describe the state with single `dataState` field and automatically calculate flags based on the value of this field:
 
 ```javascript
 const dataStates = {
