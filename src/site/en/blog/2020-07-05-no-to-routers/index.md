@@ -9,6 +9,8 @@ cover:
     src: the-journey-ahead.jpg
     alt: '"The journey ahead" by Anna Zarubey'
     srcset: the-journey-ahead@2x.jpg 2x
+    width: 1200
+    height: 675
 ---
 <p class="paragraph--lead">
     So you are building a javascript client-side web app for that next big project and wondering: "What router should I use?". Here is the thing: you don't need any, and you will understand why shortly.
@@ -25,6 +27,8 @@ Our application needs to determine from that URL which screen and in what state 
         src="one-step-away.jpg"
         alt='"One step away" by Anna Zarubey'
         srcset="one-step-away@2x.jpg 2x"
+        width="1200"
+        height="675"
     />
     <figcaption>"One step away" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -45,6 +49,8 @@ Usually we don't need all the pieces at once, so we put them to different endpoi
         src="state-reconstruction.jpg"
         alt="Example state reconstruction scheme, drawing by Anna Zarubey"
         srcset="state-reconstruction@2x.jpg 2x"
+        width="1200"
+        height="675"
     />
     <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -115,6 +121,8 @@ For some unknown reason all of the popular routing solutions for web frontend fo
         src="off-label.jpg"
         alt='"Off-label" by Anna Zarubey'
         srcset="off-label@2x.jpg"
+        width="1200"
+        height="675"
     />
     <figcaption>"Off-label" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -130,6 +138,8 @@ So there is no actual reason to do it. It still works quite good on small apps t
         src="obvious.jpg"
         alt='"Obvious" by Anna Zarubey'
         srcset="obvious@2x.jpg 2x"
+        width="1200"
+        height="675"
     />
     <figcaption>"Obvious" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -151,6 +161,8 @@ Router should allow to transition out of page, handle waiting time, then transit
         src="ever-ready.jpg"
         alt='"Ever-ready" by Anna Zarubey'
         srcset="ever-ready@2x.jpg 2x"
+        width="1200"
+        height="675"
     />
     <figcaption>"Ever-ready" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -170,6 +182,8 @@ Now if we are going to separate that page, we have to put all the preconditions 
         src="next-room-is-outside.jpg"
         alt='"Next room is outside" by Anna Zarubey'
         srcset="next-room-is-outside@2x.jpg 2x"
+        width="1200"
+        height="675"
     />
     <figcaption>"Next room is outside" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
