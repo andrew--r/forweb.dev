@@ -18,7 +18,7 @@ const comments = {
 };
 ```
 
-At the first glance, these flags look convenient enough. Using those data loading looks like this:
+At first glance, these flags look convenient. With such approach data loading code looks something like this:
 
 ```javascript
 const comments = {
