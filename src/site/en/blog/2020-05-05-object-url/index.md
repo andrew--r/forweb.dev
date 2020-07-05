@@ -2,6 +2,7 @@
 layout: article
 tags: [articles, en]
 date: 2020-05-05
+author: andrey-romanov
 title: URL.createObjectURL instead of FileReader.readAsDataURL
 description: Fast and cheap way to get an URL for a file or a blob
 ---
