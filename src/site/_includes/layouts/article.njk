@@ -29,6 +29,15 @@ layout: main
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+    {% if cover %}
+      <img
+        class="cover"
+        src="{{ cover.src }}"
+        alt="{{ cover.alt }}"
+        srcset="{{ cover.srcset }}"
+      />
+    {% endif %}
+
     <time datetime="{% dateToIsoString page.date %}" itemprop="datePublished">
       {% formatDate page.date %}
     </time>
