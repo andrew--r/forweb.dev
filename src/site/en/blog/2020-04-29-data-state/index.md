@@ -6,7 +6,7 @@ title: Data loading state
 description: How to describe the state of the data being loaded using a single text field instead of several boolean variables.
 ---
 
-One of the daily tasks of each frontend developer is downloading data from the server. During the download, you usually need to show the user a spinner, and if it fails, an error message. In code loading status is often described by boolean flags:
+One of the daily tasks of frontend developers is downloading data from the server. During the download, you usually need to show the user a spinner, and if download fails, an error message. In code, loading status is often described with boolean flags:
 
 ```javascript
 const comments = {
