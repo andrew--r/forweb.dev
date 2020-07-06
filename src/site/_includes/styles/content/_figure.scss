@@ -1,0 +1,11 @@
+@use 'tokens/text';
+
+figure {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+figcaption {
+  font-size: text.$size-s;
+  margin-top: 0.5em;
+}

@@ -9,7 +9,7 @@ alternates:
 {% from "components/rss-link/index.njk" import rssLink %}
 
 <div class="content">
-  <h1>Статьи {{ rssLink(site.localeData.en.feeds.articles) }}</h1>
+  <h1>Articles {{ rssLink(site.localeData.en.feeds.articles) }}</h1>
 
   {% for year, articles in collections.articlesEn | groupByYear %}
     <section class="indicate-visited-links">

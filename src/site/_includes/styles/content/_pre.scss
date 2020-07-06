@@ -6,6 +6,12 @@ pre {
   overflow-x: scroll;
   margin: 1.25em 0;
   margin-left: page.$content-spacing * -1;
+  max-width: calc(#{text.$readable-line-width} + #{page.$content-spacing * 2});
   padding: text.$size-m page.$content-spacing text.$size-l;
   width: calc(100% + #{page.$content-spacing * 2});
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
 }

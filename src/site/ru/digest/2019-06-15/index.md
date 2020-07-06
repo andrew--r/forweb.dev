@@ -2,6 +2,7 @@
 layout: article
 date: 2019-06-15
 tags: [digest]
+author: andrey-romanov
 title: Дайджест Форвеба №11
 description: Современный JS в NPM, Layout Instability API, нужны ли препроцессоры, вред CDN, всплытие переменных, CSS-мышление, что не так с NPM
 ---
