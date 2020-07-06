@@ -5,6 +5,11 @@ date: 2020-07-06
 author: andrey-romanov
 title: "Скачать или показать: заголовок Content-Disposition"
 description: Подсказываем браузеру, что делать с открытым по ссылке файлом
+og:
+  image:
+    url: social.jpg
+    height: 1674
+    width: 2138
 ---
 Открытие файла по прямой ссылке может привести либо к отображению файла прямо в браузере, либо к его скачиванию. Контролируется это поведение очень просто — HTTP-заголовком [`Content-Disposition`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) в ответе сервера.
 
