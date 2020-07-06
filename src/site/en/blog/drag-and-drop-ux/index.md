@@ -6,6 +6,11 @@ author: andrey-romanov
 translators: [stcherenkov]
 title: Files uploading drag-and-drop UX
 description: How to implement drag-and-drop file upload so that users won’t suffer
+og:
+  image:
+    url: amplifr.jpg
+    height: 919
+    width: 1200
 ---
 When implementing a form with a file upload field, it is a good practice to support drag and drop gesture from files to form.
 
