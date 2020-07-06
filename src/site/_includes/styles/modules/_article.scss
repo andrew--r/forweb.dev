@@ -1,0 +1,27 @@
+@use 'tokens/text';
+@use 'tokens/media';
+
+.article__header,
+.article__body {
+  @media (min-width: media.$article-narrow-aside) {
+    width: 60%;
+  }
+}
+
+.article__body {
+  @media (min-width: media.$article-narrow-aside) {
+    position: relative;
+  }
+}
+
+.article__aside {
+  margin: 1.5em 0;
+  font-size: text.$size-s;
+
+  @media (min-width: media.$article-narrow-aside) {
+    margin: 0;
+    position: absolute;
+    left: 120%;
+    width: 40%;
+  }
+}

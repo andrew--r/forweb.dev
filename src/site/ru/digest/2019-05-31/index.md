@@ -2,6 +2,7 @@
 layout: article
 date: 2019-05-31
 tags: [digest]
+author: andrey-romanov
 title: Дайджест Форвеба №10
 description: W3C и WHATWG помирились, ускорение скриптов с Binary AST, асинхронное программирование, генератор раскладки на CSS-гридах, система цветов и тёмная тема VK, управление монорепозиториями
 ---

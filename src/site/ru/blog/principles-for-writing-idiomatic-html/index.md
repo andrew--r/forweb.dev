@@ -2,6 +2,8 @@
 layout: article
 tags: [articles, ru]
 date: 2015-03-03
+author: nicolas-gallagher
+translators: [andrey-romanov]
 title: Принципы написания однородного HTML
 description: Этот документ представляет собой общие рекомендации по стилю написания HTML-разметки. Данное руководство призывает к использованию общепринятых и устоявшихся подходов к написанию кода.
 ---
