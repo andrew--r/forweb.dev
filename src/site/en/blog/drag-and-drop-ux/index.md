@@ -15,7 +15,7 @@ Usually, the drop area size is limited:
 
 If there is only one file upload field, this restriction is difficult to justify, and the user is hampered by it: the smaller the available area is, the harder it is for the user to aim at it.
 
-A more user-friendly approach is to expand the available drag and drop area to the full screen. For example, the way it is done on [Amplifr](https://amplifr.com) and GitHub:
+A more user-friendly approach is to expand the available drag and drop area to the full screen. For example, such approach is used on GitHub and [Amplifr](https://amplifr.com):
 
 <img src="amplifr.jpg" alt="Amplifr screenshot on file dragging" height="919" width="1200" />
 
