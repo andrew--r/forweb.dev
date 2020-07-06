@@ -8,8 +8,8 @@ description: Подсказываем браузеру, что делать с 
 og:
   image:
     url: social.png
-    height: 837
-    width: 1069
+    height: 796
+    width: 1148
 ---
 <p class="paragraph--lead">Открытие файла по прямой ссылке может привести либо к отображению файла прямо в браузере, либо к его скачиванию. Контролируется это поведение очень просто — HTTP-заголовком <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a> в ответе сервера.</p>
 
