@@ -8,8 +8,8 @@ description: Подсказываем браузеру, что делать с 
 og:
   image:
     url: social.jpg
-    height: 1674
-    width: 2138
+    height: 837
+    width: 1069
 ---
 Открытие файла по прямой ссылке может привести либо к отображению файла прямо в браузере, либо к его скачиванию. Контролируется это поведение очень просто — HTTP-заголовком [`Content-Disposition`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) в ответе сервера.
 
