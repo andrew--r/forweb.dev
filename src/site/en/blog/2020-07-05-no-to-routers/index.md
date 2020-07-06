@@ -193,7 +193,7 @@ Now if we are going to separate that page, we have to put all the preconditions 
     <figcaption>"Next room is outside" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-There is a stable trend in user experience to split long forms into multiple steps called "form wizards". If you would like to add those steps to browser history for a user to be able to use navigation buttons to move back and forward through the form, you will need to add it manually or specify "service" paths that are accessible only if the wizard is in a relevant state.
+There is a stable <abbr title="User experience">UX</abbr> trend to split long forms into multiple steps called "form wizards". If you would like to add those steps to browser history for a user to be able to use navigation buttons to move back and forward through the form, you will need to add it manually or specify "service" paths that are accessible only if the wizard is in a relevant state.
 
 You would presume there are browser limitations for this, but actually there is none: you can push the next history state without route change, but with another data.
 
