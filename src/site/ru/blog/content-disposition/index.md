@@ -7,7 +7,7 @@ title: "Скачать или показать: заголовок Content-Dispo
 description: Подсказываем браузеру, что делать с открытым по ссылке файлом
 og:
   image:
-    url: social.jpg
+    url: social.png
     height: 837
     width: 1069
 ---
