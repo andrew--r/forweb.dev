@@ -11,7 +11,7 @@ og:
     height: 837
     width: 1069
 ---
-Открытие файла по прямой ссылке может привести либо к отображению файла прямо в браузере, либо к его скачиванию. Контролируется это поведение очень просто — HTTP-заголовком [`Content-Disposition`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) в ответе сервера.
+<p class="paragraph--lead">Открытие файла по прямой ссылке может привести либо к отображению файла прямо в браузере, либо к его скачиванию. Контролируется это поведение очень просто — HTTP-заголовком <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a> в ответе сервера.</p>
 
 Если нужно отобразить файл прямо в браузере (если отображение не поддерживается, браузер скачает файл):
 

@@ -1,2 +1,12 @@
+@use 'tokens/media';
+
 $max-width: 80em;
-$content-spacing: 1rem;
+$content-spacing: var(--page-content-spacing);
+
+:root {
+  --page-content-spacing: 1rem;
+
+  @media (min-width: media.$article-narrow-aside) {
+    --page-content-spacing: 1.5rem;
+  }
+}

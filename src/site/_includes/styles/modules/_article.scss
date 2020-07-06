@@ -4,7 +4,7 @@
 .article__header,
 .article__body {
   @media (min-width: media.$article-narrow-aside) {
-    width: 60%;
+    width: 65%;
   }
 }
 
@@ -21,7 +21,7 @@
   @media (min-width: media.$article-narrow-aside) {
     margin: 0;
     position: absolute;
-    left: 120%;
-    width: 40%;
+    left: 115%;
+    width: 35%;
   }
 }
