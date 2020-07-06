@@ -47,7 +47,7 @@ When we scale our app, we split the state into many pieces. There are two reason
 1. it helps to avoid cognitive overload;
 2. it makes possible sharing the workload between several team members.
 
-Usually we don't need all the pieces at once, so we put them to different endpoints and storages. When user opens the web app, we reconstruct the required state from little pieces scattered all over the system. Even more: some of the state pieces determine which subset of other pieces should be restored.
+Usually, we don't need all the pieces at once, so we put them to different endpoints and storages. When a user opens the app, we reconstruct the required state from little pieces scattered all over the system. Moreover, some of the state pieces determine which subset of other pieces should be restored.
 
 <figure>
     <img
