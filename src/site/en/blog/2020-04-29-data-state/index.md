@@ -2,6 +2,8 @@
 layout: article
 tags: [articles, en]
 date: 2020-04-29
+author: andrey-romanov
+translators: [stcherenkov]
 title: Data loading state
 description: How to describe the state of the data being loaded using a single text field instead of several boolean variables.
 ---
