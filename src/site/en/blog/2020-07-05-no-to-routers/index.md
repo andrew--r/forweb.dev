@@ -197,7 +197,7 @@ There is a stable <abbr title="User experience">UX</abbr> trend to split long fo
 
 You would presume there are browser limitations for this, but actually there is none: you can push the next history state without route change, but with another data.
 
-Modal windows are also not allowed in router state without having their own path or being managed without router.
+Routers also don't allow storing modal dialog state. It leads to hacks, like modals having their own paths or managing modals without router at all.
 
 And some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and perfect for the use case of virtual routing – another view for the same page.
 
