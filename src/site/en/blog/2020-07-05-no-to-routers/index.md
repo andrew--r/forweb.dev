@@ -23,7 +23,7 @@ cover:
 
 # What is routing?
 
-The first interface for a user to access any website is their browser address bar. Even if your website is visited via link or from bookmarks, for a user it still goes through the address bar. Change of the address leads to a change of the page.
+The first interface for a user to access any website is their browser address bar. Even if your website is visited via a link or from bookmarks, for a user it still goes through the address bar. Change of the address leads to a change of the page.
 
 Our application needs to determine from that URL which screen and in what state to show to the user.
 
