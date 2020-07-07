@@ -64,7 +64,7 @@ This state reconstruction can be straightforward. For example, when user request
 
 If we want to simplify things, we need to delegate some of the business logic to our underlying framework somehow. There are different approaches to that. One of them would be to fully separate routing and business logic.
 
-For instance, we could match route to some handler function and just pass route parameters to it, then it will decide on how to restore the state and what to show to the user.
+For instance, we could match path to some handler function and just pass query parameters to it, then it will decide on how to restore the state and what to show to the user.
 
 It could look like this (🔀 is for routing, 🅱️️ is for business logic, ❇️ is for dependencies loading):
 
