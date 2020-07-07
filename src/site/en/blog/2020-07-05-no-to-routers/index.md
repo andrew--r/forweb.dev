@@ -199,7 +199,7 @@ You would presume there are browser limitations for this, but actually there is 
 
 Routers also don't allow storing modal dialog state. It leads to hacks, like modals having their own paths or managing modals without router at all.
 
-And some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and perfect for the use case of virtual routing – another view for the same page.
+And some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and are the perfect fit for the use case of virtual routing. Which literally is rendering of different fragments of the same page depending on current data state.
 
 Yes, you guessed it correctly: virtual routing cannot be implemented because routers assume you only have plain mapping (see #2).
 
