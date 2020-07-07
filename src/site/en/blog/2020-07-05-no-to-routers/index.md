@@ -201,7 +201,7 @@ Routers also don't allow storing modal dialog state. It leads to hacks, like mod
 
 And some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and perfect for the use case of virtual routing – another view for the same page.
 
-Yes, you guessed it correctly: virtual routing cannot be implemented because routers are assuming you only have plain mapping (see #2).
+Yes, you guessed it correctly: virtual routing cannot be implemented because routers assume you only have plain mapping (see #2).
 
 # What should we do then?
 
