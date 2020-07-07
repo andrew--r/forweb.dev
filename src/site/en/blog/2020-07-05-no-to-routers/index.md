@@ -132,9 +132,11 @@ For some unknown reason all of the popular routing solutions for web frontend fo
     <figcaption>"Off-label" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-As you already know, routing process is heavily dependent on business logic. The only two cases when it actually uses view logic are: mapping resolved state to page and rendering links.
+As you already know, routing process is heavily dependent on business logic. The only two cases when routing and view should collide are mapping resolved state to page and rendering links.
 
-So there is no actual reason to do it. It still works quite good on small apps though, because they don't have any complex or asynchronous business logic, and the only thing they need is a list of route-page pairs.
+So there is no actual reason use your view logic for routes definition. And when you do something without reason, you make it difficult to understand and maintain.
+
+It still works quite good on small apps though, because they don't have any complex or asynchronous business logic, and the only thing they need is a list of route-page pairs.
 
 ### Mistake #2: routing as simple mapping from paths to pages
 
