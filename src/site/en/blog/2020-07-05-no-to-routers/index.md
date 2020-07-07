@@ -222,7 +222,7 @@ Routing is extremely hard to build in an abstract way, because of its high coupl
 
 Of course, if you don't have business logic or put your business logic into view layer, you will be just fine with current solutions. But if you are building for the long term, putting your logic into view is neither maintainable, nor scalable. Yes, separating model and view still is a thing.
 
-There are some experimental projects though that try to view routing as a process and mix it with state management. That could be a good angle to view this problem from.
+There are some experimental projects though that try to treat routing as a process and mix it with state management. That could be a good angle to view this problem from.
 
 For example, [universal-router](https://www.kriasoft.com/universal-router/) resolves routes to actions which are fully capable of downloading requirements and deriving current view state. It also allows to pass any context to the action, meaning you can add your state manager there. Still, its concept of middlewares is too simple, it lacks community support and development predictability with at least some basic roadmap.
 
