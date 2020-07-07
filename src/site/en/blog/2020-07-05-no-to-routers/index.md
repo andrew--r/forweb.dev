@@ -149,7 +149,11 @@ So there is no actual reason to do it. It still works quite good on small apps t
     <figcaption>"Obvious" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-No, it's not. It could be, but only in simple hello-world-ish cases. In general it is a fully-fledged process with dependency loading, data processing and decision making. It is also full of side-effects: from external dependencies and data loading to browser history management.
+Router docs tell you can define routing in declarative style. Meaning the whole routing problem is just a key-value dictionary.
+
+No, it's not. It could be, but only in simple hello-world-ish cases, which get complex as soon as your app becomes 1 month old.
+
+In general it is a fully-fledged process with dependency loading, data processing and decision making. It is also full of side-effects: from external dependencies and data loading to browser history management.
 
 ### Mistake #3: immediate transitions
 
