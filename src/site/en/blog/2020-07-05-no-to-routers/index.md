@@ -66,23 +66,24 @@ If we want to simplify things, we need to delegate some of the business logic to
 
 For instance, we could match route to some handler function and just pass route parameters to it, then it will decide on how to restore the state and what to show to the user.
 
-It could look like this (🔀 is for routing, ▶️ is for business logic):
+It could look like this (🔀 is for routing, 🅱️️ is for business logic, ❇️ is for dependencies loading):
 
 ```
 🔀 Receive request path with parameters in it
-	🔀 Determine handler for this path and separate parameters
-		▶️ Check if user is authenticated
-    ▶️ Load user profile
-	    ▶️ Check if user is authorised to use this handler
-    ▶️ Load first item from path with parameter
-			▶️ Check if it exists
-			▶️ Check if user is authorised to use it
-		▶️ Load second item from path with parameter
-			▶️ Check if it exists
-			▶️ Check if it is relevant to the first item
-			▶️ Check if user is authorised to use it
-		▶️ ... (Other Business Logic)
-		🔀 Return the combined result
+    🔀 Determine handler for this path and separate parameters
+    ❇️ Load user session
+        🅱️ Check if user is authenticated
+    ❇️ Load user profile
+        🅱️ Check if user is authorised to use this handler
+    ❇️️ Load first item from path with parameter
+        🅱️ Check if it exists
+        🅱️ Check if user is authorised to use it
+    ❇️️ Load second item from path with parameter
+        🅱️ Check if it exists
+        🅱️ Check if it is relevant to the first item
+        🅱️️ Check if user is authorised to use it
+    🅱️️ ... (Other Business Logic)
+    🔀 Return the combined result
 ```
 
 And with every "Check" block we could also return intermediary result or error.
@@ -93,11 +94,11 @@ Routes are also organised hierarchically by design, so we could use this fact to
 
 Welcome to the concept of Routing Middleware. It is still business logic, but it also can't be separated from paths structure. So it is still routing too.
 
-Both routing and business logic? Too complicated! Screw hierarchy then. Why don't we just define all the requirements for each route?
+Both routing and business logic? Too complicated! Screw paths hierarchy then. Why don't we just define the list of all the checks and dependencies for each route?
 
-That would work, but we still need to provide context for those requirements. With authentication and handler authorisation it's quite straightforward – we can identify user from the named cookie passed in request context. But what about data availability and access control? Do we need to define additional language to extract ids from path? Or do we need to always name those ids in some consistent way?
+That would work, but we still need to provide context for those. With authentication and handler authorisation it's quite straightforward – we can identify user from the named cookie passed in request context. But what about data availability and access control? Do we need to define additional language to extract ids from path? Or do we need to always name those ids in some consistent way?
 
-Also we want to optimise things, so we need to define sequence for requirements check. And some of them could be done in parallel – that should be defined too. Do we need one more language? Or do we do it imperatively? Then how is it different from middlewares?
+Also, we want to optimise things, so we need to define sequences or relations for dependencies loading and checks. And some of them could be done in parallel – that should be defined too. Do we need one more language? Or do we do it imperatively? Then how is it different from middlewares?
 
 These questions make routing such a difficult task.
 
