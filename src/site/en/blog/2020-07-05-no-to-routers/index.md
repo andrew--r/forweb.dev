@@ -90,7 +90,7 @@ And with every "Check" block we could also return intermediary result or error.
 
 After a while, we will notice that most of these handlers mainly consist of the same instructions. Maybe we could separate all these checks into another layer in order to stop repeating the same thing all over again?
 
-Routes are also organised hierarchically by design, so we could use this fact to simplify our code too! Like, we can agree that all the authenticated paths start with `/user` – meaning we could match paths from left to right and apply different checks depending on where we are in the hierarchy right now.
+Paths are also hierarchical by design, so we could use this fact to simplify our code too! Like, we can agree that all the authenticated paths start with `/user` – meaning we could match paths from left to right and apply different checks depending on where we are in the hierarchy right now.
 
 Welcome to the concept of Routing Middleware. It is still business logic, but it also can't be separated from paths structure. So it is still routing too.
 
