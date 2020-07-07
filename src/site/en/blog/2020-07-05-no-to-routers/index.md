@@ -101,6 +101,8 @@ Also we want to optimise things, so we need to define sequence for requirements 
 
 These questions make routing such a difficult task.
 
+Should it really be so hard though? Maybe backend already solved all the problems, and frontend should just repeat after it's elder brother? It already does, but there are multiple important obstacles along the way.
+
 # How is web frontend routing different from backend routing?
 
 First, usually we **can't have all the logic on client-side**: data is stored on a remote server, and we need to check if data is still valid to perform the desired transition. An observant reader will note that the same problems exist on the backend: database requests are asynchronous. The problem is: asynchronous nature of data requests is conflicting with synchronous nature of the core concept of the web – links.
