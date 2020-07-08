@@ -60,9 +60,11 @@ Usually, we don't need all the pieces at once, so we put them to different endpo
     <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-This state reconstruction can be straightforward. For example, when user requests login page, we should just give them login page. But for larger applications **it is a part of their business logic**, meaning this code cannot be written in a third party library – it should be a part of the code we own.
+Sometimes state reconstruction is simple. For example, when user requests login page, we should just give them login page. Most of the times though this logic is a lot more complex, depending on current context, system state and business requirements.
 
-If we want to simplify things, we need to delegate some of the business logic to our underlying framework somehow. There are different approaches to that. One of them would be to fully separate routing and business logic.
+The question is how much of this logic should we own and how much could we generalize and delegate to routing via a framework or a library?
+
+Naturally, we would prefer to delegate as much code as possible. There are different approaches to that. One of them would be to fully separate routing and business logic.
 
 For instance, we could match path to some handler function and just pass query parameters to it, then it will decide on how to restore the state and what to show to the user.
 
@@ -71,18 +73,18 @@ It could look like this (🔀 is for routing, 🅱️️ is for business logic, 
 ```
 🔀 Receive request path with parameters in it
     🔀 Determine handler for this path and separate parameters
-    ❇️ Load user session
-        🅱️ Check if user is authenticated
-    ❇️ Load user profile
-        🅱️ Check if user is authorised to use this handler
-    ❇️️ Load first item from path with parameter
-        🅱️ Check if it exists
-        🅱️ Check if user is authorised to use it
-    ❇️️ Load second item from path with parameter
-        🅱️ Check if it exists
-        🅱️ Check if it is relevant to the first item
-        🅱️️ Check if user is authorised to use it
-    🅱️️ ... (Other Business Logic)
+        ❇️ Load user session
+            🅱️ Check if user is authenticated
+        ❇️ Load user profile
+            🅱️ Check if user is authorised to use this handler
+        ❇️️ Load first item from path with parameter
+            🅱️ Check if it exists
+            🅱️ Check if user is authorised to use it
+        ❇️️ Load second item from path with parameter
+            🅱️ Check if it exists
+            🅱️ Check if it is relevant to the first item
+            🅱️️ Check if user is authorised to use it
+        🅱️️ ... (Other Business Logic)
     🔀 Return the combined result
 ```
 
