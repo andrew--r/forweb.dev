@@ -104,7 +104,7 @@ Also, we want to optimise things, so we need to define sequences or relations fo
 
 These questions make routing such a difficult task.
 
-Should it really be so hard though? Maybe backend already solved all the problems, and frontend should just repeat after it's elder brother? It already does, but there are multiple important obstacles along the way.
+Should it be so hard, though? Maybe backend already solved all the problems, and frontend should repeat after it's elder brother? It already does, but there are multiple important obstacles along the way.
 
 # How is web frontend routing different from backend routing?
 
