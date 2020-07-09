@@ -18,7 +18,7 @@ cover:
     height: 675
 ---
 <p class="paragraph--lead">
-    So you are building a client-side web app for that next big project and wondering: "What router should I use?". Here is the thing: you don't need any, and you will understand why shortly.
+    So you are building a client-side web app for that next big project and wondering: "Which router should I use?". Here is the thing: you don't need any, and you will understand why shortly.
 </p>
 
 # What is routing?
