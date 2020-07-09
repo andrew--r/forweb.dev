@@ -206,7 +206,7 @@ Now if we are going to separate that page, we have to put all the preconditions 
     <figcaption>"Next room is outside" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-There is a stable <abbr title="User experience">UX</abbr> trend to split long forms into multiple steps called "form wizards". If you are aiming for the good UX, you would usually prefer to add those steps to browser history. This will allow user to navigate between form steps with browser buttons.
+There is a stable <abbr title="User experience">UX</abbr> trend to split long forms into multiple steps called "form wizards". If you aim for the good UX, you would usually prefer to add those steps to browser history. It will allow the user to navigate between form steps with browser buttons.
 
 Sounds like a natural feature, right? But you can't implement it with basic router functionality. You will need to push those steps to browser history manually. Router will still listen to history events, so you will need to find a workaround to ignore them. Or you could just specify service paths, that are accessible only if the wizard is in a relevant state. Meaning users will share links to various wizard steps, and you will also need to check if they are allowed to go there directly.
 
