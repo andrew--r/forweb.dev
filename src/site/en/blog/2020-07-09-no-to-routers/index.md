@@ -96,7 +96,7 @@ Paths are hierarchical by design, which can be used to simplify our code. Like, 
 
 Welcome to the concept of Routing Middleware. It is still business logic, but it also can't be separated from paths structure. So it is still routing too.
 
-Both routing and business logic? Too complicated! Screw paths hierarchy then. Why don't we just define the list of all the checks and dependencies for each route?
+Both routing and business logic? Too complicated! Screw paths hierarchy then. Why don't we define the list of all the checks and dependencies for each route?
 
 That would work, but we still need to provide context for those. With authentication and handler authorisation it's quite straightforward – we can identify user from the named cookie passed in request context. But what about data availability and access control? Do we need to define additional language to extract ids from path? Or do we need to always name those ids in some consistent way?
 
