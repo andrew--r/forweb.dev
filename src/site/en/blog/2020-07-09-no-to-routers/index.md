@@ -60,7 +60,7 @@ Usually, we don't need all the pieces at once, so we put them to different endpo
     <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-Sometimes state reconstruction is simple. For example, when user requests login page, we should just give them login page. Most of the times though this logic is a lot more complex, depending on current context, system state and business requirements.
+Sometimes state reconstruction is simple. For example, when a user requests the login page, we should just give them the login page. Most of the times, though, this logic is a lot more complex, depending on the current context, system state, and business requirements.
 
 The question is how much of this logic should we own and how much could we generalize and delegate to routing via a framework or a library?
 
