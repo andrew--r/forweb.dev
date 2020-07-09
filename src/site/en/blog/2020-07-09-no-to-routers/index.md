@@ -229,7 +229,7 @@ But you could also store: loading progress, all intermediary transitions (or red
 Your state manager can store all that data with ease and also keep it accessible for the business logic mentioned above.
 4. You need to render the screen. In a simple case, you need to choose a component by name and render it. In a more complex case, you could choose a component and all the modal screens depending on your business logic. Anyway, that's the only reason for your view library to exist, so use it!
 
-That's it. You got the path, you got dependencies for it, you stored the meta info, you finally rendered the page. **No router was harmed along the way.**
+That's it. You got the path, got dependencies for it, stored the meta info, and finally rendered the page. **No router was harmed along the way.**
 
 # Conclusion
 
