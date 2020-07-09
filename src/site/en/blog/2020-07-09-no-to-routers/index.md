@@ -210,7 +210,7 @@ There is a stable <abbr title="User experience">UX</abbr> trend to split long fo
 
 Sounds like a natural feature, right? But you can't implement it with basic router functionality. You will need to push those steps to browser history manually. Router will still listen to history events, so you will need to find a workaround to ignore them. Or you could just specify service paths, that are accessible only if the wizard is in a relevant state. Meaning users will share links to various wizard steps, and you will also need to check if they are allowed to go there directly.
 
-You would presume routers don't support this, because there are some browser limitations. Well, actually there is none: you can push the next history state without route change, but with another data.
+You would presume routers don't support this because there are some browser limitations. Well, actually, there is none: you can push the next history state without route change, but with another data.
 
 Routers also don't allow storing modal dialog state. It leads to hacks, like modals having their own paths or managing modals without router at all.
 
