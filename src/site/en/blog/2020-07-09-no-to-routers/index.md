@@ -62,7 +62,7 @@ Usually, we don't need all the pieces at once, so we put them to different endpo
 
 Sometimes state reconstruction is simple. For example, when a user requests the login page, we should just give them the login page. Most of the times, though, this logic is a lot more complex, depending on the current context, system state, and business requirements.
 
-The question is how much of this logic should we own and how much could we generalize and delegate to routing via a framework or a library?
+The question is how much of this logic should we own, and how much could we generalize and delegate to routing via a framework or a library?
 
 Naturally, we would prefer to delegate as much code as possible. There are different approaches to that. One of them would be to fully separate routing and business logic.
 
