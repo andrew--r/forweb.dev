@@ -66,7 +66,7 @@ The question is how much of this logic should we own and how much could we gener
 
 Naturally, we would prefer to delegate as much code as possible. There are different approaches to that. One of them would be to fully separate routing and business logic.
 
-For instance, we could match a path to some handler function and pass query parameters to it, then it will decide how to restore the state and what to show to the user.
+For instance, we could match a path to some handler function and pass query parameters to it. Then it will decide how to restore the state and what to show to the user.
 
 It could look like this (🔀 is for routing, 🅱️️ is for business logic, ❇️ is for dependencies loading):
 
