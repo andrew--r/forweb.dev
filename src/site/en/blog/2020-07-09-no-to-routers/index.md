@@ -84,7 +84,7 @@ It could look like this (🔀 is for routing, 🅱️️ is for business logic, 
             🅱️ Check if it exists
             🅱️ Check if it is relevant to the first item
             🅱️️ Check if user is authorised to use it
-        🅱️️ ... (Other Business Logic)
+        🅱️️ ... (Other business logic)
     🔀 Return the combined result
 ```
 
