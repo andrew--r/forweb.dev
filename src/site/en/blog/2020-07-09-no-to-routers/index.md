@@ -45,7 +45,7 @@ So, in a nutshell, routing is deriving the state from the input URL. Yes, that s
 When we scale our app, we split the state into many pieces. There are two reasons to do it:
 
 1. it helps to avoid cognitive overload;
-2. it allows to share the workload between several team members.
+2. it allows sharing the workload between several team members.
 
 Usually, we don't need all the pieces at once, so we put them to different endpoints and storages. When a user opens the app, we reconstruct the required state from little pieces scattered all over the system. Moreover, some of the state pieces determine which subset of other pieces should be restored.
 
