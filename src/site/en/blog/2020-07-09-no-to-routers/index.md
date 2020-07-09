@@ -100,7 +100,7 @@ Both routing and business logic? Too complicated! Screw paths hierarchy then. Wh
 
 That would work, but we still need to provide context for those. With authentication and handler authorisation it's quite straightforward – we can identify user from the named cookie passed in request context. But what about data availability and access control? Do we need to define additional language to extract ids from path? Or do we need to always name those ids in some consistent way?
 
-Also, we want to optimise things, so we need to define sequences or relations for dependencies loading and checks. And some of them could be done in parallel – that should be defined too. Do we need one more language? Or do we do it imperatively? Then how is it different from middlewares?
+We also want to optimize things, so we need to define sequences or relations for dependencies loading and checks. And some of them could be done in parallel – that should be defined too. Do we need one more language? Or do we do it imperatively? Then how is it different from middlewares?
 
 These questions make routing such a difficult task.
 
