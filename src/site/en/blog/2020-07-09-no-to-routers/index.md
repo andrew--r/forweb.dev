@@ -38,9 +38,9 @@ Our application needs to determine from that URL which screen and in what state 
     <figcaption>"One step away" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-So, in a nutshell, routing is matching the state to the input URL. Yes, that simple.
+So, in a nutshell, routing is deriving the state from the input URL. Yes, that simple.
 
-# Why is it difficult then?
+# Why is routing difficult then?
 
 When we scale our app, we split the state into many pieces. There are two reasons to do it:
 
