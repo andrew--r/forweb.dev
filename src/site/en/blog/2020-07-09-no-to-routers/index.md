@@ -231,7 +231,7 @@ That's it. You got the path, got dependencies for it, stored the meta info, and 
 
 # Conclusion
 
-Routing is extremely hard to build in an abstract way, because of its high coupling with business logic and libraries used to define business logic.
+It is extremely hard to build a general routing solution because of its high coupling with business logic and libraries used to define business logic.
 
 Of course, if you don't have business logic or put your business logic into the view layer, you will be fine with current solutions. But if you are building for the long term, putting your logic into view is neither maintainable nor scalable. Yes, separating model and view still is a thing.
 
