@@ -206,13 +206,13 @@ Now if we are going to separate that page, we have to put all the preconditions 
 
 There is a stable <abbr title="User experience">UX</abbr> trend to split long forms into multiple steps called "form wizards". If you aim for the good UX, you would usually prefer to add those steps to browser history. It will allow the user to navigate between form steps with browser buttons.
 
-Sounds like a natural feature, right? But you can't implement it with basic router functionality. You will need to push those steps to browser history manually. Router will still listen to history events, so you will need to find a workaround to ignore them. Or you could just specify service paths, that are accessible only if the wizard is in a relevant state. Meaning users will share links to various wizard steps, and you will also need to check if they are allowed to go there directly.
+Sounds like a natural feature, right? But you can't implement it with basic router functionality. You will need to push those steps to browser history manually. The router will still listen to history events, so you will need to find a workaround to ignore them. Or you could just specify service paths that are accessible only if the wizard is in a relevant state. Meaning users will share links to various wizard steps, and you will also need to check if they are allowed to go there directly.
 
 You would presume routers don't support this because there are some browser limitations. Well, actually, there is none: you can push the next history state without route change, but with another data.
 
-Routers also don't allow storing modal dialog state. It leads to hacks, like modals having their own paths or managing modals without router at all.
+Routers also don't allow storing modal dialogs state. It leads either to hacks like allocating a specific path to each dialog or dialogs management without router at all.
 
-And some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and are the perfect fit for the use case of virtual routing. Which literally is rendering of different fragments of the same page depending on current data state.
+Some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname) and [hashes](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash), while fragments (defined by hashes) are the vital part of the web platform and are the perfect fit for the use case of virtual routing. Which literally is rendering of different fragments of the same page depending on current data state.
 
 Yes, you guessed it correctly: virtual routing cannot be implemented because routers assume you only have plain mapping (see #2).
 
