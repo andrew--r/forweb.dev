@@ -233,12 +233,12 @@ That's it. You got the path, got dependencies for it, stored the meta info, and 
 
 Routing is extremely hard to build in an abstract way, because of its high coupling with business logic and libraries used to define business logic.
 
-Of course, if you don't have business logic or put your business logic into view layer, you will be just fine with current solutions. But if you are building for the long term, putting your logic into view is neither maintainable, nor scalable. Yes, separating model and view still is a thing.
+Of course, if you don't have business logic or put your business logic into the view layer, you will be fine with current solutions. But if you are building for the long term, putting your logic into view is neither maintainable nor scalable. Yes, separating model and view still is a thing.
 
-There are some experimental projects though that try to treat routing as a process and mix it with state management. That could be a good angle to view this problem from.
+There are some experimental projects though trying to treat routing as a process and mix it with state management. That could be a good angle to view this problem.
 
-For example, [universal-router](https://www.kriasoft.com/universal-router/) resolves routes to actions which are fully capable of downloading requirements and deriving current view state. It also allows to pass any context to the action, meaning you can add your state manager there. Still, its concept of middlewares is too simple, it lacks community support and development predictability with at least some basic roadmap.
+For example, [universal-router](https://www.kriasoft.com/universal-router/) resolves routes to actions that are fully capable of downloading requirements and deriving the current view state. It also allows you to pass any context to the action and return data of any type from that action. This, in turn, allows different approaches to business logic integration. You can inject your state and methods into the router and hand over control to it while the transition is happening. Or you can inject dependencies on action call, wait for the resolution, then continue with the business logic depending on the results. Still, its concept of middlewares is too simple, and it lacks community support and development predictability with at least some basic roadmap.
 
-But why use any libraries, if routing can be so dead-simple when you just do it in business logic?
+But why use any libraries, if routing can be so dead-simple when you do it in business logic?
 
 So for now – you just don't need a router.
