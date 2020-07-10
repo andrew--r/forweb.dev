@@ -122,7 +122,7 @@ And the last one – on the frontend, we sometimes have **virtual routes**, mean
 
 # Why none of the popular routers solve the problem?
 
-For some unknown reason all of the popular routing solutions for web frontend focus on the tip of the iceberg, while making some significant mistakes in core architecture design.
+For some unknown reason, most of the popular routing solutions for web frontend focus on the tip of the iceberg, while making some significant mistakes in core architecture design.
 
 ### Mistake #1: defining routes in view layer
 
