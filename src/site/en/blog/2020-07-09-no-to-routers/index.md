@@ -143,7 +143,7 @@ So there is no actual reason to use your view logic for routes definition. And w
 
 It still works quite well on small apps, though, because they don't have any complex or asynchronous business logic, and the only thing they need is a list of route-page pairs.
 
-### Mistake #2: routing as simple mapping from paths to pages
+### Mistake #2: routing as a simple mapping from paths to pages
 
 <figure>
     <img
@@ -156,11 +156,11 @@ It still works quite well on small apps, though, because they don't have any com
     <figcaption>"Obvious" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-Router docs tell you can define routing in declarative style. Meaning the whole routing problem is just a key-value dictionary.
+Some routers selling point is the declarative style of routes definition. Meaning the whole routing problem is just a key-value dictionary.
 
-No, it's not. It could be, but only in simple hello-world-ish cases, which get complex as soon as your app becomes 1 month old.
+No, it's not. It could be, but only in simple hello-world-ish cases, which get complex as soon as your app becomes one month old.
 
-In general it is a fully-fledged process with dependency loading, data processing and decision making. It is also full of side-effects: from external dependencies and data loading to browser history management.
+In general, it is a fully-fledged process with dependency loading, data processing, and decision-making. It is also full of side effects: from external dependencies and data loading to browser history management.
 
 ### Mistake #3: immediate transitions
 
