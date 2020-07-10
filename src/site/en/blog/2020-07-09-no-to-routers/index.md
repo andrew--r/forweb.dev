@@ -88,8 +88,6 @@ It could look like this (🔀 is for routing, 🅱️️ is for business logic, 
     🔀 Return the combined result
 ```
 
-And with every "Check" block we could also return intermediary result or error.
-
 After a while, we will notice that most of these handlers mainly consist of the same instructions – session loading and authentication check, for instance. Maybe we could separate all these checks into another layer to stop repeating the same thing all over again?
 
 Paths are hierarchical by design, which can be used to simplify our code. Like, we can agree that all the authenticated paths start with `/user` – meaning we could match paths from left to right and apply different checks depending on where we are in the hierarchy right now.
