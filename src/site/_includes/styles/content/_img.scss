@@ -1,5 +1,6 @@
 @use 'tokens/color';
 @use 'tokens/page';
+@use 'tokens/text';
 
 .content img {
   border: thin solid color.$borders;
@@ -7,4 +8,19 @@
   max-width: 100%;
   height: auto;
   width: auto;
+}
+
+img.cover {
+  width: 100%;
+  height: auto;
+}
+
+.content figure img {
+  border: none;
+}
+
+.content figcaption {
+  font-size: text.$size-s;
+  font-style: italic;
+  color: color.$caption;
 }
