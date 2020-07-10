@@ -106,19 +106,19 @@ Should it be so hard, though? Maybe backend already solved all the problems, and
 
 # How is frontend routing different from backend routing?
 
-First, usually we **can't have all the logic on client-side**: data is stored on a remote server, and we need to check if data is still valid to perform the desired transition. An observant reader will note that the same problems exist on the backend: database requests are asynchronous. The problem is: asynchronous nature of data requests is conflicting with synchronous nature of the core concept of the web – links.
+First, **we usually can't have all the logic on the client-side**: data is stored on a remote server, and we need to check if data is still valid to perform the desired transition. An observant reader will note that the same problems exist on the backend: database requests are asynchronous. The problem is: asynchronous nature of data requests is conflicting with the synchronous nature of the core concept of the web – links.
 
-By saying links are synchronous, I don't mean they transfer you immediately to your target, rather that they don't require developer to write any asynchronous javascript. Web platform already handles the links for us.
+By saying links are synchronous, I don't mean they transfer you immediately to your target, rather that they don't require writing any asynchronous javascript. The web platform already handles the links for us.
 
-This takes us to the second point. We need to **entertain users while they are waiting**. Modern web apps try to behave more like native apps, rather than websites of the past. To make transitions smooth and seamless we handle link clicks with javascript implementing from scratch all the logic provided by the platform.
+This takes us to the second point. **We need to entertain users while they are waiting**. Modern web apps try to behave more like native apps rather than websites of the past. To make transitions smooth and seamless, we handle link clicks with javascript implementing from scratch all the logic provided by the platform.
 
 User falls for this little deception and assumes that all the required resources are already on their device, so there is no need to load the whole page from the server – it can be just shown. It could be a smooth transition, or skeleton UI, or just plain old loader – in any case, we need to show something immediately after user interaction. On the contrary, waiting for a response from the backend is handled by the platform.
 
-Third, **client-side logic requires request chains**. We have to ask server for the first data chunk, then decide to load one of the next chunks depending on the first, then load all the items from the list in the second chunk... Only after long chain of async requests we finally can make the transition.
+Third, **client-side logic requires request chains**. We have to ask the server for the first data chunk, then decide to load one of the next chunks depending on the first, then load all the items from the list in the second chunk... Only after a long chain of async requests we finally can make the transition.
 
-Backend also has dependent data requests, but they could be optimised with stored procedures, or some JOIN queries. The only attempt to do something similar for the frontend is GraphQL, but it comes with a lot of disadvantages (which are out of scope of this article).
+The backend also has dependent data requests, but they could be optimized with stored procedures or JOIN queries. The only attempt to do something similar for the frontend is GraphQL, but it comes with a lot of disadvantages (which are out of the scope of this article).
 
-And the last one – on the web frontend we sometimes have **"virtual routes"**. This means, we have different screen states for the same path. Because, well, you filled the first two steps of that wizard form – so we need to show you the third one and not allow you to go to the fourth one.
+And the last one – on the frontend, we sometimes have **virtual routes**, meaning we have different screen states for the same path. Because, well, you filled the first two steps of that wizard form – so we need to show you the third one and not allow you to go to the fourth one.
 
 # Why none of the popular routers solve the problem?
 
