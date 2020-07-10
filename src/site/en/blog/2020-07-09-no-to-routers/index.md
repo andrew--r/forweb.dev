@@ -164,11 +164,11 @@ In general, it is a fully-fledged process with dependency loading, data processi
 
 ### Mistake #3: immediate transitions
 
-Let's assume, you are on a simple website with no javascript at all. When you click the link, are you immediately transitioned to your destination? No, even in this simple case you have to wait until the next page is loaded.
+Let's assume you are on a simple website with no javascript at all. When you click the link, are you immediately transitioned to your destination? No, even in this simple case, you have to wait until the next page is loaded.
 
-Waiting for transitions is in the DNA of the web from day one. Users got used to waiting after clicking the link, they **expect the next page to be loaded.** This means, it's ok to wait, because it is going to show me my entire friend list, and that's a lot of data, and I'm on 2G internet in the middle of nowhere, so I totally understand.
+Waiting for transitions is in the DNA of the web from day one. We got used to waiting after clicking the link, and we **expect the next page to be loaded**. This means it's ok to wait because I requested my entire friend list, and that's a lot of data, and I'm on 2G internet in the middle of nowhere, so I totally understand.
 
-Router should allow to transition out of page, handle waiting time, then transition to the next page. That's what browsers already do with websites, and the least we can do is not break it.
+A router should allow to transition out of the page, handle waiting time, then transition to the next page. That's what browsers already do with websites, and the least we can do is not break it.
 
 ### Mistake #4: no place for dependencies or common behaviour
 
