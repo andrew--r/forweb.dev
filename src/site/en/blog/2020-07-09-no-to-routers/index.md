@@ -60,7 +60,7 @@ Usually, we don't need all the pieces at once, so we put them to different endpo
     <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-Sometimes state reconstruction is simple. For example, when a user requests the login page, we should just give them the login page. Most of the times, though, this logic is a lot more complex, depending on the current context, system state, and business requirements.
+Sometimes state reconstruction is simple. For example, when a user requests the login page, we should just give them the login page. Most of the time, though, this logic is a lot more complex, depending on the current context, system state, and business requirements.
 
 The question is how much of this logic should we own, and how much could we generalize and delegate to routing via a framework or a library?
 
@@ -74,16 +74,16 @@ It could look like this (🔀 is for routing, 🅱️️ is for business logic, 
 🔀 Receive request path with parameters in it
     🔀 Determine handler for this path and separate parameters
         ❇️ Load user session
-            🅱️ Check if user is authenticated
+            🅱️ Check if the user is authenticated
         ❇️ Load user profile
-            🅱️ Check if user is authorised to use this handler
-        ❇️️ Load first item from path with parameter
+            🅱️ Check if the user is authorized to use this handler
+        ❇️️ Load the first item from the path with parameter
             🅱️ Check if it exists
-            🅱️ Check if user is authorised to use it
-        ❇️️ Load second item from path with parameter
+            🅱️ Check if the user is authorized to use it
+        ❇️️ Load the second item from the path with parameter
             🅱️ Check if it exists
             🅱️ Check if it is relevant to the first item
-            🅱️️ Check if user is authorised to use it
+            🅱️️ Check if the user is authorized to use it
         🅱️️ ... (Other business logic)
     🔀 Return the combined result
 ```
@@ -220,9 +220,9 @@ Yes, you guessed it correctly: virtual routing cannot be implemented because rou
 
 All this sounds awful. What should we do to solve our routing problem in a simple, maintainable, and scalable way without going crazy in the meantime? I'm glad you asked.
 
-1. You still need to deserialize state from the path and serialize it back. Many libraries do it just fine. For instance, you can check [path-to-regexp](https://github.com/pillarjs/path-to-regexp) (used by react-router and page.js), [path-parser](https://github.com/troch/path-parser) (used by router5), or [route-parser](https://github.com/rcs/route-parser). You also need to put that state into browser history (or sometimes not), and there is [history.js](https://github.com/browserstate/history.js/) lib for you, but you should probably just use [Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) – it is in a good and consistent state across all major browsers right now.
+1. You still need to deserialize the state from the path and serialize it back. Many libraries do it just fine. For instance, you can check [path-to-regexp](https://github.com/pillarjs/path-to-regexp) (used by react-router and page.js), [path-parser](https://github.com/troch/path-parser) (used by router5), or [route-parser](https://github.com/rcs/route-parser). You also need to put that state into browser history (or sometimes not), and there is [history.js](https://github.com/browserstate/history.js/) lib for you, but you should probably just use [Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) – it is in a good and consistent state across all major browsers right now.
 2. You need to add asynchronous dependencies check, which consists of additional script loading and data requests. Usually, this is what your controller handles already: redux-thunk, redux-saga, mobx, effector – whatever you prefer. If it handles your async logic, it could handle your async dependencies management.
-3. While the transition is happening, you need to know some meta info about it. It's always different, so you can just save whatever structure you prefer to your state manager. In most cases, the basics you would like to know are the current screen, the next screen and the transition state.
+3. While the transition is happening, you need to know some meta info about it. It's always different, so you can just save whatever structure you prefer to your state manager. In most cases, the basics you would like to know are the current screen, the next screen, and the transition state.
 But you could also store loading progress, all intermediary transitions (or redirects), additional context to help with the transition, scroll position, cause of transition, etc.
 Your state manager can store all that data with ease and keep it accessible for the business logic mentioned above.
 4. You need to render the screen. In a simple case, you need to choose a component by name and render it. In a more complex case, you could choose a component and all the modal screens depending on your business logic. Anyway, that's the only reason for your view library to exist, so use it!
