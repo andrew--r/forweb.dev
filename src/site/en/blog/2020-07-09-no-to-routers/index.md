@@ -170,7 +170,7 @@ Waiting for transitions is in the DNA of the web from day one. We got used to wa
 
 A router should allow to transition out of the page, handle waiting time, then transition to the next page. That's what browsers already do with websites, and the least we can do is not break it.
 
-### Mistake #4: no place for dependencies or common behaviour
+### Mistake #4: no place for dependencies or common behavior
 
 <figure>
     <img
@@ -183,13 +183,13 @@ A router should allow to transition out of the page, handle waiting time, then t
     <figcaption>"Ever-ready" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-This is generally a combination of #2 and #3, but feels like something to be addressed explicitly.
+It is generally a combination of #2 and #3 but feels like something to be addressed explicitly.
 
-Routers tend to work with pages as if the app already has everything it needs to display every page. And that may be true for calculator, or some mini game.
+Routers tend to work with pages as if the app already has everything it needs to display every page. And that may be true for a calculator, or some mini-game.
 
-In reality we have network-heavy applications, which require both data loading and a lot of javascript and styles to display it. And most of the users won't even visit that one heavy page. So the most logical solution is to separate its resources from the rest of the app.
+In reality, we have network-heavy applications, which require both data loading and a lot of javascript and styles to display it. And most of the users won't even visit that one heavy page. So the most logical solution is to separate its resources from the rest of the app.
 
-Now if we are going to separate that page, we have to put all the preconditions and dependencies inside of the page itself, but is it really where they belong? Also: do you enjoy repeating "if no user is authorised, redirect to login" for every page?
+Now if we are going to separate that page, we have to put all the preconditions and dependencies inside of the page itself, but is it really where they belong? Also: do you enjoy repeating "if no user is authorized, redirect to login" for every page?
 
 ### Mistake #5: one and only one path for every page
 
