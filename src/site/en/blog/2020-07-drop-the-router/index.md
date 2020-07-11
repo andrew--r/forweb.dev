@@ -2,45 +2,45 @@
 layout: article
 tags: [articles, en]
 date: 2020-07-11
-title: Your SPA Doesn't Need a Router
+title: Your SPA Doesn’t Need a Router
 author: stcherenkov
-description: "So you are building a client-side web app for that next big project and wondering: "Which router should I use?". Here is the thing: you don't need any at all."
+description: "So you are building a client-side web app for that next big project and wondering: “Which router should I use?”. Here is the thing: you don’t need any at all."
 og:
   image:
-    url: social.jpg
-    width: 1200
-    height: 675
+  url: social.jpg
+  width: 1200
+  height: 675
 cover:
-    src: the-journey-ahead.jpg
-    alt: '"The journey ahead" by Anna Zarubey'
-    srcset: the-journey-ahead@2x.jpg 2x
-    width: 1200
-    height: 675
+  src: the-journey-ahead.jpg
+  alt: '"The journey ahead" by Anna Zarubey'
+  srcset: the-journey-ahead@2x.jpg 2x
+  width: 1200
+  height: 675
 ---
 <p class="paragraph--lead">
-    So you are building a client-side web app for that next big project and wondering: "Which router should I use?". Here is the thing: you don't need any, and you will understand why shortly.
+  So you are building a client-side web app for that next big project and wondering: “Which router should I use?”. Here is the thing: you don’t need any, and you will understand why shortly.
 </p>
 
-# What is routing?
+## What is routing?
 
-The first interface for a user to access any website is their browser address bar. Even if your website is visited via a link or from bookmarks, for a user it still goes through the address bar. Change of the address leads to a change of the page.
+The first interface for a user to access any website is their browser address bar. Even if your website is visited via a link or from bookmarks, for a user it still goes through the address bar. Change of the address leads to a change of the page.
 
-Our application needs to determine from that URL which screen and in what state to show to the user.
+Our application needs to determine from that URL which screen and in what state to show to the user.
 
 <figure>
-    <img
-        src="one-step-away.jpg"
-        alt='"One step away" by Anna Zarubey'
-        srcset="one-step-away@2x.jpg 2x"
-        width="1200"
-        height="675"
-    />
-    <figcaption>"One step away" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="one-step-away.jpg"
+    alt="“One step away” by Anna Zarubey"
+    srcset="one-step-away@2x.jpg 2x"
+    width="1200"
+    height="675"
+  />
+  <figcaption>“One step away” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
-So, in a nutshell, routing is deriving the state from the input URL. Yes, that simple.
+So, in a nutshell, routing is deriving the state from the input URL. Yes, that simple.
 
-# Why is routing difficult then?
+## Why is routing difficult then?
 
 When we scale our app, we split the state into many pieces. There are two reasons to do it:
 
@@ -50,14 +50,14 @@ When we scale our app, we split the state into many pieces. There are two reason
 Usually, we don't need all the pieces at once, so we put them to different endpoints and storages. When a user opens the app, we reconstruct the required state from little pieces scattered all over the system. Moreover, some of the state pieces determine which subset of other pieces should be restored.
 
 <figure>
-    <img
-        src="state-reconstruction.jpg"
-        alt="Example state reconstruction scheme, drawing by Anna Zarubey"
-        srcset="state-reconstruction@2x.jpg 2x"
-        width="1200"
-        height="675"
-    />
-    <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="state-reconstruction.jpg"
+    alt="Example state reconstruction scheme, drawing by Anna Zarubey"
+    srcset="state-reconstruction@2x.jpg 2x"
+    width="1200"
+    height="675"
+  />
+  <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
 Sometimes state reconstruction is simple. For example, when a user requests the login page, we should just give them the login page. Most of the time, though, this logic is a lot more complex, depending on the current context, system state, and business requirements.
@@ -104,7 +104,7 @@ These questions make routing such a difficult task.
 
 Should it be so hard, though? Maybe backend already solved all the problems, and frontend should repeat after it's elder brother? It already does, but there are multiple important obstacles along the way.
 
-# How is frontend routing different from backend routing?
+## How is frontend routing different from backend routing?
 
 First, **we usually can't have all the logic on the client-side**: data is stored on a remote server, and we need to check if data is still valid to perform the desired transition. An observant reader will note that the same problems exist on the backend: database requests are asynchronous. The problem is: asynchronous nature of data requests is conflicting with the synchronous nature of the core concept of the web – links.
 
@@ -120,21 +120,21 @@ The backend also has dependent data requests, but they could be optimized with s
 
 And the last one – on the frontend, we sometimes have **virtual routes**, meaning we have different screen states for the same path. Because, well, you filled the first two steps of that wizard form – so we need to show you the third one and not allow you to go to the fourth one.
 
-# Why none of the popular routers solve the problem?
+## Why none of the popular routers solve the problem?
 
 For some unknown reason, most of the popular routing solutions for web frontend focus on the tip of the iceberg, while making some significant mistakes in core architecture design.
 
 ### Mistake #1: defining routes in the view layer
 
 <figure>
-    <img
-        src="off-label.jpg"
-        alt='"Off-label" by Anna Zarubey'
-        srcset="off-label@2x.jpg"
-        width="1200"
-        height="675"
-    />
-    <figcaption>"Off-label" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="off-label.jpg"
+    alt='"Off-label" by Anna Zarubey'
+    srcset="off-label@2x.jpg"
+    width="1200"
+    height="675"
+  />
+  <figcaption>"Off-label" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
 As you already know, the routing process is heavily dependent on business logic. The only two cases when routing and view should collide are mapping resolved state to page and rendering links.
@@ -146,14 +146,14 @@ It still works quite well on small apps, though, because they don't have any com
 ### Mistake #2: routing as a simple mapping from paths to pages
 
 <figure>
-    <img
-        src="obvious.jpg"
-        alt='"Obvious" by Anna Zarubey'
-        srcset="obvious@2x.jpg 2x"
-        width="1200"
-        height="675"
-    />
-    <figcaption>"Obvious" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="obvious.jpg"
+    alt='"Obvious" by Anna Zarubey'
+    srcset="obvious@2x.jpg 2x"
+    width="1200"
+    height="675"
+  />
+  <figcaption>"Obvious" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
 Some routers selling point is the declarative style of routes definition. Meaning the whole routing problem is just a key-value dictionary.
@@ -173,14 +173,14 @@ A router should allow to transition out of the page, handle waiting time, then t
 ### Mistake #4: no place for dependencies or common behavior
 
 <figure>
-    <img
-        src="ever-ready.jpg"
-        alt='"Ever-ready" by Anna Zarubey'
-        srcset="ever-ready@2x.jpg 2x"
-        width="1200"
-        height="675"
-    />
-    <figcaption>"Ever-ready" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="ever-ready.jpg"
+    alt='"Ever-ready" by Anna Zarubey'
+    srcset="ever-ready@2x.jpg 2x"
+    width="1200"
+    height="675"
+  />
+  <figcaption>"Ever-ready" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
 It is generally a combination of #2 and #3 but feels like something to be addressed explicitly.
@@ -194,14 +194,14 @@ Now if we are going to separate that page, we have to put all the preconditions 
 ### Mistake #5: one and only one path for every page
 
 <figure>
-    <img
-        src="next-room-is-outside.jpg"
-        alt='"Next room is outside" by Anna Zarubey'
-        srcset="next-room-is-outside@2x.jpg 2x"
-        width="1200"
-        height="675"
-    />
-    <figcaption>"Next room is outside" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
+  <img
+    src="next-room-is-outside.jpg"
+    alt='"Next room is outside" by Anna Zarubey'
+    srcset="next-room-is-outside@2x.jpg 2x"
+    width="1200"
+    height="675"
+  />
+  <figcaption>"Next room is outside" by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
 
 There is a stable <abbr title="User experience">UX</abbr> trend to split long forms into multiple steps called "form wizards". If you aim for the good UX, you would usually prefer to add those steps to browser history. It will allow the user to navigate between form steps with browser buttons.
@@ -216,7 +216,7 @@ Some routers even forbid mixing [pathnames](https://developer.mozilla.org/en-US/
 
 Yes, you guessed it correctly: virtual routing cannot be implemented because routers assume you only have plain mapping (see #2).
 
-# What should we do then?
+## What should we do then?
 
 All this sounds awful. What should we do to solve our routing problem in a simple, maintainable, and scalable way without going crazy in the meantime? I'm glad you asked.
 
@@ -229,7 +229,7 @@ Your state manager can store all that data with ease and keep it accessible for 
 
 That's it. You got the path, got dependencies for it, stored the meta info, and finally rendered the page. **No router was harmed along the way.**
 
-# Conclusion
+## Conclusion
 
 It is extremely hard to build a general routing solution because of its high coupling with business logic and libraries used to define business logic.
 
