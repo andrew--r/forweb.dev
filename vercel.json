@@ -1,5 +1,4 @@
 {
-  "trailingSlash": false,
   "routes": [
     {
       "src": "/(news|digest|blog)",
