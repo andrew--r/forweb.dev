@@ -16,7 +16,7 @@ When implementing a form with a file upload field, it is a good practice to
 
 Usually, the drop area size is limited:
 
-<img src="vk.jpg" alt="VK screenshot on file dragging" height="919" width="1200" />
+<img class="bordered" src="vk.jpg" alt="VK screenshot on file dragging" height="919" width="1200" />
 
 If there is only one file upload field, this restriction is difficult to justify, and the user is hampered by it: the smaller the available area is, the harder it is for the user to aim at it.
 
