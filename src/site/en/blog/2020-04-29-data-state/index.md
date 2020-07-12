@@ -8,7 +8,7 @@ title: Data loading state
 description: How to describe the state of the data being loaded using a single text field instead of several boolean variables.
 ---
 
-One of the daily tasks of frontend developers is downloading data from the server. During the download, you usually need to show the user a spinner, and if download fails, an error message. In code, loading status is often described with boolean flags:
+One of the daily tasks of every frontend developer is downloading data from the server. During the download, you usually need to show user a spinner or an error message if download fails. In code, loading status is often described with boolean flags:
 
 ```javascript
 const comments = {
@@ -20,7 +20,7 @@ const comments = {
 };
 ```
 
-At first glance, these flags look convenient. With such approach data loading code looks something like this:
+At first glance, these flags seem convenient. With such approach data loading code looks something like this:
 
 ```javascript
 const comments = {
@@ -51,7 +51,7 @@ function loadComments() {
 }
 ```
 
-It turns out to be confusing and repetitive. You have to be careful resetting flags, otherwise you’ll get meaningless flag combinations like `isLoading: true` and `isLoaded: true`.
+It turns out to be glibly and confusing. You have to be careful resetting flags, otherwise you’ll get meaningless flag combinations like `isLoading: true` and `isLoaded: true`.
 
 A more practical approach is to describe the state with single `dataState` field and automatically calculate flags based on the value of this field:
 
