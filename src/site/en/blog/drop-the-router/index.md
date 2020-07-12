@@ -1,7 +1,7 @@
 ---
 layout: article
 tags: [articles, en]
-date: 2020-07-11
+date: 2020-07-12
 title: Your SPA doesn’t need a router
 author: stcherenkov
 description: "So you are building a client-side web app for that next big project and wondering: “Which router should I use?”. Here is the thing: you don’t need any at all."
