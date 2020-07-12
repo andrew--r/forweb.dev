@@ -1,5 +1,6 @@
 @use 'tokens/text';
 @use 'tokens/media';
+@use 'tokens/color';
 
 .article__header,
 .article__body {
@@ -29,4 +30,5 @@
 .article__cover {
   width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
