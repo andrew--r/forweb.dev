@@ -45,7 +45,7 @@ layout: main
     {% endif %}
 
     <time datetime="{% dateToIsoString page.date %}" itemprop="datePublished">
-      {% formatDate page.date %}
+      {% formatDate page.date, currentLocale %}
     </time>
 
     <h1 itemprop="name headline">

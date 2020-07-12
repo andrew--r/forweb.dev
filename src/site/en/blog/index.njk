@@ -8,6 +8,8 @@ alternates:
 ---
 {% from "components/rss-link/index.njk" import rssLink %}
 
+{% set currentLocale = site.currentLocale(page) %}
+
 <div class="content">
   <h1>Articles {{ rssLink(site.localeData.en.feeds.articles) }}</h1>
 
@@ -18,7 +20,7 @@ alternates:
       {% for item in articles %}
         <section>
           <time datetime="{% dateToIsoString item.date %}" itemprop="datePublished">
-            {% formatDate item.date %}
+            {% formatDate item.date, currentLocale %}
           </time>
           <h3>
             <a href="{{ item.url }}">

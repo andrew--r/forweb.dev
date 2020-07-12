@@ -61,14 +61,14 @@ module.exports = (config) => {
 
   config.addShortcode('dateToIsoString', (date) => date.toISOString());
 
-  config.addShortcode('formatDate', (date) => {
-    const formatter = new Intl.DateTimeFormat('ru', {
+  config.addShortcode('formatDate', (date, locale) => {
+    const formatter = new Intl.DateTimeFormat(locale, {
       year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
+      month: 'long',
+      day: 'numeric',
     });
 
-    return formatter.format(date);
+    return formatter.format(date).replace(/\sг.$/, ''); // remove trailing " г." in Russian
   });
 
   /**
