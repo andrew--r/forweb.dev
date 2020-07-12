@@ -96,7 +96,7 @@ Welcome to the concept of Routing Middleware. It is still business logic, bu
 
 Both routing and business logic? Too complicated! We wanted a clear separation to delegate as much routing code as possible. Instead, we got the opposite. Screw middleware then. Why don’t we just define the list of all the checks and dependencies for each route?
 
-That would work, but we still need to provide context for those. For authentication and handler authorization it’s quite straightforward — we can identify the user from the named cookie passed in the request context. But what about data availability and access control? Do we need to invent an additional language to extract ids from the path? Or do we need to always name those ids in some way consistent with the list of checks?
+That would work, but we still need to provide context for those. For authentication and handler authorization it’s quite straightforward — we can identify the user from the named cookie passed in the request context. But what about data availability and access control? Do we need to invent an additional language to extract ids from the path? Or do we need to always name those ids using a naming convention to uniformly map ids to checks?
 
 We also want to optimize things, so we need to define sequences or relations for dependencies loading and checks. And some of them could be done in parallel — that should be defined too. Do we need one more language? Or do we do it imperatively? Then how is it different from middlewares?
 
