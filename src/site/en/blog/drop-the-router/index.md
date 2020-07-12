@@ -7,15 +7,15 @@ author: stcherenkov
 description: "So you are building a client-side web app for that next big project and wondering: “Which router should I use?”. Here is the thing: you don’t need any at all."
 og:
   image:
-    url: the-journey-ahead@2x.jpg
+    url: social@2x.jpg
     width: 1200
     height: 675
 cover:
   src: the-journey-ahead.jpg
   alt: “The journey ahead” by Anna Zarubey
   srcset: the-journey-ahead@2x.jpg 2x
-  width: 1200
-  height: 675
+  width: 1000
+  height: 563
 ---
 <p class="paragraph--lead">
   So you are building a client-side web app for that next big project and wondering: “Which router should I use?”. Here is the thing: you don’t need any, and you will understand why shortly.
@@ -32,8 +32,8 @@ Our application needs to determine from that URL which screen and in what stat
     src="one-step-away.jpg"
     alt="“One step away” by Anna Zarubey"
     srcset="one-step-away@2x.jpg 2x"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>“One step away” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -54,8 +54,8 @@ Usually, we don’t need all the pieces at once, so we put them to differen
     src="state-reconstruction.jpg"
     alt="Example state reconstruction scheme, drawing by Anna Zarubey"
     srcset="state-reconstruction@2x.jpg 2x"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>Example state reconstruction scheme, drawing by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -131,8 +131,8 @@ For some unknown reason, most of the popular routing solutions for web frontend
     src="off-label.jpg"
     alt="“Off-label” by Anna Zarubey"
     srcset="off-label@2x.jpg"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>“Off-label” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -150,8 +150,8 @@ It still works quite well on small apps, though, because they don’t have any
     src="obvious.jpg"
     alt="“Obvious” by Anna Zarubey"
     srcset="obvious@2x.jpg 2x"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>“Obvious” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -177,8 +177,8 @@ A router should allow to transition out of the page, handle waiting time, the
     src="ever-ready.jpg"
     alt="“Ever-ready” by Anna Zarubey"
     srcset="ever-ready@2x.jpg 2x"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>“Ever-ready” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
@@ -198,8 +198,8 @@ Now if we are going to separate that page, we have to put all the precondit
     src="next-room-is-outside.jpg"
     alt="“Next room is outside” by Anna Zarubey"
     srcset="next-room-is-outside@2x.jpg 2x"
-    width="1200"
-    height="675"
+    width="1000"
+    height="563"
   />
   <figcaption>“Next room is outside” by <a href="https://t.me/anna_zarubey">Anna Zarubey</a></figcaption>
 </figure>
