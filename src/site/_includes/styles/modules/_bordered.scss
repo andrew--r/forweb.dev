@@ -1,0 +1,5 @@
+@use 'tokens/color';
+
+.bordered {
+  border: thin solid color.$borders;
+}

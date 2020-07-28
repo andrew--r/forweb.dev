@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-  max-width: calc(60em + 2vw);
+  max-width: calc(#{page.$max-width} + 2vw);
   margin: auto;
   background: #fff;
 }

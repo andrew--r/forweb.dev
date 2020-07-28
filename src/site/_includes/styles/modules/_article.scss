@@ -1,0 +1,34 @@
+@use 'tokens/text';
+@use 'tokens/media';
+@use 'tokens/color';
+
+.article__header,
+.article__body {
+  @media (min-width: media.$article-narrow-aside) {
+    width: 65%;
+  }
+}
+
+.article__body {
+  @media (min-width: media.$article-narrow-aside) {
+    position: relative;
+  }
+}
+
+.article__aside {
+  margin: 1.5em 0;
+  font-size: text.$size-s;
+
+  @media (min-width: media.$article-narrow-aside) {
+    margin: 0;
+    position: absolute;
+    left: 115%;
+    width: 35%;
+  }
+}
+
+.article__cover {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
