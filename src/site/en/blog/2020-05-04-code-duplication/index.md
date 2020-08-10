@@ -1,6 +1,8 @@
 ---
 layout: article
 tags: [articles, en]
+author: andrey-romanov
+translators: [stcherenkov]
 date: 2020-05-04
 title: When code duplication is allowed?
 description: Analyzing a large code base, we immediately see cases in which the code should have been reused. But if you are just starting a project, cases of code reuse are not so obvious.
