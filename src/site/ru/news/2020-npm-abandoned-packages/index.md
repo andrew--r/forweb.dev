@@ -2,6 +2,8 @@
 layout: article
 tags: [news]
 date: 2020-05-26
+author: the-olognion
+translators: [artem-trubachev]
 title: NPM помечает пакеты заброшенными спустя сутки без коммитов
 description: Когда дело касается обновлений, мир JavaScript живёт на высоких скоростях. NPM теперь помечает пакет как заброшенный и устаревший спустя 24 часа с момента последнего не ломающего коммита.
 og:
@@ -11,7 +13,7 @@ og:
     width: 2000
 ---
 
-Когда дело касается обновлений, мир JavaScript живёт на высоких скоростях. NPM теперь помечает пакет как заброшенный и устаревший спустя 24 часа с момента последнего не ломающего коммита.
+<p class="paragraph--lead">Когда дело касается обновлений, мир JavaScript живёт на высоких скоростях. NPM теперь помечает пакет как заброшенный и устаревший спустя 24 часа с момента последнего не ломающего коммита.</p>
 
 В результате авторы популярных библиотек получают дополнительный стимул работать интенсивно и поддерживать заполненный граф активности на GitHub.
 
@@ -23,7 +25,7 @@ og:
 
 ---
 
-Оригинал: [NPM now marks packages as abandoned after 24h since the last commit](https://www.theolognion.com/npm-now-marks-packages-as-abandoned-after-24h-since-the-last-commit/). Перевод [Артёма Трубачева](https://twitter.com/Truuuuuuubachev).
+Оригинал: [NPM now marks packages as abandoned after 24h since the last commit](https://www.theolognion.com/npm-now-marks-packages-as-abandoned-after-24h-since-the-last-commit/).
 
 <details>
 <summary>Комментарий редакции</summary>

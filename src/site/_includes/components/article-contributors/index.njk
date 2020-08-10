@@ -1,0 +1,35 @@
+{% set translation = {
+  'en': 'Translation:',
+  'ru': 'Перевод:'
+} %}
+{% set editing = {
+  en: 'Editing:',
+  ru: 'Редактура:'
+} %}
+
+{% macro item(name, people) %}
+  {% set comma = joiner() %}
+
+  <p class="article-contributors__item">
+    <b>{{ name }}</b>
+    {%- for person in people -%}
+      {%- if person.data.url -%}
+        {{ comma() }} <a href="{{ person.data.url }}">{{ person.data.name }}</a>
+      {%- else -%}
+        {{ comma() }} {{ person.data.name }}
+      {%- endif -%}
+    {%- endfor -%}
+  </p>
+{% endmacro %}
+
+{% macro articleContributors(locale, translators, editors) %}
+  <div class="article-contributors">
+    {% if translators | length %}
+      {{ item(translation[locale], translators) }}
+    {% endif %}
+
+    {% if editors | length %}
+      {{ item(editing[locale], editors) }}
+    {% endif %}
+  </div>
+{% endmacro %}

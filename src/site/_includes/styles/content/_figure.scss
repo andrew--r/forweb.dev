@@ -1,0 +1,13 @@
+@use 'tokens/text';
+@use 'tokens/color';
+
+figure {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+figcaption {
+  font-size: text.$size-s;
+  margin-top: 0.5em;
+  color: color.$caption;
+}

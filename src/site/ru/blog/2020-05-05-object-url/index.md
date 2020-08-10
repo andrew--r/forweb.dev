@@ -1,6 +1,7 @@
 ---
 layout: article
 tags: [articles, ru]
+author: andrey-romanov
 date: 2020-05-05
 title: URL.createObjectURL вместо FileReader.readAsDataURL
 description: Быстрый и нетребовательный к ресурсам способ получить ссылку на файл или блоб.

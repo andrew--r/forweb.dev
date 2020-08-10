@@ -5,7 +5,19 @@ pre {
   background-color: #f7f7f7;
   overflow-x: scroll;
   margin: 1.25em 0;
-  margin-left: page.$content-spacing * -1;
+  margin-left: calc(#{page.$content-spacing} * -1);
+  max-width: calc(#{text.$readable-line-width} + #{page.$content-spacing} * 2);
   padding: text.$size-m page.$content-spacing text.$size-l;
-  width: calc(100% + #{page.$content-spacing * 2});
+  width: calc(100% + #{page.$content-spacing} * 2);
+
+  @media (min-width: text.$readable-line-width) {
+    max-width: text.$readable-line-width;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
 }
