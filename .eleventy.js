@@ -81,9 +81,13 @@ module.exports = (config) => {
       ready: (_, browserSync) => {
         browserSync.addMiddleware('/', localeRedirect);
 
-        browserSync.addMiddleware('*', (_, response) => {
+        browserSync.addMiddleware('*', (request, response) => {
+          const fileName = request.url.startsWith('/ru')
+            ? 'ru/404.html'
+            : '404.html';
+
           const notFoundPageContent = fs.readFileSync(
-            `${OUTPUT_FOLDER_NAME}/404.html`,
+            `${OUTPUT_FOLDER_NAME}/${fileName}`,
           );
 
           response.write(notFoundPageContent);
