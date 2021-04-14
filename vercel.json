@@ -16,6 +16,16 @@
     },
     { "handle": "filesystem" },
     {
+      "src": "/javascript/module-pattern",
+      "status": 404,
+      "dest": "/ru/404.html"
+    },
+    {
+      "src": "/ru/(.*)",
+      "status": 404,
+      "dest": "/ru/404.html"
+    },
+    {
       "src": "/(.*)",
       "status": 404,
       "dest": "/404.html"

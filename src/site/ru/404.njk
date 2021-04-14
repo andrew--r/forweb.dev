@@ -1,0 +1,23 @@
+---
+layout: main
+title: 404 – For Web
+permalink: /ru/404.html
+---
+{% from "components/rss-link/index.njk" import rssLink %}
+
+<div class="content">
+  <h1>Страница не найдена</h1>
+  <p class="paragraph--lead">Скорее всего вы перешли на удалённую устаревшую статью. Чтобы было не так обидно, подписывайтесь на свежие статьи, доклады, инструменты и многое другое в <a href="tg://resolve?domain=forwebdev">Телеграме</a>, <a href="https://vk.com/forwebdev">ВКонтакте</a> и <a href="https://twitter.com/forwebdev">Твитере</a>.</p>
+
+  <p>Или почитайте наши статьи:</p>
+
+  <ul>
+    {% set latestArticles = collections.articlesRu | sort(true, false, 'date') | jsSlice(0, 3) %}
+    {% for item in latestArticles %}
+      <li class="indicate-visited-links">
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+    {% endfor %}
+    <li>Все статьи → <a href="/ru/blog">/blog</a></li>
+  </ul>
+</div>
