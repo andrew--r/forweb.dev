@@ -3,7 +3,7 @@ layout: main
 title: 404 – For Web
 permalink: /ru/404.html
 ---
-{% from "components/rss-link/index.njk" import rssLink %}
+{% from "components/latest-articles-list-ru/index.njk" import latestArticlesListRu %}
 
 <div class="content">
   <h1>Страница не найдена</h1>
@@ -11,13 +11,5 @@ permalink: /ru/404.html
 
   <p>Или почитайте наши статьи:</p>
 
-  <ul>
-    {% set latestArticles = collections.articlesRu | sort(true, false, 'date') | jsSlice(0, 3) %}
-    {% for item in latestArticles %}
-      <li class="indicate-visited-links">
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
-      </li>
-    {% endfor %}
-    <li>Все статьи → <a href="/ru/blog">/blog</a></li>
-  </ul>
+  {{ latestArticlesListRu(collections) }}
 </div>

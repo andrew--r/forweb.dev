@@ -1,0 +1,11 @@
+{% macro latestArticlesListRu(collections) %}
+  <ul>
+    {% set latestArticles = collections.articlesRu | sort(true, false, 'date') | jsSlice(0, 3) %}
+    {% for item in latestArticles %}
+      <li class="indicate-visited-links">
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+    {% endfor %}
+    <li>Все статьи → <a href="/ru/blog">/blog</a></li>
+  </ul>
+{% endmacro %}
