@@ -25,3 +25,21 @@ A more user-friendly approach is to stretch the drop area to the viewport. F
 <img src="amplifr.jpg" alt="Amplifr screenshot on file dragging" height="919" width="1200" />
 
 If there are several file upload fields on a page (for example, when uploading scans of several documents is required), the drop area can still be stretched to the viewport and split into parts for each field. These areas will still be large enough.
+
+## Don’t show drop area when dragging text
+
+To prevent showing drop area on accidental or intentional text dragging, check that drag events includes files:
+
+```js
+function isFileDragEvent(event) {
+  return event.dataTransfer.types.includes('Files');
+}
+
+document.addEventListener('dragenter', (event) => {
+  if (!isFileDragEvent(event)) {
+    return;
+  }
+
+  // ...
+});
+```
