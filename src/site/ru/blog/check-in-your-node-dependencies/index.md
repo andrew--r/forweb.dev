@@ -6,6 +6,11 @@ author: jack-franklin
 translators: [andrey-romanov]
 title: Почему стоит хранить зависимости в системе контроля версий
 description: Джек Франклин из команды Chrome DevTools делится неочевидными преимуществами хранения зависимостей в git
+og:
+  image:
+    url: social.png
+    height: 801
+    width: 1286
 ---
 <p class="paragraph--lead">Везде, где я раньше работал, было простое правило: не храните <code>node_modules</code> в системе контроля версий (в этой статье я буду для краткости называть её git).</p>
 
