@@ -1,0 +1,36 @@
+.banner {
+  min-height: 70vh;
+  position: relative;
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.banner::before {
+  top: 0;
+  bottom: 50%;
+  background: #0057b7;
+}
+
+.banner::after {
+  top: 50%;
+  bottom: 0;
+  background: #ffd700;
+}
+
+.banner h1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.banner a {
+  color: #ffd700;
+  border-color: rgba(255, 255, 255, 0.5);
+}
