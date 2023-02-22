@@ -358,6 +358,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argparse@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "argparse@npm:2.0.1"
+  checksum: 83644b56493e89a254bae05702abf3a1101b4fa4d0ca31df1c9985275a5a5bd47b3c27b7fa0b71098d41114d8ca000e6ed90cad764b306f8a503665e4d517ced
+  languageName: node
+  linkType: hard
+
 "array-differ@npm:^1.0.0":
   version: 1.0.0
   resolution: "array-differ@npm:1.0.0"
@@ -1249,6 +1256,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"entities@npm:~2.1.0":
+  version: 2.1.0
+  resolution: "entities@npm:2.1.0"
+  checksum: a10a877e489586a3f6a691fe49bf3fc4e58f06c8e80522f08214a5150ba457e7017b447d4913a3fa041bda06ee4c92517baa4d8d75373eaa79369e9639225ffd
+  languageName: node
+  linkType: hard
+
 "env-paths@npm:^2.2.0":
   version: 2.2.1
   resolution: "env-paths@npm:2.2.1"
@@ -1412,7 +1426,7 @@ __metadata:
     highlight.js: 10.7.3
     hljs-alabaster: 1.0.0
     html-minifier: 4.0.0
-    markdown-it: 10.0.0
+    markdown-it: 12.3.2
     postcss-selector-matches: 4.0.0
     sass: 1.58.3
   languageName: unknown
@@ -2183,6 +2197,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"linkify-it@npm:^3.0.1":
+  version: 3.0.3
+  resolution: "linkify-it@npm:3.0.3"
+  dependencies:
+    uc.micro: ^1.0.1
+  checksum: 31367a4bb70c5bbc9703246236b504b0a8e049bcd4e0de4291fa50f0ebdebf235b5eb54db6493cb0b1319357c6eeafc4324c9f4aa34b0b943d9f2e11a1268fbc
+  languageName: node
+  linkType: hard
+
 "liquidjs@npm:^6.4.3":
   version: 6.4.3
   resolution: "liquidjs@npm:6.4.3"
@@ -2303,7 +2326,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:10.0.0, markdown-it@npm:^10.0.0":
+"markdown-it@npm:12.3.2":
+  version: 12.3.2
+  resolution: "markdown-it@npm:12.3.2"
+  dependencies:
+    argparse: ^2.0.1
+    entities: ~2.1.0
+    linkify-it: ^3.0.1
+    mdurl: ^1.0.1
+    uc.micro: ^1.0.5
+  bin:
+    markdown-it: bin/markdown-it.js
+  checksum: 890555711c1c00fa03b936ca2b213001a3b9b37dea140d8445ae4130ce16628392aad24b12e2a0a9935336ca5951f2957a38f4e5309a2e38eab44e25ff32a41e
+  languageName: node
+  linkType: hard
+
+"markdown-it@npm:^10.0.0":
   version: 10.0.0
   resolution: "markdown-it@npm:10.0.0"
   dependencies:
