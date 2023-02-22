@@ -24,7 +24,7 @@ module.exports = (config) => {
     markdownIt({
       html: true,
       highlight: (source, language) =>
-        language ? hljs.highlight(language, source).value : '',
+        language ? hljs.highlight(source, { language }).value : '',
     }),
   );
 
