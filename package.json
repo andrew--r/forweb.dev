@@ -28,7 +28,7 @@
     "highlight.js": "10.7.3",
     "hljs-alabaster": "1.0.0",
     "html-minifier": "4.0.0",
-    "markdown-it": "10.0.0",
+    "markdown-it": "12.3.2",
     "postcss-selector-matches": "4.0.0",
     "sass": "1.58.3"
   },
