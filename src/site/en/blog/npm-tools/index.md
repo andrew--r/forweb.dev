@@ -7,9 +7,9 @@ author: romanov
 description: "Hardly any front-end projects are built without external dependencies. And when it comes to choosing dependencies, you’d better make concious and informed decisions, since bad choice can lead to worsened UX and even legal consequences. In this article we’ll look into a few tools that’ll help you make those decisions better."
 og:
   image:
-    url: social.jpg
-    width: 1200
-    height: 675
+    url: social.png
+    width: 1140
+    height: 712
 ---
 <p class="paragraph--lead">
   Hardly any front-end projects are built without external dependencies. And when it comes to choosing dependencies, you’d better make concious and informed decisions, since bad choice can lead to worsened <abbr title="User experience">UX</abbr> and even legal consequences. In this article we’ll look into a few tools that’ll help you make those decisions better.
