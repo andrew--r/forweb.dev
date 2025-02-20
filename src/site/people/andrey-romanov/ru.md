@@ -6,5 +6,5 @@ name: Андрей Романов
 url: https://andrew-r.ru
 avatar: avatar.jpg
 ---
-Основатель For Web, фронтенд-разработчик в Joom
+Основатель For Web
 
