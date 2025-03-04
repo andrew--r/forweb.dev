@@ -22,22 +22,6 @@ description: "Годнота для фронтендеров и дизайне�
   </section>
 
   <section>
-    <h2>
-      <a href="/ru/news">Новости фронтенда</a> {{ rssLink(site.localeData.ru.feeds.news) }}
-    </h2>
-
-    <ul>
-      {% set latestNews = collections.news | sort(true, false, 'date') | jsSlice(0, 2) %}
-      {% for item in latestNews  %}
-        <li class="indicate-visited-links">
-          <a href="{{ item.url }}">{{ item.data.title }}</a>
-        </li>
-      {% endfor %}
-      <li>Все новости → <a href="/ru/news">/news</a></li>
-    </ul>
-  </section>
-
-  <section>
     <h2>Архив</h2>
 
     <ul>
