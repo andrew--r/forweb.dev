@@ -22,7 +22,7 @@
   "homepage": "https://forweb.dev",
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
-    "@11ty/eleventy-plugin-rss": "1.2.0",
+    "@11ty/eleventy-plugin-rss": "2.0.3",
     "autoprefixer": "9.8.8",
     "full-icu": "1.5.0",
     "highlight.js": "10.7.3",
