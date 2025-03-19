@@ -7,7 +7,7 @@
   min-height: 100%;
   max-width: calc(#{page.$max-width} + 2vw);
   margin: auto;
-  background: #fff;
+  background: var(--color-background);
 }
 
 .page__header,

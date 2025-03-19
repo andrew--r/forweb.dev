@@ -2,7 +2,7 @@
 @use 'tokens/page';
 
 pre {
-  background-color: #f7f7f7;
+  background-color: var(--color-code-background);
   overflow-x: scroll;
   margin: 1.25em 0;
   margin-left: calc(#{page.$content-spacing} * -1);

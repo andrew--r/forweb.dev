@@ -1,7 +1,5 @@
-@use 'tokens/color';
-
 hr {
-  background: color.$borders;
+  background: var(--color-borders);
   border: none;
   height: 1px;
   margin: 1rem 0;

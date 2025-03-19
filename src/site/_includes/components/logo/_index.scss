@@ -22,4 +22,9 @@ $safe-area: 0.5rem;
   height: $image-size;
   vertical-align: middle;
   margin-right: 0.5em;
+
+  @media (prefers-color-scheme: dark) {
+    outline: thin solid var(--color-borders);
+    border-radius: 50%;
+  }
 }

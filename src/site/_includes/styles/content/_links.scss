@@ -1,10 +1,3 @@
-@use 'sass:color' as sassColor;
-@use 'tokens/color';
-
-@function get-border-color($color) {
-  @return sassColor.scale($color, $alpha: -80%);
-}
-
 a {
   font: inherit;
   text-decoration: none;
@@ -12,35 +5,35 @@ a {
 }
 
 a:focus {
-  outline: 0.1875rem solid color.$outline;
+  outline: 0.1875rem solid var(--color-outline);
 }
 
 a:not(.unstyled-link) {
-  border-bottom: thin solid get-border-color(color.$link);
-  color: color.$link;
+  border-bottom: thin solid var(--color-link-border);
+  color: var(--color-link);
 
   &:hover,
   .indicate-visited-links &:visited:hover {
-    border-bottom-color: sassColor.scale(color.$link-hover, $alpha: -80%);
-    color: color.$link-hover;
+    border-bottom-color: var(--color-link-hover-border);
+    color: var(--color-link-hover);
   }
 
   &:is(:focus, :active) {
-    background-color: color.$link-hover;
+    background-color: var(--color-link-hover);
     border-bottom-color: transparent;
-    color: #fff;
-    outline: 0.15em solid color.$link-hover;
+    color: var(--color-text-knockout);
+    outline: 0.15em solid var(--color-link-hover);
   }
 
   .indicate-visited-links &:visited {
-    border-bottom-color: get-border-color((color.$link-visited));
-    color: color.$link-visited;
+    border-bottom-color: var(--color-link-visited-border);
+    color: var(--color-link-visited);
 
     &:is(:focus, :active) {
-      background-color: color.$link-visited;
+      background-color: var(--color-link-visited);
       border-bottom-color: transparent;
-      color: #fff;
-      outline-color: color.$link-visited;
+      color: var(--color-text-knockout);
+      outline-color: var(--color-link-visited);
     }
   }
 }

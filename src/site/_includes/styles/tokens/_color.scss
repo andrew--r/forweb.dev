@@ -1,16 +1,50 @@
-$blue: #005ea5;
-$blue-light: #139ceb;
-$red: #cd192e;
-$purple: #4c2c92;
-$rss: #f60;
+:root {
+  --color-blue: #005ea5;
+  --color-blue-light: #139ceb;
+  --color-red: #cd192e;
+  --color-purple: #4c2c92;
+  --color-green: #70c64f;
 
-$outline: $red;
+  --color-borders: rgba(0, 0, 0, 0.1);
+  --color-rss: #f60;
 
-$link: $blue;
-$link-hover: $red;
-$link-visited: $purple;
+  --color-link: var(--color-blue);
+  --color-link-border: rgba(0, 94, 165, 0.2);
+  --color-link-hover: var(--color-red);
+  --color-link-hover-border: rgba(205, 25, 46, 0.2);
+  --color-link-visited: var(--color-purple);
+  --color-link-visited-border: rgba(76, 44, 146, 0.2);
 
-$borders: rgba(0, 0, 0, 0.1);
+  --color-outline: var(--color-red);
 
-$text: #222;
-$caption: #666;
+  --color-background: #fff;
+  --color-text: #222;
+  --color-text-knockout: #fff;
+  --color-caption: #666;
+  --color-code-background: #f0f0f0;
+
+  --color-message-bubble: #eff2f7;
+  --color-message-bubble-shadow: #e0e6ed;
+
+  @media (prefers-color-scheme: dark) {
+    --color-blue: #66b2ff;
+    --color-blue-light: #99ccff;
+    --color-red: #ec5d72;
+    --color-purple: #b39ddb;
+
+    --color-borders: rgba(255, 255, 255, 0.1);
+
+    --color-link-border: rgba(102, 178, 255, 0.3);
+    --color-link-hover-border: rgba(255, 111, 133, 0.3);
+    --color-link-visited-border: rgba(179, 157, 219, 0.3);
+
+    --color-background: #231f20;
+    --color-text: #f9f9f9;
+    --color-text-knockout: #121212;
+    --color-caption: #ccc;
+    --color-code-background: #282828;
+
+    --color-message-bubble: #2a2a2a;
+    --color-message-bubble-shadow: rgba(0, 0, 0, 0.5);
+  }
+}

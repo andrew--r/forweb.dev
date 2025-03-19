@@ -9,5 +9,5 @@ figure {
 figcaption {
   font-size: text.$size-s;
   margin-top: 0.5em;
-  color: color.$caption;
+  color: var(--color-caption);
 }

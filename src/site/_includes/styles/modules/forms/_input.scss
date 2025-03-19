@@ -10,11 +10,11 @@
   padding-left: 0.75em;
   padding-right: 0.75em;
   font: inherit;
-  border: thin solid #ced4da;
+  border: thin solid var(--color-borders);
 }
 
 .input:focus {
   outline: 0;
-  border-color: color.$blue-light;
-  box-shadow: 0 0 0 0.2em color.$blue-light;
+  border-color: var(--color-blue-light);
+  box-shadow: 0 0 0 0.2em var(--color-blue-light);
 }

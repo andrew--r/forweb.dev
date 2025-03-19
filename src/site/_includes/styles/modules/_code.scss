@@ -1,0 +1,22 @@
+@use 'hljs-alabaster/theme.css';
+
+@media (prefers-color-scheme: dark) {
+  .hljs-number,
+  .hljs-literal {
+    color: var(--color-purple);
+  }
+
+  .hljs-title {
+    color: var(--color-blue);
+  }
+
+  .hljs-string,
+  .hljs-meta-string,
+  .hljs-regexp {
+    color: var(--color-green);
+  }
+
+  .hljs-comment {
+    color: var(--color-red);
+  }
+}

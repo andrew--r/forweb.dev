@@ -1,6 +1,5 @@
-@use "tokens/text";
-@use "tokens/media";
-@use "tokens/color";
+@use 'tokens/text';
+@use 'tokens/media';
 
 $avatar-size: 4rem;
 
@@ -31,7 +30,7 @@ $avatar-size: 4rem;
 }
 
 img.author-card__image {
-  border: thin solid color.$borders;
+  border: thin solid var(--color-borders);
   border-radius: 100%;
   display: block;
   margin-right: 1rem;

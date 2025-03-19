@@ -1,19 +1,17 @@
-@use 'tokens/color';
-
 .rss-link {
   display: inline-block;
   width: 0.5em;
   height: 0.5em;
-  color: color.$rss;
+  color: var(--color-rss);
   vertical-align: top;
 
   &:hover {
-    color: color.$link-hover;
+    color: var(--color-link-hover);
   }
 
   &:focus-visible {
-    background-color: color.$link-hover;
-    color: #fff;
+    background-color: var(--color-link-hover);
+    color: var(--color-text-knockout);
   }
 
   svg {

@@ -11,8 +11,8 @@
   margin-bottom: 1em;
   max-width: 40em;
   padding: 1em;
-  background-color: #eff2f7;
-  box-shadow: 0 0.125em 0 #e0e6ed;
+  background-color: var(--color-message-bubble);
+  box-shadow: 0 0.125em 0 var(--color-message-bubble-shadow);
   border-radius: 0.125em 1em 1em;
 }
 

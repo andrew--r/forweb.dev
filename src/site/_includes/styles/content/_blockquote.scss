@@ -1,8 +1,5 @@
-@use 'tokens/color';
-@use 'tokens/text';
-
 blockquote {
-  border-left: 0.5rem solid color.$blue-light;
+  border-left: 0.5rem solid var(--color-blue-light);
   margin: 1.25em 0;
   padding: 0.5rem 0;
   padding-left: 1.75rem;

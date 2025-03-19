@@ -1,5 +1,3 @@
-@use 'tokens/color';
-
 .bordered {
-  border: thin solid color.$borders;
+  border: thin solid var(--color-borders);
 }
