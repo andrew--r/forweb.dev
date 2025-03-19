@@ -3,14 +3,14 @@
 
 $spacing-vertical: 1.25em;
 
-.content :matches(ul, ol) {
+.content :is(ul, ol) {
   margin-top: $spacing-vertical;
   margin-bottom: $spacing-vertical;
   padding-left: calc(#{text.$base-line} * 1.5);
   list-style: none;
 }
 
-.content p + :matches(ul, ol) {
+.content p + :is(ul, ol) {
   margin-top: -0.75em;
 }
 

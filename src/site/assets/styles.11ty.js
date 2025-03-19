@@ -23,10 +23,7 @@ module.exports = class {
       includePaths: [rawDir, nodeModulesDir],
     });
 
-    return postcss([
-      require('postcss-selector-matches'),
-      require('autoprefixer'),
-    ])
+    return postcss([require('autoprefixer')])
       .process(compiledSass.css.toString(), {
         from: rawFilepath.replace('scss', 'css'),
       })
