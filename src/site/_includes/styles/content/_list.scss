@@ -15,11 +15,13 @@ $spacing-vertical: 1.25em;
 }
 
 .content li {
+  position: relative;
   max-width: text.$readable-line-width;
 
   &::before {
     position: absolute;
     transform: translateX(-100%);
+    color: var(--color-caption);
   }
 }
 
@@ -34,4 +36,8 @@ $spacing-vertical: 1.25em;
     counter-increment: ol;
     content: counter(ol) '. ';
   }
+}
+
+.content ul li::before {
+  content: '— ';
 }
